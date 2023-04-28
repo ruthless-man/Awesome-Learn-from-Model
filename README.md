@@ -17,5 +17,7 @@
 </details>
 
 
-- :x: [论文2：论文标题](https://论文链接)
+
+- :white_check_mark: [Adversarial Prompting for Black Box Foundation Modelss]https://arxiv.org/abs/2302.04237
+
 - :x: [论文3：论文标题](https://论文链接)
