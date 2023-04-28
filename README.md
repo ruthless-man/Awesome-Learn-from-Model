@@ -6,8 +6,8 @@
 # 论文列表
 
 <details>
-<summary> :white_check_mark: [Adversarial Prompting for Black Box Foundation Models]  [链接到论文](https://arxiv.org/abs/2302.04237)</summary>
-## 关键观点
+<summary> :white_check_mark: [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237)</summary>
+
 
 - 开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。
 - 我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。
