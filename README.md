@@ -7,7 +7,7 @@
 # 论文列表
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">[Adversarial Prompting for Black Box Foundation Models]</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">Adversarial Prompting for Black Box Foundation Models</a> </summary>
 <strong>关键观点</strong> 
 <ul>
   <li>开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。</li>
@@ -19,7 +19,7 @@
 
 
 <details>
-<summary> :white_check_mark: [Textual Few-Shot Classification For API-based Models] https://arxiv.org/abs/2302.04237 </summary>
+<summary> :white_check_mark: Textual Few-Shot Classification For API-based Models </summary>
 <strong>关键观点</strong>
 <ul>
 </ul>
