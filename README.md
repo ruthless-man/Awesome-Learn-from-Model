@@ -17,7 +17,6 @@
 </details>
 
 
-
 <details>
 <summary> :white_check_mark: Textual Few-Shot Classification For API-based Models </summary>
 <strong>关键观点</strong>
@@ -26,4 +25,13 @@
 </details>
 
 
-- :x: [论文3：论文标题](https://论文链接)
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2004.15015">Imitation Attacks and Defenses for Black-box Machine Translation Systems</a> </summary>
+
+  <strong>关键观点</strong>
+<ul>
+</ul>
+</details>
+- :x: 
+
+
