@@ -1,7 +1,7 @@
 # 论文阅读进度
 
-:white_check_mark: 已阅读
-:x: 未阅读
+-:white_check_mark: 已阅读
+-:x: 未阅读
 
 # 论文列表
 
