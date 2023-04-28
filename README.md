@@ -19,7 +19,7 @@
 
 
 <details>
-<summary> :white_check_mark: [Adversarial Prompting for Black Box Foundation Modelss](https://arxiv.org/abs/2302.04237)</summary>
+<summary> :white_check_mark: [Adversarial Prompting for Black Box Foundation Modelss] https://arxiv.org/abs/2302.04237 </summary>
 <strong>关键观点</strong>
 <ul>
 </ul>
