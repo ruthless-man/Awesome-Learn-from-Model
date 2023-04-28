@@ -20,18 +20,20 @@
 <details>
 <summary> :white_check_mark: Textual Few-Shot Classification For API-based Models </summary>
 <strong>关键观点</strong>
-<ul>
-</ul>
 </details>
-
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2004.15015">Imitation Attacks and Defenses for Black-box Machine Translation Systems</a> </summary>
-
-  <strong>关键观点</strong>
-<ul>
-</ul>
 </details>
-- :x: 
+
+<details>
+<summary> :white_check_mark: <a href="https://openreview.net/forum?id=LoJ6oXzc_P3">STEALING AND DEFENDING TRANSFORMER-BASED ENCODERS</a> </summary>
+</details>
+
+<details>
+<summary> :white_check_mark: <a href="https://www.nature.com/articles/s42256-023-00626-4">Parameter-efficient fine-tuning of large-scale pre-trained language models</a> </summary>
+</details>
+
+
 
 
