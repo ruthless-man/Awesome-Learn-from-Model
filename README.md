@@ -6,7 +6,7 @@
 
 # 论文列表
 
-<details>
+- <details>
 <summary> :white_check_mark: [Adversarial Prompting for Black Box Foundation Models](https://arxiv.org/abs/2302.04237)</summary>
 <strong>关键观点</strong>
 <ul>
