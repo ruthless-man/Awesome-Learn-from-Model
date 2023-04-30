@@ -33,8 +33,7 @@
 <summary> :x: <a href="https://www.nature.com/articles/s42256-023-00626-4">Parameter-efficient fine-tuning of large-scale pre-trained language models</a> </summary>
 <br><strong>关键观点</strong> 
 旨在全面分析delta-tuning（使模型自适应变得低成本）的最新进展
-1.Adapter tuning：在冻结层之间插入可训练的架构
-2.
+1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods. 
 </details>
 
 <details>
