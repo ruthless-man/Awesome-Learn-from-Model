@@ -54,3 +54,14 @@ Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），
 <details>
 <summary> :white_check_mark: <a href="https://openreview.net/forum?id=LoJ6oXzc_P3">STEALING AND DEFENDING TRANSFORMER-BASED ENCODERS</a> </summary>
 </details>
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04863">Knowledge is a Region in Weight Space for Fine-tuned Language Models</a> </summary>
+
+**关键观点**：  
+1.模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识  
+2.
+
+
+</details>
+
