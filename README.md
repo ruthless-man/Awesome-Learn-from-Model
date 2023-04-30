@@ -36,6 +36,7 @@
  
 1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
 2.基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象
+ 
 3.受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为为为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。
  
 </details>
