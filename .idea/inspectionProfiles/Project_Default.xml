@@ -1,0 +1,33 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="20">
+            <item index="0" class="java.lang.String" itemvalue="argparse" />
+            <item index="1" class="java.lang.String" itemvalue="PyOpenGL" />
+            <item index="2" class="java.lang.String" itemvalue="absl-py" />
+            <item index="3" class="java.lang.String" itemvalue="protobuf" />
+            <item index="4" class="java.lang.String" itemvalue="glfw" />
+            <item index="5" class="java.lang.String" itemvalue="torch" />
+            <item index="6" class="java.lang.String" itemvalue="requests" />
+            <item index="7" class="java.lang.String" itemvalue="mujoco-py" />
+            <item index="8" class="java.lang.String" itemvalue="torchvision" />
+            <item index="9" class="java.lang.String" itemvalue="dm-env" />
+            <item index="10" class="java.lang.String" itemvalue="labmaze" />
+            <item index="11" class="java.lang.String" itemvalue="gym-notices" />
+            <item index="12" class="java.lang.String" itemvalue="fasteners" />
+            <item index="13" class="java.lang.String" itemvalue="certifi" />
+            <item index="14" class="java.lang.String" itemvalue="gym" />
+            <item index="15" class="java.lang.String" itemvalue="mujoco" />
+            <item index="16" class="java.lang.String" itemvalue="pyparsing" />
+            <item index="17" class="java.lang.String" itemvalue="dm-tree" />
+            <item index="18" class="java.lang.String" itemvalue="torchaudio" />
+            <item index="19" class="java.lang.String" itemvalue="pybullet" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
