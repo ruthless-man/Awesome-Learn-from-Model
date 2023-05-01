@@ -84,5 +84,17 @@
 </blockquote>
 </details>
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2101.00190">Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> </summary>
+<br>
+<blockquote>
+
+**Adapter-tuning简单易用，插入可训练模块**  
+**Prefix-Tuning前缀调优：上游前缀控制一个下游LM，而下游LM保持不变，因此不同的前缀+相同LM可以实现多功能**  
+Lightweight fine-tuning：（1）removing parameters，（2）summation tuning （3）Adapter tuning
+![](README.assets/prefix.png)
+</blockquote>
+</details>
+
 
 
