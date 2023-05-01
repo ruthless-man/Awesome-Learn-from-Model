@@ -120,6 +120,51 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 
 
 
+<details>
+<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
+<br>
+<blockquote>
+
+** **
+</blockquote>
+</details>
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2212.09257">PromptBoosting: Black-Box Text Classification with Ten Forward Passes</a> </summary>
+<br>
+<blockquote>
+
+** **
+</blockquote>
+</details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2205.12548">Prompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
+<br>
+<blockquote>
+
+** **
+</blockquote>
+</details>
+
+
+##
+
+## 模型融合
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.10879">$K$NN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
+<br>
+<blockquote>
+
+** **
+</blockquote>
+</details>
+
 
 
 
