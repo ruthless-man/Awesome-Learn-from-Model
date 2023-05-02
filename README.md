@@ -199,4 +199,13 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
+<br>
+<blockquote>
+
+<!-- ![](README.assets/KNN.PNG) -->
+
+</blockquote>
+</details>
 
