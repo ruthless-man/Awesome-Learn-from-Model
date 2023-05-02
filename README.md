@@ -157,7 +157,7 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -165,17 +165,38 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 思路基于2019年的文章：https://arxiv.org/abs/1911.00172
 k-Nearest将语言模型的输出与从目标域构建的数据存储中的topk最近匹配示例所做的预测相结合。这种组合允许模型在没有额外训练的情况下，通过将该领域的特定特征纳入其预测来适应新的目标领域。然而，检索增强域自适应的零样本特性常常导致有限的实用性，因为模型不是在目标域上训练的，而是仅基于在数据存储中可以找到的最近的示例来适应域。与在目标域上进行专门微调的模型相比，这可能会导致性能次优。  
 **KNN-Adapter+LM**  
-kNN-Adapter通过学习根据要预测的令牌、当前上下文和从数据存储中检索到的邻居来调整两个关键参数，即插值系数和分布温度，从而提高kNN-LM的域自适应性能。
-![](README.assets/prefix.PNG)
-
-
-
+KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通过学习根据要预测的令牌、当前上下文和从数据存储中检索到的邻居来调整两个关键参数，即插值系数$\lambda $和分布温度$t$，从而提高kNN-LM的域自适应性能。
+![](README.assets/KNN.PNG)
 
 </blockquote>
 </details>
 
 
 
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14225">Weighted Sampling for Masked Language Modeling</a> </summary>
+<br>
+<blockquote>
+
+**提出了两种加权采样方法来缓解传统掩蔽语言建模中的频率偏差问题。**  
+**通过将加权采样应用于BERT，开发了一种新的PLM，即WSBERT。**
+<!-- ![](README.assets/KNN.PNG) -->
+
+</blockquote>
+</details>
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2203.06904">Delta tuning: A comprehensive study of parameter efficient methods for pre-trained language models</a> </summary>
+<br>
+<blockquote>
+
+<!-- ![](README.assets/KNN.PNG) -->
+
+</blockquote>
+</details>
 
 
 
