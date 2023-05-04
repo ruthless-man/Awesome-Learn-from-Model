@@ -176,11 +176,11 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14225">Weighted Sampling for Masked Language Modeling</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14225">Weighted Sampling for Masked Language Modeling</a> </summary>
 <br>
 <blockquote>
 
-**提出了两种加权采样方法来缓解传统掩蔽语言建模中的频率偏差问题。**  
+**提出了两种加权采样方法来缓解传统掩蔽语言建模中的频率偏差问题：频率加加权采样和动态加权采样，计算出来每个token的屏蔽概率。**  
 **通过将加权采样应用于BERT，开发了一种新的PLM，即WSBERT。**
 <!-- ![](README.assets/KNN.PNG) -->
 
@@ -189,11 +189,12 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2203.06904">Delta tuning: A comprehensive study of parameter efficient methods for pre-trained language models</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.06904">Delta tuning: A comprehensive study of parameter efficient methods for pre-trained language models</a> </summary>
 <br>
 <blockquote>
 
-<!-- ![](README.assets/KNN.PNG) -->
+**内容和Parameter-efficient fine-tuning of large-scale pre-trained language models几乎相同**
+
 
 </blockquote>
 </details>
@@ -204,8 +205,18 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 <br>
 <blockquote>
 
-<!-- ![](README.assets/KNN.PNG) -->
+**基于自监督生成标签的方式，让语言模型可以自己决定什么时候使用外部工具，使用什么外部工具，怎么使用外部工具。**
+![](README.assets/Toolformer.PNG)
+</blockquote>
+</details>
 
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2109.01134">Learning to Prompt for Vision-Language Models</a> </summary>
+<br>
+<blockquote>
+
+****
 </blockquote>
 </details>
 
