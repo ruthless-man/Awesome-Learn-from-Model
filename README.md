@@ -226,5 +226,16 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
+##
+## 模型蒸馏
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2112.15278">Data-Free Knowledge Transfer: A Survey</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
 
 
