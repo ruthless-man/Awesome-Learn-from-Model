@@ -151,6 +151,14 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 </details>
 
 
+<details>
+<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
 ##
 
 ## 模型融合
@@ -225,11 +233,5 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
-<details>
-<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing</a> </summary>
-<br>
-<blockquote>
 
-</blockquote>
-</details>
 
