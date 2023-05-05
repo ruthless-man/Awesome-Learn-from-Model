@@ -216,7 +216,20 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 <br>
 <blockquote>
 
-****
+**研究Prompt在大型视觉-语言模型的应用，也是用自适应的上下文学习来提升分类精度。**
+提供了两种实现来处理不同性质的任务:  
+1.基于统一上下文，与所有类共享相同的上下文，并且在大多数类别上都能很好地工作  
+2.基于特定于类的上下文，每个类学习一组特定的上下文令牌，适合于一些细粒度的类别。
+![](README.assets/Coop.PNG)
+</blockquote>
+</details>
+
+
+<details>
+<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, prompt, and predict: A systematic survey of prompting methods in natural language processing</a> </summary>
+<br>
+<blockquote>
+
 </blockquote>
 </details>
 
