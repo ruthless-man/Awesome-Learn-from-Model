@@ -231,10 +231,37 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2112.15278">Data-Free Knowledge Transfer: A Survey</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2112.15278">Data-Free Knowledge Transfer: A Survey</a> </summary>
 <br>
 <blockquote>
 
+**Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
+1.Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
+（1）噪声优化 （2）生成重建 （3）对抗探索  
+应用方向：量化剪枝，增量学习，模型攻击
+2.Source-(Data) Free Domain Adaptation (SFDA) 无数据领域自适应：通过目标数据查询和探索跨领域知识，两个模型的结构共享（就是参数不一样），面对不同的任务  
+实现方法：（1）自监督训练：伪标签聚类；伪标签过滤 （2）虚拟源知识转移：源印象；风格迁移  
+应用方向：语义分割，目标检测  
+
+**未来研究方向**
+1.更高效的数据重建  
+2.适应性的知识迁移  
+3.联合学习  
+4.Transformer or GNN
+
+
+</blockquote>
+</details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/1710.07535">Data-free knowledge distillation for deep neural networks</a> </summary>
+<br>
+<blockquote>
+提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
+传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
+在MNIST和CelebA上进行实验分析
 </blockquote>
 </details>
 
