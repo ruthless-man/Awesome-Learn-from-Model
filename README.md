@@ -256,7 +256,18 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/1710.07535">Data-free knowledge distillation for deep neural networks</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/1710.07535">Data-free knowledge distillation for deep neural networks</a> </summary>
+<br>
+<blockquote>
+提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
+传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
+在MNIST和CelebA上进行实验分析
+</blockquote>
+</details>
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
 <br>
 <blockquote>
 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
