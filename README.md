@@ -270,6 +270,8 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
 <br>
 <blockquote>
+
+**ICLR**
 用于图像识别的生成数据：  
 1.传统仿真流水线生成的生成数据集（从图形引擎合成3D模型或场景的2D渲染）  
 2.Diffusion，GAN生成模型合成得到
@@ -279,5 +281,18 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 局限性：受限于资源无法计算更大尺寸，和图片大小
 </blockquote>
 </details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
+<br>
+<blockquote>
+
+**cvpr2023**
+
+</blockquote>
+</details>
+
 
 
