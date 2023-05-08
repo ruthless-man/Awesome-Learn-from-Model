@@ -127,13 +127,28 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 
 
 <details>
-<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
+<summary> :white_check_mark: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
 <br>
 <blockquote>
 
-** **
 </blockquote>
 </details>
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language
+Pre-training via Soft Prompts</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
+
+
+
+
+
 
 
 <details>
