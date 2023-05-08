@@ -267,12 +267,16 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
 <br>
 <blockquote>
-提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
-传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
-在MNIST和CelebA上进行实验分析
+用于图像识别的生成数据：  
+1.传统仿真流水线生成的生成数据集（从图形引擎合成3D模型或场景的2D渲染）  
+2.Diffusion，GAN生成模型合成得到
+
+从生成数据角度出发对于零样本分类，少样本分类和预训练数据合成三个角度开展了实验分析，工作量大  
+结论：合成数据可以促进image recognition，合成数据在预训练方面甚至超过imagenet。  
+局限性：受限于资源无法计算更大尺寸，和图片大小
 </blockquote>
 </details>
 
