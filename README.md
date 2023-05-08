@@ -316,4 +316,13 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor,
+but a Good Reranker for Hard Samples!</a> </summary>
+<br>
+<blockquote>
+
+
+</blockquote>
+</details>
 
