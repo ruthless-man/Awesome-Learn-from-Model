@@ -66,7 +66,13 @@
 
 </details>
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
+</details>
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
+</details>
 
 
 <details>
