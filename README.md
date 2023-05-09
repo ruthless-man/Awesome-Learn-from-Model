@@ -152,7 +152,6 @@ NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了�
 2.答案提示  
 3.多提示学习  
 4.提示感知方法  
-
 http://pretrain.nlpedia.ai/  
 
 prompting 更加依赖先验，而 fine-tuning 更加依赖后验
@@ -362,14 +361,28 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 
-## 模型对齐
+## 多模态大模型
 
 
 <details>
 <summary> :x: <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
 <br>
 <blockquote>
-多模态大模型的研究
+
+**语言不是你需要的全部：对齐感知与语言模型，主要是针对多模态大模型的研究**
+github链接：https://github.com/microsoft/unilm  
+
+
+作者在Web规模的多模态语料库中从头开始训练Kosmos-1，语料库的内容包含了任意交错的文本和图像、图像-标题对以及文本数据
+
+没有任何梯度更新或微调的情况下，在广泛的任务中评估了各种设置，包括零次学习、少次学习和多模态思维链的提示。
+
+实验结果表明，Kosmos-1在以下方面效果较好：  
+（1）语言理解、生成，甚至是无OCR的NLP（直接输入文档图像）  
+（2）感知-语言任务，包括多模态对话、图像说明、视觉问答  
+（3）视觉任务，例如带有说明的图像识别（通过文本指令指定分类）
+
+
 
 </blockquote>
 </details>
