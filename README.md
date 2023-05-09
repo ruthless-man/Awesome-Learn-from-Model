@@ -82,8 +82,19 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :x <a href="https://arxiv.org/abs/2304.03589">On Efficient Training of Large-Scale Deep Learning Models: A Literature Review</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2304.03589">On Efficient Training of Large-Scale Deep Learning Models: A Literature Review</a> </summary>
+
+<br>
+<blockquote>
+以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
+以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
+以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
+预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
+以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持
+</blockquote>
 </details>
+
+
 
 
 <details>
