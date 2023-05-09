@@ -365,7 +365,7 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
 <br>
 <blockquote>
 
@@ -382,7 +382,23 @@ github链接：https://github.com/microsoft/unilm
 （2）感知-语言任务，包括多模态对话、图像说明、视觉问答  
 （3）视觉任务，例如带有说明的图像识别（通过文本指令指定分类）
 
+</blockquote>
+</details>
 
+
+## 模型编辑
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
+<br>
+<blockquote>
+
+**基于任务向量算术的模型编辑**  
+权重修改指导  
+
+提出一种用任务向量编辑预训练模型的新方法，任务向量是通过将预训练模型权重减去该模型在任务中微调后权重而产生的。任务向量上的算术运算，如取负和相加，使得用户可修改和组合预训练模型的行为，也可以用来创建新的模型，在多个任务或由类比关系连接的任务上有更好的性能。这种方法高效易用，可实现无需额外推理成本的模型编辑。
 
 </blockquote>
 </details>
