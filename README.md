@@ -153,7 +153,9 @@ NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了�
 3.多提示学习  
 4.提示感知方法  
 
-http://pretrain.nlpedia.ai/
+http://pretrain.nlpedia.ai/  
+
+prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
 </blockquote>
 </details>
@@ -367,7 +369,7 @@ but a Good Reranker for Hard Samples!</a> </summary>
 <summary> :x: <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
 <br>
 <blockquote>
-
+多模态大模型的研究
 
 </blockquote>
 </details>
