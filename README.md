@@ -72,11 +72,17 @@
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
+
+**CVPR 2023  CaFo提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。**
+融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
+CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
+
+
 </details>
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2304.03589">On Efficient Training of Large-Scale Deep Learning Models: A Literature Review</a> </summary>
+<summary> :x <a href="https://arxiv.org/abs/2304.03589">On Efficient Training of Large-Scale Deep Learning Models: A Literature Review</a> </summary>
 </details>
 
 
@@ -127,7 +133,7 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 
 
 <details>
-<summary> :white_check_mark: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
+<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
 <br>
 <blockquote>
 
@@ -140,7 +146,7 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 Pre-training via Soft Prompts</a> </summary>
 <br>
 <blockquote>
-
+提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
 </blockquote>
 </details>
 
@@ -299,7 +305,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 从生成数据角度出发对于零样本分类，少样本分类和预训练数据合成三个角度开展了实验分析，工作量大  
 结论：合成数据可以促进image recognition，合成数据在预训练方面甚至超过imagenet。  
-局限性：受限于资源无法计算更大尺寸，和图片大小
+局限性：受限于资源无法计算更大尺寸的图片大小
 </blockquote>
 </details>
 
@@ -322,7 +328,15 @@ but a Good Reranker for Hard Samples!</a> </summary>
 <br>
 <blockquote>
 
+**信息抽取领域的大小模型协同**
+问题：  
+（1）在少样本IE任务中，Large-LM是否真的优于Small-LM?  
+（2）更多的标注数据能否提高Large-LM和Small-LM?  
+（3）LLMs和SLMs是否分别擅长处理不同类型的样本?  
 
+
+思路：将小模型不太确定的测试样本再给大模型重新选择一下  
+![](README.assets/large.PNG)
 </blockquote>
 </details>
 
