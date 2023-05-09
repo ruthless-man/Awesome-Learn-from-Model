@@ -144,9 +144,16 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 
 
 <details>
-<summary> :x: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
+<summary> :white_check_mark: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
 <br>
 <blockquote>
+NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
+1.基础的提示工程  
+2.答案提示  
+3.多提示学习  
+4.提示感知方法  
+
+http://pretrain.nlpedia.ai/
 
 </blockquote>
 </details>
@@ -351,3 +358,16 @@ but a Good Reranker for Hard Samples!</a> </summary>
 </blockquote>
 </details>
 
+
+
+## 模型对齐
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
+<br>
+<blockquote>
+
+
+</blockquote>
+</details>
