@@ -490,7 +490,7 @@ github链接：https://github.com/microsoft/unilm
 
 
 <details>
-<summary> :⬜: <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
+<summary> ⬜ <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
 <br>
 <blockquote>
 
