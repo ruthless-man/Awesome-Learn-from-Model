@@ -18,7 +18,7 @@
 
 
 <details>
-<summary> :x: <a href="https://proceedings.neurips.cc/paper/2021/hash/50a074e6a8da4662ae0a29edde722179-Abstract.html">Variational model inversion attacks</a> </summary>
+<summary> ⬜ <a href="https://proceedings.neurips.cc/paper/2021/hash/50a074e6a8da4662ae0a29edde722179-Abstract.html">Variational model inversion attacks</a> </summary>
 <br>
 <blockquote>
 
