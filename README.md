@@ -4,7 +4,7 @@
 
 # 论文列表
 
-## 模型窃取
+## 模型攻击
 
 
 <details>
@@ -16,6 +16,21 @@
 </details>  
 
 
+<details>
+<summary> :x: <a href="https://proceedings.neurips.cc/paper/2021/hash/50a074e6a8da4662ae0a29edde722179-Abstract.html">Variational model inversion attacks</a> </summary>
+<br>
+<blockquote>
+
+**NIPS 2021**
+关注模型反演(MI)攻击，即只能访问训练过的分类器的情况下恢复训练集，这篇属于是白盒攻击  
+
+1.将模型反演(MI)攻击问题看作是一个变分推理(VI)问题  
+2.使用一组深度规范化流来实现框架  
+
+
+
+</blockquote>
+</details>
 ##
 
 
@@ -272,6 +287,22 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
+
+<details>
+<summary> :x: <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
+</a> </summary>
+<br>
+<blockquote>
+
+**研究prompt工程**
+
+论文提出了基于挖掘（mining-based）和基于释义（paraphrasing-based）的方法来自动生成高质量和多样化的prompt，以及集成方法来组合来自不同提示的答案，用以更准确地估计LM中包含的知识，主要使用的数据集是LAMA。
+</blockquote>
+</details>
+
+
+
+
 ##
 ## 模型蒸馏
 
@@ -331,7 +362,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
 <br>
 <blockquote>
 
@@ -342,7 +373,10 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 主要处理的问题就是在学生网络更新的过程中的分布偏移  
 1.提出了一种新的元学习启发的知识蒸馏中学生网络更新的策略，旨在保持学生在知识保留上的表现，同时从当前分布的样本中获取知识。  
-2.策略在知识获取和知识保留之间强制执行隐式梯度对齐  
+2.策略在知识获取和知识保留之间强制执行隐式梯度对齐，也就是说提出的学生更新策略对这两个任务执行了一个共同的梯度方向，减少了两个目标之间的干扰。  
+3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
+![](README.assets/元学习元训练.PNG)
+
 ![](README.assets/无数据知识蒸馏.PNG)
 
 </blockquote>
@@ -366,6 +400,21 @@ but a Good Reranker for Hard Samples!</a> </summary>
 ![](README.assets/large.PNG)
 </blockquote>
 </details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -409,6 +458,44 @@ github链接：https://github.com/microsoft/unilm
 提出一种用任务向量编辑预训练模型的新方法，任务向量是通过将预训练模型权重减去该模型在任务中微调后权重而产生的。任务向量上的算术运算，如取负和相加，使得用户可修改和组合预训练模型的行为，也可以用来创建新的模型，在多个任务或由类比关系连接的任务上有更好的性能。这种方法高效易用，可实现无需额外推理成本的模型编辑。
 
 使用方法：（1）删除特定向量来降低本模型在某方面的能力   （2）添加其他模型的任务向量增强本模型某方面能力  （3）通过类比（平行四边形法则）的方式让模型获得新能力（即使没有该方向的数据）
+
+</blockquote>
+</details>
+
+
+
+
+## 待分类
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/1909.01066">Language Models as Knowledge Bases?</a> </summary>
+<br>
+<blockquote>
+
+**EMNLP**
+该篇文章想要探索的问题是，通过在大型的文本语料上进行预训练，语言模型是否已经（或是有潜力）学习到并存储下了一些事实知识（主体-关系-客体形式的三元组或是问题-答案对）？  
+
+针对这个问题，本文首先定义了一种判断语言模型是否包含某种知识的方法。以Bert作为例子，对于某个三元组（小明，出生在，上海），本文首先将这一知识通过模板转换为自然语言的形式—小明出生在[MASK]，如果Bert能够成功的预测出被[MASK]掉的词语，那么我们就认为Bert掌握了这一知识。
+
+![](README.assets/EMNLP.PNG)
+
+为了对预训练模型所包含的知识进行探索，本文进一步以上述完形填空的形式，从一些现有的知识源中构建了四个用于知识探测的数据集
+
+实验部分，本文分别对两个单向的语言模型fairseq-fconv和Transformer-XL以及两个双向的语言模型ELMo和BERT进行了实验测试，使用$precision@k(p@k)$来表示模型预测的前K个词中，命中正确答案的准确率。结果表明，BERT-LARGE已经可以较为精确的对知识进行预测，这初步回答了该篇论文所提出的问题，语言模型中已经包含了相当数量的知识。
+
+本文是较早对语言模型中包含的事实知识进行正式、系统化探索的论文，提出了将语言模型作为知识库这一概念，并构建了LAMA数据集用于对模型存储知识的能力进行评估。
+</blockquote>
+</details>
+
+
+<details>
+<summary> :⬜: <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
+<br>
+<blockquote>
+
+分析了neural collapse问题，网络崩溃，提出了一种全新的框架，把可训练线性分类器修改为一个训练过程中保持不变的随机初始化的 ETF simplex，训练过程中最后一层 classifier 不再需要 push 梯度，只需要 pull 梯度，同时证明了一个更好的收敛性质。
+
 
 </blockquote>
 </details>
