@@ -407,10 +407,24 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
+</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
 
 
+<details>
+<summary> :x: <a href="https://link.springer.com/chapter/10.1007/978-3-031-27181-6_5">Assisted Process Knowledge Graph Building Using Pre-trained Language Models
+</a> </summary>
+<br>
+<blockquote>
 
-
+</blockquote>
+</details>
 
 
 
@@ -465,6 +479,42 @@ github链接：https://github.com/microsoft/unilm
 
 
 ##
+## 神经崩塌（Neural Collapse）
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
+<br>
+<blockquote>
+
+分析了神经崩塌问题，提出了一种全新的框架，把可训练线性分类器修改为一个训练过程中保持不变的随机初始化的 ETF simplex，训练过程中最后一层 classifier 不再需要 push 梯度，只需要 pull 梯度，同时证明了一个更好的收敛性质。
+
+</blockquote>
+</details>
+
+
+
+
+<details>
+<summary> ⬜ <a href="https://www.researchgate.net/publication/348927984_Layer-Peeled_Model_Toward_Understanding_Well-Trained_Deep_Neural_Networks#:~:text=In%20this%20paper%2C%20we%20introduce%20the%20Layer-Peeled%20Model%2Ca,suggests%2C%20this%20new%20model%20is%20derived%20by%20isolating">Layer-Peeled Model: Toward Understanding Well-Trained Deep Neural Networks</a> </summary>
+<br>
+<blockquote>
+分层模型：理解训练有素的深度神经网络
+
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+##
 
 ## 待分类
 
@@ -490,13 +540,4 @@ github链接：https://github.com/microsoft/unilm
 </details>
 
 
-<details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
-<br>
-<blockquote>
 
-分析了neural collapse问题，网络崩溃，提出了一种全新的框架，把可训练线性分类器修改为一个训练过程中保持不变的随机初始化的 ETF simplex，训练过程中最后一层 classifier 不再需要 push 梯度，只需要 pull 梯度，同时证明了一个更好的收敛性质。
-
-
-</blockquote>
-</details>
