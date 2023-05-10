@@ -40,7 +40,7 @@
 
 
 
-## Prompt Tuning微调
+## 提示学习
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">Adversarial Prompting for Black Box Foundation Models</a> </summary>
 <br>
@@ -204,7 +204,7 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2205.12548">Prompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
+<summary> :x: <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
 <br>
 <blockquote>
 
