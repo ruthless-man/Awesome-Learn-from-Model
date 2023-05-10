@@ -247,7 +247,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
 <br>
 <blockquote>
 
@@ -391,14 +391,16 @@ github链接：https://github.com/microsoft/unilm
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
 <br>
 <blockquote>
 
 **基于任务向量算术的模型编辑（ICLR 2023）**  
-权重修改指导  
+从非常有趣的角度进行模型权重的修改，原理上比较清晰，论文主要的工作是一直在做实验验证这些观点  
 
 提出一种用任务向量编辑预训练模型的新方法，任务向量是通过将预训练模型权重减去该模型在任务中微调后权重而产生的。任务向量上的算术运算，如取负和相加，使得用户可修改和组合预训练模型的行为，也可以用来创建新的模型，在多个任务或由类比关系连接的任务上有更好的性能。这种方法高效易用，可实现无需额外推理成本的模型编辑。
+
+使用方法：（1）删除特定向量来降低本模型在某方面的能力   （2）添加其他模型的任务向量增强本模型某方面能力  （3）通过类比（平行四边形法则）的方式让模型获得新能力（即使没有该方向的数据）
 
 </blockquote>
 </details>
