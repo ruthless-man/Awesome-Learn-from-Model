@@ -589,15 +589,6 @@ but a Good Reranker for Hard Samples!</a> </summary>
 </details>
 
 
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
-</a> </summary>
-<br>
-<blockquote>
-
-</blockquote>
-</details>
-
 
 <details>
 <summary> :x: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders
