@@ -598,6 +598,18 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 ##
 
 
@@ -677,6 +689,11 @@ github链接：https://github.com/microsoft/unilm
 
 
 
+
+
+
+
+
 ##
 ## 零阶
 
@@ -693,6 +710,11 @@ github链接：https://github.com/microsoft/unilm
 
 
 
+
+
+
+
+
 ##
 ## 数理基础
 
@@ -705,13 +727,6 @@ github链接：https://github.com/microsoft/unilm
 
 </blockquote>
 </details>
-
-
-
-
-
-
-
 
 
 
@@ -751,4 +766,39 @@ github链接：https://github.com/microsoft/unilm
 </details>
 
 
+Training-free Lexical Backdoor Attacks on Language Models
+
+
+Augmented Language Models: a Survey
+
+Understanding Finetuning for Factual Knowledge Extraction from Language Models
+
+Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
+
+Modular Deep Learning
+
+REPLUG: Retrieval-Augmented Black-Box Language Models
+
+Crawling the Internal Knowledge-Base of Language Models
+
+
+Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
+
+Active Prompting with Chain-of-Thought for Large Language Models
+
+
+Progressive Prompts: Continual Learning for Language Models
+
+Causally Disentangled Generative Variational AutoEncoder
+
+Out-of-Domain Robustness via Targeted Augmentations
+
+
+Aligning Text-to-Image Models using Human Feedback
+
+Exponential Hardness of Reinforcement Learning with Linear Function Approximation
+
+Digital twin aided adversarial transfer learning method for domain adaptation fault diagnosis
+
+Git re-basin: Merging models modulo permutation symmetries
 
