@@ -312,11 +312,14 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.03668">Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discoveryCCF none</a> </summary>
+<summary> ⬜ <a href="https://arxiv.org/abs/2302.03668">Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery</a> </summary>
 <br>
 <blockquote>
+提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。
 
-
+1.作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
+2.所提出的方法在优化硬提示的过程中使用连续的"软"提示作为中间变量，从而实现了鲁棒的优化并促进了提示的探索和发现  
+3.该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好  
 </blockquote>
 </details>
 
@@ -570,33 +573,43 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
 </a> </summary>
 <br>
 <blockquote>
+
+将预训练语言模型的知识生命周期划分为五个：  
+**1.知识获取：关注模型怎么从文本中提取知识**
+建模方法有：因果建模，掩码建模，Seq2Seq建模，去噪建模
+**2.知识表示：关注知识怎么转化为模型的底层参数**  
+分析方法有：基于梯度，基于因果，基于注意
+**3.知识探索：评估当前包含不同类型知识的plm的效果。**  
+**4.知识编辑：编辑或删除模型中的知识**  
+约束微调，内存微调，元学习微调
+**5.知识应用：从训练好的模型中提取可用的知识**
+
+
 
 </blockquote>
 </details>
 
 
-<details>
-<summary> :x: <a href="https://link.springer.com/chapter/10.1007/978-3-031-27181-6_5">Assisted Process Knowledge Graph Building Using Pre-trained Language Models
-</a> </summary>
-<br>
-<blockquote>
-
-</blockquote>
-</details>
 
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders
 
 </a> </summary>
 <br>
 <blockquote>
 
+**CVPR 2023**
+提出了通用到特定的蒸馏(G2SD)，将任务不可知和任务特定的知识从MAE转移到轻量级的vit，为两阶段视觉模型蒸馏设定了坚实的基线  
+实现方式：
+第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
+第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
+![](README.assets/G2SD.PNG)
 </blockquote>
 </details>
 
