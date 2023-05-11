@@ -82,9 +82,6 @@
 
 </details>
 
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
-</details>
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
@@ -193,24 +190,63 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2212.09257">PromptBoosting: Black-Box Text Classification with Ten Forward Passes</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2212.09257">PromptBoosting: Black-Box Text Classification with Ten Forward Passes</a> </summary>
 <br>
 <blockquote>
 
-** **
+**集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
+
+针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
+
+![](README.assets/PROMPT_BOOSTING.PNG)
 </blockquote>
 </details>
 
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
+<summary> :⬜: <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
 <br>
 <blockquote>
 
-** **
+**基于强化学习的离散提示优化**
+训练一个parameter-efficient policy network
 </blockquote>
 </details>
+
+
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
+<br>
+<blockquote>
+
+
+</blockquote>
+</details>
+
+
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
+<br>
+<blockquote>
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
 
 
 ##
@@ -290,7 +326,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :x: <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
+<summary> ⬜ <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
 </a> </summary>
 <br>
 <blockquote>
