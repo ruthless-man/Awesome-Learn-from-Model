@@ -53,7 +53,7 @@
 
 
 <details>
-<summary> :white_check_mark: Textual Few-Shot Classification For API-based Models </summary>
+<summary> :white_check_mark: 沈老师推荐Textual Few-Shot Classification For API-based Models </summary>
 
 </details>
 
@@ -120,6 +120,27 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 </blockquote>
 </details>
 
+
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
+<br>
+<blockquote>
+
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2101.00190">Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> </summary>
 <br>
@@ -173,6 +194,50 @@ prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 </details>
 
 
+
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.09236">Scalable Prompt Generation for Semi-supervised Learning with Language Models</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.02909">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language
 Pre-training via Soft Prompts</a> </summary>
@@ -183,6 +248,23 @@ Pre-training via Soft Prompts</a> </summary>
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.07121">Universal Guidance for Diffusion Models</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
 
 
 
@@ -205,7 +287,7 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :⬜: <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
+<summary> ⬜ <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
 <br>
 <blockquote>
 
@@ -213,6 +295,18 @@ Pre-training via Soft Prompts</a> </summary>
 训练一个parameter-efficient policy network
 </blockquote>
 </details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.03668">Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discoveryCCF none</a> </summary>
+<br>
+<blockquote>
+
+
+</blockquote>
+</details>
+
 
 
 
@@ -239,7 +333,22 @@ Pre-training via Soft Prompts</a> </summary>
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.06571">Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Models</a> </summary>
+<br>
+<blockquote>
+</blockquote>
+</details>
 
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
+<br>
+<blockquote>
+</blockquote>
+</details>
 
 
 
@@ -298,15 +407,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
-<br>
-<blockquote>
 
-**基于自监督生成标签的方式，让语言模型可以自己决定什么时候使用外部工具，使用什么外部工具，怎么使用外部工具。**
-![](README.assets/Toolformer.PNG)
-</blockquote>
-</details>
 
 
 <details>
@@ -336,6 +437,18 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 论文提出了基于挖掘（mining-based）和基于释义（paraphrasing-based）的方法来自动生成高质量和多样化的prompt，以及集成方法来组合来自不同提示的答案，用以更准确地估计LM中包含的知识，主要使用的数据集是LAMA。
 </blockquote>
 </details>
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
+<br>
+<blockquote>
+
+**基于自监督生成标签的方式，让语言模型可以自己决定什么时候使用外部工具，使用什么外部工具，怎么使用外部工具。**
+![](README.assets/Toolformer.PNG)
+</blockquote>
+</details>
+
 
 
 
@@ -463,6 +576,25 @@ but a Good Reranker for Hard Samples!</a> </summary>
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
+</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders
+
+</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
 
 
 
@@ -539,6 +671,49 @@ github链接：https://github.com/microsoft/unilm
 
 </blockquote>
 </details>
+
+
+
+
+
+
+##
+## 零阶
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2203.14195">How to robustify black-box ml models? a zeroth-order optimization perspective</a> </summary>
+<br>
+<blockquote>
+
+
+
+</blockquote>
+</details>
+
+
+
+##
+## 数理基础
+
+<details>
+<summary> :x: <a href="https://www.csie.ntu.edu.tw/~b97058/tseng/papers/archive/bcr_jota.pdf">Convergence of a block coordinate descent method for nondifferentiable minimization</a> </summary>
+<br>
+<blockquote>
+
+
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
 
 
 
