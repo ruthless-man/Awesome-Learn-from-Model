@@ -610,7 +610,7 @@ but a Good Reranker for Hard Samples!</a> </summary>
 实现方式：
 第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
 第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
-![](README.assets/G2SD.PNG)
+![](README.assets/GS2D.PNG)
 </blockquote>
 </details>
 
