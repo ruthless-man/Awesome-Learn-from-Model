@@ -333,8 +333,12 @@ Pre-training via Soft Prompts</a> </summary>
 <summary> :x: <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
 <br>
 <blockquote>
+(i)推导了主流PETL方法的并行形式（提示，Adapter，），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。  
+(ii)我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
+(iii)对迁移学习的全面研究证明了U-Tuning的通用性和强大性。
 
 
+将PTEL分为了MHA Based Tuning和FFN Based Tuning
 </blockquote>
 </details>
 
@@ -717,12 +721,14 @@ github链接：https://github.com/microsoft/unilm
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2203.14195">How to robustify black-box ml models? a zeroth-order optimization perspective</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.14195">How to robustify black-box ml models? a zeroth-order optimization perspective</a> </summary>
 <br>
 <blockquote>
 
-
-
+建议查看前缀论文Zoo: Zeroth order optimization based black-box attacks to deep neural networks without training substitute models
+**基于对抗训练（AT）的防御机制**
+通过将去噪平滑(DS)与零阶优化(ZO)相结合，构建了一个可行的黑盒防御框架。然而，论文发现直接应用ZO优化使得防御无效且难以扩展。然后，提出了ZO-AE-DS，加上了自编码器(AE)来弥合FO和ZO优化之间的差距。
+![](README.assets/ZO-AE-DS.PNG)
 </blockquote>
 </details>
 
