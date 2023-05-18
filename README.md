@@ -330,15 +330,21 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
 <br>
 <blockquote>
-(i)推导了主流PETL方法的并行形式（提示，Adapter，），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。  
+
+(i)推导了主流PETL方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。    
 (ii)我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
-(iii)对迁移学习的全面研究证明了U-Tuning的通用性和强大性。
+(iii)对迁移学习的全面研究证明了U-Tuning的通用性和强大性。  
 
 
-将PTEL分为了MHA Based Tuning和FFN Based Tuning
+将PTEL分为了MHA Based Tuning（包含了Prefix tuning和Prompt tuning）和FFN Based Tuning（Adapter tuning），如下图所示
+![](README.assets/prefix+ada+pro.PNG)
+
+U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：  
+$\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
+
 </blockquote>
 </details>
 
@@ -347,17 +353,28 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
 <br>
 <blockquote>
+
+**通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
+
+
+![](README.assets/MVP.PNG)
+
 </blockquote>
 </details>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.06571">Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Models</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.06571">Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Models</a> </summary>
 <br>
 <blockquote>
+
+
+**多模态相关**
+
+引入了一种新的梯度调节元提示学习(GRAM)框架，该框架仅使用未标记的图像-文本预训练数据，在元学习范式中联合元学习有效的软提示初始化以更好地适应和轻量级梯度调节功能以实现强跨域泛化
 </blockquote>
 </details>
 
