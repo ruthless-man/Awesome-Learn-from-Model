@@ -229,9 +229,20 @@ prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.02909">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02909">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> </summary>
 <br>
 <blockquote>
+为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
+
+prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。  
+
+![](README.assets/DP.PNG)
+
+DP主要就是在输入x的前后都插入prompt  
+首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
+然后，设计合适的prompt长度  
+最后，设计合适的prompt表示词
+
 
 </blockquote>
 </details>
