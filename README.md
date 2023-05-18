@@ -28,11 +28,15 @@
 1.将模型反演(MI)攻击问题看作是一个变分推理(VI)问题  
 2.使用一组深度规范化流来实现框架  
 
-
-
 </blockquote>
 </details>
 
+
+
+<details>
+<summary> :white_check_mark: <a href="https://openreview.net/forum?id=LoJ6oXzc_P3">Training-free Lexical Backdoor Attacks on Language Models</a> </summary>
+**2023 WWW**
+</details>  
 
 
 ##
@@ -799,7 +803,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </details>
 
 
-Training-free Lexical Backdoor Attacks on Language Models
+
 
 
 Augmented Language Models: a Survey
