@@ -120,13 +120,16 @@
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
 <br>
 <blockquote>
-思维链可参考博客：https://zhuanlan.zhihu.com/p/620776904
-**思维链系列文章 此系列开山作品：Chain of thought prompting elicits reasoning in large language models（NIPS 2022）**
-思维链是一系列的短句子，模仿了人类在回答问题时的思考和可能的推理过程。
-![](README.assets/%E6%80%9D%E7%BB%B4%E9%93%BE%E5%BC%80%E5%B1%B1.PNG)
-第二篇工作Large Language Models are Zero-Shot Reasoners，这篇文章的发现很有趣
 
-回到本篇：  
+
+**思维链系列开山作品：Chain of thought prompting elicits reasoning in large language models（NIPS 2022）**  
+思维链可参考博客：https://zhuanlan.zhihu.com/p/620776904 
+
+思维链是一系列的短句子，模仿了人类在回答问题时的思考和可能的推理过程。
+![](README.assets/思维链开山.PNG)
+第二篇Large Language Models are Zero-Shot Reasoners的发现很有趣
+
+**回到本篇：**  
 大多数 CoT 研究依赖于精心设计的人工注释理性链来提示语言模型，这对现实世界的应用提出了挑战。本文提出了一种新的策略Automate-CoT，它可以通过从一个小的标记数据集中自动增加理性链，然后修剪低质量的链来绕过人工标注思维链的过程。最后，它采用减少方差的策略梯度策略来估计语言模型中每个示例的重要性，从池中选择几个基本原理链的最佳组合用于形成思维链。  
 核心内容：小型标注数据集 ——> 扩充推理链 ——> 删除低质推理链，构建候选池 ——> 选择示例组合 ——> 推理链提示  
 实验结果：算术推理 (+2.7%)、常识推理 (+3.4%)、符号推理 (+3.2%) 和非推理任务(+2.5%)
@@ -351,7 +354,7 @@ $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
+<summary> ⬜ <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
 <br>
 <blockquote>
 </blockquote>
