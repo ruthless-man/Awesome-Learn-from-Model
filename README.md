@@ -83,15 +83,7 @@
 </details>
 
 
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
 
-**CVPR 2023  CaFo提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。**
-融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
-CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
-
-
-</details>
 
 
 <details>
@@ -248,20 +240,6 @@ DP主要就是在输入x的前后都插入prompt
 </details>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language
 Pre-training via Soft Prompts</a> </summary>
@@ -270,26 +248,6 @@ Pre-training via Soft Prompts</a> </summary>
 提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
 </blockquote>
 </details>
-
-
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.07121">Universal Guidance for Diffusion Models</a> </summary>
-<br>
-<blockquote>
-
-</blockquote>
-</details>
-
-
-
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
-<br>
-<blockquote>
-
-</blockquote>
-</details>
-
 
 
 
@@ -428,7 +386,13 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details>
 
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
 
+**CVPR 2023  CaFo提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。**
+融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
+CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
+</details>
 
 
 <details>
@@ -663,7 +627,7 @@ but a Good Reranker for Hard Samples!</a> </summary>
 ##
 
 
-## 多模态大模型
+## 多模态模型
 
 
 <details>
@@ -683,6 +647,20 @@ github链接：https://github.com/microsoft/unilm
 （1）语言理解、生成，甚至是无OCR的NLP（直接输入文档图像）  
 （2）感知-语言任务，包括多模态对话、图像说明、视觉问答  
 （3）视觉任务，例如带有说明的图像识别（通过文本指令指定分类）
+
+</blockquote>
+</details>
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.07121">Universal Guidance for Diffusion Models</a> </summary>
+<br>
+<blockquote>
+
+**实现多模态的Guidance指令来控制Diffusion Models**
+
+Guided Image Generation：采用冻结的预训练扩散模型作为基础模型，修改采样方法，利用引导函数$f$的反馈来引导图像生成。
+![](README.assets/通用制导算法.PNG)
 
 </blockquote>
 </details>
