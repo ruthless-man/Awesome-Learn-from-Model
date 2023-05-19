@@ -358,13 +358,17 @@ $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
 <br>
 <blockquote>
 
-设计了一个轻量级的通用检索器UPRISE，给定一个Zero-Shot任务输入，该检索器可以自动从预先构建的数据池中检索提示。  
-在小模型GPT-Neo-2.7B上进行训练调优，然后在BLOOM-7.1B，OPT-66B，GPT3-175B上进行测试
+设计了一个轻量级的通用检索器UPRISE，给定一个Zero-Shot任务输入，该检索器可以自动从预先构建的数据池中检索提示（看上去是硬提示），原理是冻结LLM，然后通过模型输出来反向梯度优化检索器，然后训练好的检索器可以根据输入x选择合适的prompt插入到x前面，再一起输入LLM。文章提出跨模型（小模型到大模型）和跨任务（已有任务到没见过的任务）两种标准进行实验分析（在小模型GPT-Neo-2.7B上进行训练调优，然后在BLOOM-7.1B，OPT-66B，GPT3-175B上进行测试）。
 ![](README.assets/UPRISE.PNG)
+![](README.assets/UPRISE2.PNG)
+Method部分介绍了数据标签的构建方法，总体任务划分为text completion和multiple-choice两种，然后介绍了检索器的结构，微调和推理的方法。
+
+![](README.assets/UP3.PNG)
+
 </blockquote>
 </details>
 
