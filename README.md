@@ -7,11 +7,13 @@
 
 ## 模型安全
 
-**模型攻击的分类：对抗样本adversarial examples、通用对抗补丁universal adversarial patch、数据投毒data poisoning、后门攻击backdoor attack**  
-对抗样本：故意对输入样例添加难以察觉的扰动使模型以高置信度给出一个错误的输出。  
-通用对抗补丁：UAP可以被认为是对抗样本的一种特殊形式，对抗样本是对每一个样本生成其特定的扰动，而UAP则是对任何样本生成通用的精心构造的扰动。  
-数据投毒：数据投毒攻击发生在数据收集与预处理阶段，目标是影响模型推理时的准确率。  
-后门攻击：代码投毒code poisoning，外包outsourcing，预训练pretrained，数据收集data collection，协作学习collaborative learning，部署后post-deployment。
+**模型攻击的分类：**
+- 对抗样本（adversarial examples）：故意对输入样例添加难以察觉的扰动使模型以高置信度给出一个错误的输出。  
+- 通用对抗补丁（universal adversarial patch）：对抗样本的一种特殊形式，对抗样本是对每一个样本生成其特定的扰动，而UAP对任何样本生成通用的精心构造的扰动。 
+- 数据投毒（data poisoning）：数据投毒攻击发生在数据收集与预处理阶段，目标是影响模型推理时的准确率。 
+- 后门攻击（backdoor attack）：代码投毒code poisoning，外包outsourcing，预训练pretrained，数据收集data collection，协作学习collaborative learning，部署后post-deployment。
+
+
 
 
 
