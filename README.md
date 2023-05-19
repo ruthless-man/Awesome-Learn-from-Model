@@ -47,8 +47,11 @@
 <br>
 <blockquote>
 **2023 WWW**
+后门攻击介绍：Backdoor learning: A survey 
 
-后门攻击介绍：Backdoor learning: A survey  
+从标记器（tokenizer）的视角设计了一种无需训练的词法后门攻击(TFLexAttack)，直接将triggers秘密植入语言模型中。
+- 策略1：TFLexAttack-substitution：通过标记替换操作给定单词的词汇嵌入
+- 策略2：TFLexAttack-insertion：通过标记插入在上下文上修改给定单词
 
 </blockquote>
 </details>
