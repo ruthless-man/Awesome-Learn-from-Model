@@ -5,7 +5,14 @@
 
 # 论文列表
 
-## 模型攻击
+## 模型安全
+
+**模型攻击的分类：对抗样本adversarial examples、通用对抗补丁universal adversarial patch、数据投毒data poisoning、后门攻击backdoor attack**  
+对抗样本：故意对输入样例添加难以察觉的扰动使模型以高置信度给出一个错误的输出。  
+通用对抗补丁：UAP可以被认为是对抗样本的一种特殊形式，对抗样本是对每一个样本生成其特定的扰动，而UAP则是对任何样本生成通用的精心构造的扰动。  
+数据投毒：数据投毒攻击发生在数据收集与预处理阶段，目标是影响模型推理时的准确率。  
+后门攻击：代码投毒code poisoning，外包outsourcing，预训练pretrained，数据收集data collection，协作学习collaborative learning，部署后post-deployment。
+
 
 
 <details>
@@ -35,8 +42,31 @@
 
 <details>
 <summary> :white_check_mark: <a href="https://dl.acm.org/doi/abs/10.1145/3543507.3583348">Training-free Lexical Backdoor Attacks on Language Models</a> </summary>
+<br>
+<blockquote>
 **2023 WWW**
-</details>  
+
+后门攻击介绍：Backdoor learning: A survey  
+
+</blockquote>
+</details>
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.14195">How to robustify black-box ml models? a zeroth-order optimization perspective</a> </summary>
+<br>
+<blockquote>
+
+建议查看前缀论文Zoo: Zeroth order optimization based black-box attacks to deep neural networks without training substitute models
+**基于对抗训练（AT）的防御机制**
+通过将去噪平滑(DS)与零阶优化(ZO)相结合，构建了一个可行的黑盒防御框架。然而，论文发现直接应用ZO优化使得防御无效且难以扩展。然后，提出了ZO-AE-DS，加上了自编码器(AE)来弥合FO和ZO优化之间的差距。
+![](README.assets/ZO-AE-DS.PNG)
+</blockquote>
+</details>
+
+
+
+
 
 
 ##
@@ -703,7 +733,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 ##
-## 神经崩塌（Neural Collapse）
+## 神经崩塌
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
@@ -735,24 +765,6 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 
-
-
-
-##
-## 零阶
-
-
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.14195">How to robustify black-box ml models? a zeroth-order optimization perspective</a> </summary>
-<br>
-<blockquote>
-
-建议查看前缀论文Zoo: Zeroth order optimization based black-box attacks to deep neural networks without training substitute models
-**基于对抗训练（AT）的防御机制**
-通过将去噪平滑(DS)与零阶优化(ZO)相结合，构建了一个可行的黑盒防御框架。然而，论文发现直接应用ZO优化使得防御无效且难以扩展。然后，提出了ZO-AE-DS，加上了自编码器(AE)来弥合FO和ZO优化之间的差距。
-![](README.assets/ZO-AE-DS.PNG)
-</blockquote>
-</details>
 
 
 
