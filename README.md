@@ -800,16 +800,9 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 
-
-
-
-
-
-
 ##
 
-## 待分类
-
+## 知识探索
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/1909.01066">Language Models as Knowledge Bases?</a> </summary>
@@ -817,6 +810,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 <blockquote>
 
 **EMNLP**
+
 该篇文章想要探索的问题是，通过在大型的文本语料上进行预训练，语言模型是否已经（或是有潜力）学习到并存储下了一些事实知识（主体-关系-客体形式的三元组或是问题-答案对）？  
 
 针对这个问题，本文首先定义了一种判断语言模型是否包含某种知识的方法。以Bert作为例子，对于某个三元组（小明，出生在，上海），本文首先将这一知识通过模板转换为自然语言的形式—小明出生在[MASK]，如果Bert能够成功的预测出被[MASK]掉的词语，那么我们就认为Bert掌握了这一知识。
@@ -830,6 +824,17 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 本文是较早对语言模型中包含的事实知识进行正式、系统化探索的论文，提出了将语言模型作为知识库这一概念，并构建了LAMA数据集用于对模型存储知识的能力进行评估。
 </blockquote>
 </details>
+
+
+
+
+
+
+
+
+##
+
+## 待分类
 
 
 
