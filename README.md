@@ -836,9 +836,9 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 **知识提取相关**
 
-**工作**：聚焦提取事实知识的语言模型微调过程，发现微调可能对知识提取产生负面影响，并提出了两套当前最优方案，以助于弥补负面影响并提高性能。
+**工作**：聚焦提取事实知识的语言模型微调过程，发现微调可能对知识提取产生负面影响，并提出了两套当前最优方案1：model mixing（将一个微调模型与一个零射击或少射击模型进行混合） and 2：mixture finetuning with the LM’s pre-training task（知识提取任务与LM的原始预训练任务的混合），以助于弥补负面影响并提高性能。
 
-**背景**：此前在LM的研究上有一种新的知识图（KG）构建范式，在这种范式中，LMs可以作为一种简单有效的管道，将网络上的异构数据源转换为结构化的KG表示，但是存在频率冲击（Frequency Shock）和范围转移（Range Shift）几种问题。
+**背景**：此前在LM的研究上有一种新的知识图（Knowledge Graph，KG）构建范式，在这种范式中，LMs可以作为一种简单有效的管道，将网络上的异构数据源转换为结构化的KG表示，但是存在频率冲击（Frequency Shock）和范围转移（Range Shift）几种问题。
 
 
 </blockquote>
@@ -896,13 +896,6 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 ## 待分类
 
-
-
-
-
-
-
-Understanding Finetuning for Factual Knowledge Extraction from Language Models
 
 Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
 
