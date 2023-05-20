@@ -82,7 +82,7 @@
 
 
 
-## 提示学习
+## 提示微调
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">Adversarial Prompting for Black Box Foundation Models</a> </summary>
 <br>
@@ -828,7 +828,67 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.11293">Understanding Finetuning for Factual Knowledge Extraction from Language Models</a> </summary>
+<br>
+<blockquote>
 
+
+**知识提取相关**
+
+**工作**：聚焦提取事实知识的语言模型微调过程，发现微调可能对知识提取产生负面影响，并提出了两套当前最优方案，以助于弥补负面影响并提高性能。
+
+**背景**：此前在LM的研究上有一种新的知识图（KG）构建范式，在这种范式中，LMs可以作为一种简单有效的管道，将网络上的异构数据源转换为结构化的KG表示，但是存在频率冲击（Frequency Shock）和范围转移（Range Shift）几种问题。
+
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+##
+
+## 相关综述
+
+
+<details>
+<summary> ⬜ <a href="https://arxiv.org/abs/2302.07842">Augmented Language Models: a Survey</a> </summary>
+<br>
+<blockquote>
+
+**增强语言模型（ALM）**
+LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外部工具能力的工作（推理指将复杂任务分解为更简单的子任务，工具包括调用模块等），并指出这个方向有可能解决传统语言模型所面临的可解释性，一致性以及扩展性的问题。
+
+- 观点1：大规模语言模型由于模型幻视等问题在大规模推广时受到限制，很多LLM的能力随着模型参数量增加到一定限度才会涌现，LLM的模型规模跟数据需求在很多情况下都是不符合实际的。
+
+- 观点2：将ALM分为（1） Reason: 推理，将潜在复杂任务分解为简单子任务的能力，而这些子任务是语言模型可以自身解决或者调用其他工具解决。（2）Tool: 工具，语言模型通过规则或者特殊token调用外部模块的能力，包括检索外部信息的检索系统，或者可以调用机器手臂的工具等。（3）Act：行为，ALM调用的工具会对虚拟或者真实世界产生影响并观测到结果。
+
+参照博客 https://zhuanlan.zhihu.com/p/611492200
+
+</blockquote>
+</details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/pdf/2006.05525.pdf">Knowledge distillation: A survey
+</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
 
 
 
@@ -840,7 +900,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 
-Augmented Language Models: a Survey
+
 
 Understanding Finetuning for Factual Knowledge Extraction from Language Models
 
