@@ -577,8 +577,6 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 </blockquote>
 </details>
 
-
-
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
 <br>
@@ -645,6 +643,17 @@ but a Good Reranker for Hard Samples!</a> </summary>
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2212.05956">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
+<br>
+<blockquote>
+
+**采用随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM**
+
+
+
+</blockquote>
+</details>
 
 
 
@@ -664,13 +673,6 @@ but a Good Reranker for Hard Samples!</a> </summary>
 </details>
 
 
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
-<blockquote>
-
-**采用随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM***
-</blockquote>
-</details>
 
 
 
@@ -679,6 +681,7 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 ##
+
 ## 检索增强
 
 
