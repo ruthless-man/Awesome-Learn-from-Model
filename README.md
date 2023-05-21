@@ -666,8 +666,13 @@ but a Good Reranker for Hard Samples!</a> </summary>
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
+<br>
+<blockquote>
 
-
+</blockquote>
+</details>
 
 
 
@@ -868,10 +873,25 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2301.12810">Crawling The Internal Knowledge-Base of Language Models</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12810">Crawling The Internal Knowledge-Base of Language Models</a> </summary>
 <br>
 <blockquote>
 目的是获得一个可解释和透明的表示，使人类能够检查LM知道什么，不知道什么，为什么会犯某些错误，以及LM编码的偏见是什么。
+
+**贡献：**
+- 1.设计了一个从LM中提取知识图谱（KG）方法
+- 2.基于Prompt的方法将任务分解为多个子任务
+![](README.assets/CRAW.PNG)
+主要内容：
+- 1.Relation Generation
+- 2.Relation Paraphrasing
+- 3.Object Generation
+- 4.Learning to Output “Don’t Know”
+- 5.Subject Paraphrasing
+- 6.LMCRAWL
+![](README.assets/CRAW-TABLE.PNG)
+
+
 
 </blockquote>
 </details>
@@ -957,11 +977,6 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 🟧 Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
 
-
-Crawling the Internal Knowledge-Base of Language Models
-
-
-Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
 
 Active Prompting with Chain-of-Thought for Large Language Models
 
