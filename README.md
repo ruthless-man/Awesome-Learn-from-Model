@@ -627,7 +627,6 @@ but a Good Reranker for Hard Samples!</a> </summary>
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
 </a> </summary>
-<br>
 <blockquote>
 
 将预训练语言模型的知识生命周期划分为五个：  
@@ -653,7 +652,6 @@ but a Good Reranker for Hard Samples!</a> </summary>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders
 
 </a> </summary>
-<br>
 <blockquote>
 
 **CVPR 2023**
@@ -668,7 +666,6 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 <details>
 <summary> :x: <a href="https://arxiv.org/abs/2302.14771">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
-<br>
 <blockquote>
 
 **采用随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM***
