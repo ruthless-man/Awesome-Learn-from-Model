@@ -1,6 +1,7 @@
 :white_check_mark: 已阅读
 :x: 未阅读
 ⬜ 泛读
+🟧 不太相关
 
 
 # 论文列表
@@ -674,13 +675,32 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 
+##
+## 检索增强
 
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12652">REPLUG: Retrieval-Augmented Black-Box Language Models</a> </summary>
+<br>
+<blockquote>
+
+**处理生成文本中的事实性错误**
+
+以往的白盒检索增强中一般是冻结检索器，优化大模型，也就是让LM适应retriever。
+
+**思路:** 本文提出了一种黑盒式的检索增强组件REPLUG，优化检索组件，冻结大模型，让retriever适应LM，然后使用了一个集成的框架，其实就是把多个检索到的文档分别和输入x结合送到LM中，得到的结果再用权重的方式集成，老套路了。用余弦相似度去提取和x最接近的文本，然后分别结合x输入LM，得到集成结果，根据KL散度来训练检索器。
+![](README.assets/Replug1.PNG)
+![](README.assets/Replug2.PNG)
+
+损失函数（检索似然和语言模型似然之间的KL散度）：
+$$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
+
+</blockquote>
+</details>
 
 
 
 ##
-
-
 ## 多模态模型
 
 
@@ -847,6 +867,16 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2301.12810">Crawling The Internal Knowledge-Base of Language Models</a> </summary>
+<br>
+<blockquote>
+目的是获得一个可解释和透明的表示，使人类能够检查LM知道什么，不知道什么，为什么会犯某些错误，以及LM编码的偏见是什么。
+
+</blockquote>
+</details>
+
+
 
 
 
@@ -891,17 +921,42 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 </details>
 
 
+## 
+
+## 模块化
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.11529">Modular Deep Learning
+</a> </summary>
+<br>
+<blockquote>
+
+**关于模块化迁移学习的survey**
+
+- 观点1：多任务微调中，来自不同任务的学习信号可能会相互负向干扰。
+- 观点2：模块化深度学习通过将计算与路由分离，并在本地更新模块来实现正向迁移和系统性泛化；
+- 观点3：该框架由自主参数高效模块组成，信息有条件地被路由到模块的子集，随后被聚合；
+- 观点4：模块化还有其他用途，包括扩展语言模型、因果推理、程序归纳和强化学习中的规划；
+- 观点5：模块化深度学习已经成功地部署在具体的应用中，如跨语言和跨模态的知识转移。
+
+**总结:**  
+模块化深度学习提供了一种很有前途的解决方案，可以开发出专门针对多个任务而没有负面干扰的模型，并且可以系统性泛化到非相同分布的任务。
+</blockquote>
+</details>
+
+
+
+
+
 
 ##
 
 ## 待分类
 
 
-Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
+🟧 Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
 
-Modular Deep Learning
-
-REPLUG: Retrieval-Augmented Black-Box Language Models
 
 Crawling the Internal Knowledge-Base of Language Models
 
