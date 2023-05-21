@@ -671,6 +671,7 @@ but a Good Reranker for Hard Samples!</a> </summary>
 <br>
 <blockquote>
 
+**采用随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM***
 </blockquote>
 </details>
 
