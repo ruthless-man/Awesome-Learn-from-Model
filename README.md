@@ -1,7 +1,7 @@
-:white_check_mark: 已阅读
-:x: 未阅读
-⬜ 泛读
-🟧 不太相关
+:white_check_mark: 已阅读 \quad
+:x: 未阅读 \quad
+⬜ 已泛读 \quad
+🟧 待分类 \quad
 
 
 # 论文列表
@@ -397,6 +397,12 @@ Method部分介绍了数据标签的构建方法，总体任务划分为text com
 <blockquote>
 
 **ICLR 2023**
+
+**思路：**
+在模型面对一连串任务的情况下，为每个任务单独设计训练一个Prompt,同时前面的任务的prompt也会结合进来，但是不会被训练，同时对于每一个任务训练prompt的时候，遵循的训练方法是训练的时候优化MLP，然后训练完之后，输入到下一个任务的prompt是$P_k^{\prime}$：
+$$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
+
+![](README.assets/PP.PNG)
 
 </blockquote>
 </details>
@@ -1022,9 +1028,9 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 🟧 Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
 
 
-Causally Disentangled Generative Variational AutoEncoder
+🟧 Causally Disentangled Generative Variational AutoEncoder
 
-Out-of-Domain Robustness via Targeted Augmentations
+
 
 
 Aligning Text-to-Image Models using Human Feedback
