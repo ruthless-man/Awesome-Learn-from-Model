@@ -408,17 +408,6 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 </details>
 
 
-
-
-
-
-
-
-
-
-
-
-
 ### 思维链
 
 <details>
@@ -722,7 +711,14 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
 
+</a> </summary>
+<blockquote>
+
+</blockquote>
+</details>
 
 
 
@@ -1025,7 +1021,7 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 ## 待分类
 
 
-🟧 Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
+
 
 
 🟧 Causally Disentangled Generative Variational AutoEncoder
