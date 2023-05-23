@@ -568,10 +568,19 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2209.04836">Git re-basin: Merging models modulo permutation symmetries</a> </summary>
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
+
 
 
 ##
-## 模型蒸馏
+## Knowledge Distillation
 
 
 <details>
@@ -1036,20 +1045,15 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 ## 待分类
 
 
-
-
-
 🟧 Causally Disentangled Generative Variational AutoEncoder（VAE设计）
 
 
-🟧Out-of-Domain Robustness via Targeted Augmentations (数据增强方法解决OOD问题)
+🟧 Out-of-Domain Robustness via Targeted Augmentations (数据增强方法解决OOD问题)
 
-
-Aligning Text-to-Image Models using Human Feedback
 
 Exponential Hardness of Reinforcement Learning with Linear Function Approximation
 
 Digital twin aided adversarial transfer learning method for domain adaptation fault diagnosis
 
-Git re-basin: Merging models modulo permutation symmetries
+
 
