@@ -87,7 +87,7 @@
 
 **步骤：**
 - 1.使用多个文本提示，基于图像生成模型生成多个图形，然后收集二进制的人类反馈。
-- 2.基于输入：文本+图像，输出：人类反馈训练一个反馈（奖励）函数，反馈函数的损失由MSE和交叉熵损失组成
+- 2.基于CLIP输入：文本+图像，输出：人类反馈训练一个反馈（奖励）函数，反馈函数的损失由MSE和交叉熵损失组成
 - 3.基于这个模型来微调生成模型，一个文本生成的多个图的评分用加权和处理后反向训练
 损失函数：
 $$\mathcal{L}(\theta)=\underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text {model }}}{\mathbb{E}}\left[-r_\phi(\mathbf{x}, \mathbf{z}) \log p_\theta(\mathbf{x} \mid \mathbf{z})\right]+\beta \underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text {pre }}}{\mathbb{E}}\left[-\log p_\theta(\mathbf{x} \mid \mathbf{z})\right]$$
