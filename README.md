@@ -159,29 +159,6 @@
 
 
 
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
-<br>
-<blockquote>
-
-
-**思维链系列开山作品：Chain of thought prompting elicits reasoning in large language models（NIPS 2022）**  
-思维链可参考博客：https://zhuanlan.zhihu.com/p/620776904 
-
-思维链是一系列的短句子，模仿了人类在回答问题时的思考和可能的推理过程。
-![](README.assets/思维链开山.PNG)
-第二篇Large Language Models are Zero-Shot Reasoners的发现很有趣
-
-**回到本篇：**  
-大多数 CoT 研究依赖于精心设计的人工注释理性链来提示语言模型，这对现实世界的应用提出了挑战。本文提出了一种新的策略Automate-CoT，它可以通过从一个小的标记数据集中自动增加理性链，然后修剪低质量的链来绕过人工标注思维链的过程。最后，它采用减少方差的策略梯度策略来估计语言模型中每个示例的重要性，从池中选择几个基本原理链的最佳组合用于形成思维链。  
-核心内容：小型标注数据集 ——> 扩充推理链 ——> 删除低质推理链，构建候选池 ——> 选择示例组合 ——> 推理链提示  
-实验结果：算术推理 (+2.7%)、常识推理 (+3.4%)、符号推理 (+3.2%) 和非推理任务(+2.5%)
-
-</blockquote>
-</details>
-
-
-
 
 
 
@@ -411,6 +388,70 @@ Method部分介绍了数据标签的构建方法，总体任务划分为text com
 
 </blockquote>
 </details>
+
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
+<br>
+<blockquote>
+
+**ICLR 2023**
+
+</blockquote>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 思维链
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
+<br>
+<blockquote>
+
+
+**思维链系列开山作品：Chain of thought prompting elicits reasoning in large language models（NIPS 2022）**  
+思维链可参考博客：https://zhuanlan.zhihu.com/p/620776904 
+
+思维链是一系列的短句子，模仿了人类在回答问题时的思考和可能的推理过程。
+![](README.assets/思维链开山.PNG)
+第二篇Large Language Models are Zero-Shot Reasoners的发现很有趣
+
+**回到本篇：**  
+大多数 CoT 研究依赖于精心设计的人工注释理性链来提示语言模型，这对现实世界的应用提出了挑战。本文提出了一种新的策略Automate-CoT，它可以通过从一个小的标记数据集中自动增加理性链，然后修剪低质量的链来绕过人工标注思维链的过程。最后，它采用减少方差的策略梯度策略来估计语言模型中每个示例的重要性，从池中选择几个基本原理链的最佳组合用于形成思维链。  
+核心内容：小型标注数据集 ——> 扩充推理链 ——> 删除低质推理链，构建候选池 ——> 选择示例组合 ——> 推理链提示  
+实验结果：算术推理 (+2.7%)、常识推理 (+3.4%)、符号推理 (+3.2%) 和非推理任务(+2.5%)
+
+</blockquote>
+</details>
+
+
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12246">Active Prompting with Chain-of-Thought for Large Language Models</a> </summary>
+<br>
+<blockquote>
+
+**思路：**
+- 1.主动提示(Active-Prompt)通过特定任务的示例提示使大型语言模型自适应不同任务
+- 2.采用基于不确定性的主动选择策略，选择最有用的问题进行标注
+- 3.介绍了四种不同的不确定性估计策略：分歧、熵、方差和自信度
+
+![](README.assets/ACTIVE-COT.PNG)
+
+</blockquote>
+</details>
+
 
 
 
@@ -644,13 +685,15 @@ but a Good Reranker for Hard Samples!</a> </summary>
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2212.05956">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2212.05956">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
 <br>
 <blockquote>
 
-**采用随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM**
+**采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
 
+SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
 
+![](README.assets/SWA.PNG)
 
 </blockquote>
 </details>
@@ -978,11 +1021,6 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 🟧 Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
 
-
-Active Prompting with Chain-of-Thought for Large Language Models
-
-
-Progressive Prompts: Continual Learning for Language Models
 
 Causally Disentangled Generative Variational AutoEncoder
 
