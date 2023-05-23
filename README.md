@@ -75,6 +75,19 @@
 
 
 
+##
+
+## Fine Tuning
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.12192">Aligning Text-to-Image Models using Human Feedback</a> </summary>
+
+<br>
+<blockquote>
+
+</blockquote>
+</details>
+
 
 
 
@@ -83,7 +96,7 @@
 
 
 
-## 提示微调
+## Prompt Tuning
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">Adversarial Prompting for Black Box Foundation Models</a> </summary>
 <br>
@@ -695,11 +708,14 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data</a> </summary>
+<summary> ⬜ <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data</a> </summary>
 <br>
 <blockquote>
 
+**设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
 
+**思路：**
+不仅是将老师和学生在输出层的标签进行匹配，同时还要将他们中间阶段的特征图进行匹配
 
 </blockquote>
 </details>
@@ -1023,9 +1039,10 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 
 
-🟧 Causally Disentangled Generative Variational AutoEncoder
+🟧 Causally Disentangled Generative Variational AutoEncoder（VAE设计）
 
 
+🟧Out-of-Domain Robustness via Targeted Augmentations (数据增强方法解决OOD问题)
 
 
 Aligning Text-to-Image Models using Human Feedback
