@@ -392,7 +392,7 @@ Method部分介绍了数据标签的构建方法，总体任务划分为text com
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -694,11 +694,22 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 </details>
 
 
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data</a> </summary>
+<br>
+<blockquote>
+
+
+
+</blockquote>
+</details>
+
+
+
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders
-
-</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders</a> </summary>
+<br>
 <blockquote>
 
 **CVPR 2023**
@@ -709,18 +720,6 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 ![](README.assets/GS2D.PNG)
 </blockquote>
 </details>
-
-
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
-
-</a> </summary>
-<blockquote>
-
-</blockquote>
-</details>
-
-
 
 
 
