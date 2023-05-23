@@ -80,11 +80,22 @@
 ## Fine Tuning
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.12192">Aligning Text-to-Image Models using Human Feedback</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12192">Aligning Text-to-Image Models using Human Feedback</a> </summary>
 
 <br>
 <blockquote>
 
+**步骤：**
+- 1.使用多个文本提示，基于图像生成模型生成多个图形，然后收集二进制的人类反馈。
+- 2.基于输入：文本+图像，输出：人类反馈训练一个反馈（奖励）函数，反馈函数的损失由MSE和交叉熵损失组成
+- 3.基于这个模型来微调生成模型，一个文本生成的多个图的评分用加权和处理后反向训练
+损失函数：
+$$\mathcal{L}(\theta)=\underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text {model }}}{\mathbb{E}}\left[-r_\phi(\mathbf{x}, \mathbf{z}) \log p_\theta(\mathbf{x} \mid \mathbf{z})\right]+\beta \underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text {pre }}}{\mathbb{E}}\left[-\log p_\theta(\mathbf{x} \mid \mathbf{z})\right]$$
+损失函数第一项用我们自己设计的文本，反馈也用我们训练的，第二项用的是现有数据集，已经有标签了，不需要我们的反馈函数去打分，第二项就是为了防止过拟合的
+
+**缺陷：**
+图片生成的质量下降，原因可能是损失中第二项用到的数据量不够
+![](README.assets/RLHF.PNG)
 </blockquote>
 </details>
 
