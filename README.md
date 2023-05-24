@@ -1018,6 +1018,9 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 <br>
 <blockquote>
 
+**IJCV 2021**
+知识蒸馏由知识，蒸馏算法，师生架构三部分组成
+![](README.assets/KD.PNG)
 </blockquote>
 </details>
 
@@ -1062,9 +1065,9 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 🟧 Out-of-Domain Robustness via Targeted Augmentations (数据增强方法解决OOD问题)
 
 
-Exponential Hardness of Reinforcement Learning with Linear Function Approximation
+🟧 Exponential Hardness of Reinforcement Learning with Linear Function Approximation（强化学习的优化算法）
 
-Digital twin aided adversarial transfer learning method for domain adaptation fault diagnosis
+🟧 Digital twin aided adversarial transfer learning method for domain adaptation fault diagnosis（迁移学习用于工程领域三级泵的维修，额）
 
 
 
