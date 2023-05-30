@@ -579,15 +579,6 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2209.04836">Git re-basin: Merging models modulo permutation symmetries</a> </summary>
-<br>
-<blockquote>
-
-</blockquote>
-</details>
-
-
 
 
 ##
@@ -1020,8 +1011,31 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 **IJCV 2021**
 
-知识蒸馏由知识，蒸馏算法，师生架构三部分组成
+知识蒸馏由知识类型，蒸馏算法，师生架构三部分组成
 ![](README.assets/KD.PNG)
+
+
+**根据使用到的知识阶段进行划分：**
+
+- Response-Based Knowledge 只用最后一层logit
+$$L_{\operatorname{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
+
+- Feature-Based Knowledge 还用到中间层特征
+$$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
+
+- Relation-Based Knowledge 基于关系的知识探索不同层或数据样本之间的关系
+$$L_{\operatorname{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
+![](README.assets/relation-based.PNG)
+
+
+
+**根据教师学生模型是否同步更新进行划分：**
+
+- 离线蒸馏
+- 在线蒸馏
+- 自我蒸馏
+
+
 </blockquote>
 </details>
 
@@ -1059,7 +1073,6 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 ## 待分类
 
-
 🟧 Causally Disentangled Generative Variational AutoEncoder（VAE设计）
 
 
@@ -1070,5 +1083,20 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 🟧 Digital twin aided adversarial transfer learning method for domain adaptation fault diagnosis（迁移学习用于工程领域三级泵的维修，额）
 
+
+<details>
+<summary> 🟧 <a href="https://arxiv.org/abs/2209.04836">Git re-basin: Merging models modulo permutation symmetries</a> </summary>
+<br>
+<blockquote>
+
+**合并模型的模排列对称性:**
+
+深度学习的成功归功于我们能够相对轻松地解决某些大规模的非凸优化问题。尽管非凸优化是 NP 难的，但简单的算法（通常是SGD的变体）在实践中拟合大型神经网络时表现出令人惊讶的有效性。在考虑了隐藏单元所有可能的排列对称性之后，我们认为神经网络损失包含（几乎）一个单一的极值点。我们引入了三种算法来置换一个模型的单元，使它们与参考模型的单元对齐。这种转换产生了一组功能等效的权重，它们位于参考模型附近的近似凸极值点中。在实验上，我们在各种模型架构和数据集中展示了单极值点现象，包括首次（据我们所知）在 CIFAR-10 和 CIFAR-100 上独立训练的 ResNet 模型之间的零障碍线性模式连接性演示。此外，我们还发现了将模型宽度和训练时间与各种模型和数据集的模式连通性相关的有趣现象。最后，我们讨论了单极值点理论的缺点，包括线性模式连通性假设的反例。
+
+
+**偏理论的深度学习训练优化研究**
+
+</blockquote>
+</details>
 
 
