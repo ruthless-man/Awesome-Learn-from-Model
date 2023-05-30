@@ -1018,17 +1018,13 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 **根据使用到的知识阶段进行划分：**
 
 - Response-Based Knowledge 只用最后一层logit
-$$
-L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)
-$$
+$$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
 
 - Feature-Based Knowledge 还用到中间层特征
 $$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
 
 - Relation-Based Knowledge 基于关系的知识探索不同层或数据样本之间的关系
-$$
-L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)
-$$
+$$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
 
 ![](README.assets/relation-based.PNG)
 
