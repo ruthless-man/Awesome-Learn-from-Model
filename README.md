@@ -1004,7 +1004,7 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/pdf/2006.05525.pdf">Knowledge distillation: A survey
+<summary> :white_check_mark: <a href="https://arxiv.org/pdf/2006.05525.pdf">Knowledge distillation: A survey
 </a> </summary>
 <br>
 <blockquote>
@@ -1032,9 +1032,29 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
 
 **根据教师学生模型是否同步更新进行划分：**
 
-- 离线蒸馏
-- 在线蒸馏
-- 自我蒸馏
+- 离线蒸馏：先训练教师模型，然后离线训练学生模型
+- 在线蒸馏：两个模型同时更新，不区分教师和学生模型
+- 自我蒸馏：两个模型的架构完全一致，可以看成是学生自己学习
+
+
+**根据蒸馏算法进行划分：**
+
+- 对抗蒸馏
+- 多教师蒸馏
+- 跨通道蒸馏
+- 图蒸馏
+- 注意力蒸馏
+- 无数据蒸馏
+- 量化蒸馏
+- 终生蒸馏
+- 神经结构搜索蒸馏
+
+**根据应用进行划分**
+- CV
+- NLP
+- 语音识别
+- 推荐系统
+
 
 
 </blockquote>
