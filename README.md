@@ -776,6 +776,22 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 
 
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2302.07027">AdapterSoup: Weight Averaging to Improve Generalization of Pretrained Language Models</a> </summary>
+<br>
+<blockquote>
+
+
+</blockquote>
+</details>
+
+
+
+
+
+
 ##
 ## 多模态模型（Multimodal Learning）
 
@@ -871,8 +887,16 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 ## 模型重用（Model Reuse）
 
 
+<details>
+<summary> :x: <a href="https://ieeexplore.ieee.org/document/9949516">Nonlinear Multi-Model Reuse
+</a> </summary>
+<br>
+<blockquote>
 
 
+
+</blockquote>
+</details>
 
 
 
@@ -900,7 +924,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 ##
 
-## 知识探索
+## 知识探索（Knowledge Exploration）
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/1909.01066">Language Models as Knowledge Bases?</a> </summary>
@@ -982,7 +1006,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 ##
 
-## 相关综述
+## 相关综述（Related Survey）
 
 
 <details>
@@ -1064,7 +1088,7 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
 
 ## 
 
-## 模块化
+## 模块化（Modularity）
 
 
 <details>
