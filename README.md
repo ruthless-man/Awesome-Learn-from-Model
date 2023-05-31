@@ -6,8 +6,7 @@
 
 # 论文列表
 
-## 模型安全
-
+## 模型安全（Model Safety）
 **模型攻击的分类：**
 - 对抗样本（adversarial examples）：故意对输入样例添加难以察觉的扰动使模型以高置信度给出一个错误的输出。  
 - 通用对抗补丁（universal adversarial patch）：对抗样本的一种特殊形式，对抗样本是对每一个样本生成其特定的扰动，而UAP对任何样本生成通用的精心构造的扰动。 
@@ -77,7 +76,7 @@
 
 ##
 
-## Fine Tuning
+## 微调（Fine Tuning）
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12192">Aligning Text-to-Image Models using Human Feedback</a> </summary>
@@ -107,7 +106,7 @@ $$\mathcal{L}(\theta)=\underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text
 
 
 
-## Prompt Tuning
+## 提示调优（Prompt Tuning）
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">Adversarial Prompting for Black Box Foundation Models</a> </summary>
 <br>
@@ -432,7 +431,7 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 </details>
 
 
-### 思维链
+### 思维链（Chain of Thought）
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
@@ -482,7 +481,7 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 
 ##
 
-## 模型融合
+## 模型融合（Model fusion）
 
 
 <details>
@@ -582,7 +581,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 ##
-## Knowledge Distillation
+## 知识蒸馏（Knowledge Distillation）
 
 
 <details>
@@ -753,7 +752,7 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 ##
 
-## 检索增强
+## 检索增强（Retrieval Augmented）
 
 
 <details>
@@ -778,7 +777,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 
 ##
-## 多模态模型
+## 多模态模型（Multimodal Learning）
 
 
 <details>
@@ -817,7 +816,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </details>
 
 ##
-## 模型编辑
+## 模型编辑（Model Editing）
 
 
 
@@ -838,7 +837,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 ##
-## 神经崩塌
+## 神经崩塌（Neural Collapse）
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
@@ -868,6 +867,8 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 
+##
+## 模型重用（Model Reuse）
 
 
 
