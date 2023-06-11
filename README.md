@@ -899,7 +899,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2306.03900">Model Spider: Learning to Rank Pre-Trained Models Efficiently
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2306.03900">Model Spider: Learning to Rank Pre-Trained Models Efficiently
 </a> </summary>
 <br>
 <blockquote>
@@ -914,6 +914,24 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </blockquote>
 </details>
 
+
+
+<details>
+<summary> :x: <a href="https://arxiv.org/abs/2306.03828">Quick-Tune: Quickly Learning Which Pretrained Model to Finetune and How
+</a> </summary>
+<br>
+<blockquote>
+
+**为新的数据集（新任务）选择一个准确的预训练模型及其最优超参数**
+
+- 设计广泛的搜索空间：创建了一个涵盖常见微调策略的搜索空间，用于训练和评估模型与数据集组合。
+
+- 创建大型元数据集：通过在搜索空间中训练和评估 20,000 个模型与数据集组合，我们生成了一个大型元数据集，用于元学习多保真度性能预测器。
+
+- 元学习多保真度性能预测器：利用元数据集，我们训练了一个多保真度性能预测器，用于预测不同模型在不同数据集上的性能。
+
+</blockquote>
+</details>
 
 
 ##
