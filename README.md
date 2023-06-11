@@ -894,12 +894,25 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 <blockquote>
 
 
-
 </blockquote>
 </details>
 
 
+<details>
+<summary> ⬜ <a href="https://arxiv.org/abs/2306.03900">Model Spider: Learning to Rank Pre-Trained Models Efficiently
+</a> </summary>
+<br>
+<blockquote>
 
+**高效选择合适的预训练模型用于新任务的方法**
+
+- 提出了一种新的模型蜘蛛方法来对任务和ptm进行标记，该方法能够在给定下游任务的模型动物园中高效准确地对ptm进行排序
+- MODEL SPIDER学习在单独的任务训练集上对ptm进行标记和排序，并且在资源预算允许的情况下，它可以合并某些ptm的特定于任务的前向结果。
+
+![](README.assets/蜘蛛侠.PNG)
+
+</blockquote>
+</details>
 
 
 
