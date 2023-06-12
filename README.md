@@ -78,7 +78,9 @@
 <summary> :white_check_mark: <a href="https://dl.acm.org/doi/abs/10.1145/3543507.3583348">Training-free Lexical Backdoor Attacks on Language Models</a> </summary>
 <br>
 <blockquote>
+
 **2023 WWW**
+
 后门攻击介绍：Backdoor learning: A survey 
 
 从分词器（tokenizer）的视角设计了一种无需训练的词法后门攻击(TFLexAttack)，主要思路就是直接把模型的分析器给改了，其他地方不动，将triggers秘密植入语言模型中，本文是用白盒攻击。  
@@ -98,8 +100,11 @@
 <blockquote>
 
 建议查看前缀论文Zoo: Zeroth order optimization based black-box attacks to deep neural networks without training substitute models
+
 **基于对抗训练（AT）的防御机制**
+
 通过将去噪平滑(DS)与零阶优化(ZO)相结合，构建了一个可行的黑盒防御框架。然而，论文发现直接应用ZO优化使得防御无效且难以扩展。然后，提出了ZO-AE-DS，加上了自编码器(AE)来弥合FO和ZO优化之间的差距。
+
 ![](README.assets/ZO-AE-DS.PNG)
 </blockquote>
 </details>
@@ -261,10 +266,11 @@ Lightweight fine-tuning：（1）removing parameters，（2）summation tuning �
 <br>
 <blockquote>
 NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
-1.基础的提示工程  
-2.答案提示  
-3.多提示学习  
-4.提示感知方法  
+- 1.基础的提示工程  
+- 2.答案提示  
+- 3.多提示学习  
+- 4.提示感知方法  
+
 http://pretrain.nlpedia.ai/  
 
 prompting 更加依赖先验，而 fine-tuning 更加依赖后验
@@ -288,11 +294,6 @@ prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
 </blockquote>
 </details>
-
-
-
-
-
 
 
 
@@ -381,7 +382,7 @@ Pre-training via Soft Prompts</a> </summary>
 <br>
 <blockquote>
 
-(i)推导了主流PETL方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。    
+(i)推导了主流PETL(Parameter efficient transfer learning)方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。    
 (ii)我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
 (iii)对迁移学习的全面研究证明了U-Tuning的通用性和强大性。  
 
@@ -535,7 +536,10 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
 
-**CVPR 2023  CaFo提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。**
+**CVPR 2023**
+
+提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。
+
 融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
 CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
 </details>
