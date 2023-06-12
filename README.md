@@ -627,8 +627,13 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 **Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
 1.Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
-（1）噪声优化 （2）生成重建 （3）对抗探索  
+
+- （1）噪声优化 
+- （2）生成重建 
+- （3）对抗探索  
+
 应用方向：量化剪枝，增量学习，模型攻击
+
 2.Source-(Data) Free Domain Adaptation (SFDA) 无数据领域自适应：通过目标数据查询和探索跨领域知识，两个模型的结构共享（就是参数不一样），面对不同的任务  
 实现方法：（1）自监督训练：伪标签聚类；伪标签过滤 （2）虚拟源知识转移：源印象；风格迁移  
 应用方向：语义分割，目标检测  
@@ -656,21 +661,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 </details>
 
 
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
-<br>
-<blockquote>
 
-**ICLR**
-用于图像识别的生成数据：  
-1.传统仿真流水线生成的生成数据集（从图形引擎合成3D模型或场景的2D渲染）  
-2.Diffusion，GAN生成模型合成得到
-
-从生成数据角度出发对于零样本分类，少样本分类和预训练数据合成三个角度开展了实验分析，工作量大  
-结论：合成数据可以促进image recognition，合成数据在预训练方面甚至超过imagenet。  
-局限性：受限于资源无法计算更大尺寸的图片大小
-</blockquote>
-</details>
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
@@ -695,8 +686,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor,
-but a Good Reranker for Hard Samples!</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!</a> </summary>
 <br>
 <blockquote>
 
@@ -838,6 +828,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 <blockquote>
 
 **语言不是你需要的全部：对齐感知与语言模型，主要是针对多模态大模型的研究**
+
 github链接：https://github.com/microsoft/unilm  
 
 
@@ -1014,7 +1005,21 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </blockquote>
 </details>
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
+<br>
+<blockquote>
 
+**ICLR**
+用于图像识别的生成数据：  
+1.传统仿真流水线生成的生成数据集（从图形引擎合成3D模型或场景的2D渲染）  
+2.Diffusion，GAN生成模型合成得到
+
+从生成数据角度出发对于零样本分类，少样本分类和预训练数据合成三个角度开展了实验分析，工作量比较大  
+结论：合成数据可以促进image recognition，合成数据在预训练方面甚至超过imagenet。  
+局限性：受限于资源无法计算更大尺寸的图片大小
+</blockquote>
+</details>
 
 
 <details>
