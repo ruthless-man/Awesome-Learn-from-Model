@@ -19,11 +19,40 @@
 
 <details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2004.15015">Imitation Attacks and Defenses for Black-box Machine Translation Systems</a> </summary>
+
+
+<blockquote>
+
+**机器翻译黑箱系统的攻击和窃取研究**
+
+提出了一种修改生产模型输出的防御方法，以误导模仿模型的优化。这种防御会降低对手的BLEU分数和攻击成功率，但代价是降低了防守方的BLEU和推理速度。
+
+- 基于知识蒸馏的方式提出了由生产模型获得模仿模型的方式
+- 基于白盒对抗攻击的方式利用模仿模型得到对抗性示例然后用于生产模型
+
+**这篇文章政治倾向不良（使用了谷歌误译的例子），不做引用**
+
+</blockquote>
 </details>
+
+
+
+
 
 <details>
 <summary> :white_check_mark: <a href="https://openreview.net/forum?id=LoJ6oXzc_P3">STEALING AND DEFENDING TRANSFORMER-BASED ENCODERS</a> </summary>
-</details>  
+<blockquote>
+
+**关注模型窃取和防御**
+
+
+- 设计了模型窃取的算法，并且只需要原始训练集四十分之一的数据量就能达到原模型的效果
+- 针对防御，提出了DSI水印机制，在视觉模型和语言模型上都有一定的效果（语言模型的防御是后面加的，结果还是被Reject了）
+
+![](README.assets/DSI.PNG)
+
+</blockquote>
+</details>
 
 
 <details>
@@ -32,6 +61,7 @@
 <blockquote>
 
 **NIPS 2021**
+
 关注模型反演(MI)攻击，即只能访问训练过的分类器的情况下恢复训练集，这篇属于是白盒攻击  
 
 1.将模型反演(MI)攻击问题看作是一个变分推理(VI)问题  
