@@ -67,6 +67,8 @@
 1.将模型反演(MI)攻击问题看作是一个变分推理(VI)问题  
 2.使用一组深度规范化流来实现框架  
 
+![](README.assets/变分.PNG)
+
 </blockquote>
 </details>
 
