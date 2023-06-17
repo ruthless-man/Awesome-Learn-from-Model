@@ -879,35 +879,6 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </details>
 
 
-##
-## 神经崩塌（Neural Collapse）
-
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.09081">Inducing Neural Collapse in Imbalanced Learning: Do We Really Need a Learnable Classifier at the End of Deep Neural Network?</a> </summary>
-<br>
-<blockquote>
-
-分析了神经崩塌问题，提出了一种全新的框架，把可训练线性分类器修改为一个训练过程中保持不变的随机初始化的 ETF simplex，训练过程中最后一层 classifier 不再需要 push 梯度，只需要 pull 梯度，同时证明了一个更好的收敛性质。
-
-</blockquote>
-</details>
-
-
-
-
-<details>
-<summary> ⬜ <a href="https://www.researchgate.net/publication/348927984_Layer-Peeled_Model_Toward_Understanding_Well-Trained_Deep_Neural_Networks#:~:text=In%20this%20paper%2C%20we%20introduce%20the%20Layer-Peeled%20Model%2Ca,suggests%2C%20this%20new%20model%20is%20derived%20by%20isolating">Layer-Peeled Model: Toward Understanding Well-Trained Deep Neural Networks</a> </summary>
-<br>
-<blockquote>
-分层模型：理解训练有素的深度神经网络
-
-
-</blockquote>
-</details>
-
-
-
-
 
 
 ##
@@ -959,21 +930,6 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 </blockquote>
 </details>
-
-
-##
-## 数理基础
-
-<details>
-<summary> :x: <a href="https://www.csie.ntu.edu.tw/~b97058/tseng/papers/archive/bcr_jota.pdf">Convergence of a block coordinate descent method for nondifferentiable minimization</a> </summary>
-<br>
-<blockquote>
-
-
-
-</blockquote>
-</details>
-
 
 
 
@@ -1190,31 +1146,4 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
 ##
 
 ## 待分类
-
-🟧 Causally Disentangled Generative Variational AutoEncoder（VAE设计）
-
-
-🟧 Out-of-Domain Robustness via Targeted Augmentations (数据增强方法解决OOD问题)
-
-
-🟧 Exponential Hardness of Reinforcement Learning with Linear Function Approximation（强化学习的优化算法）
-
-🟧 Digital twin aided adversarial transfer learning method for domain adaptation fault diagnosis（迁移学习用于工程领域三级泵的维修，额）
-
-
-<details>
-<summary> 🟧 <a href="https://arxiv.org/abs/2209.04836">Git re-basin: Merging models modulo permutation symmetries</a> </summary>
-<br>
-<blockquote>
-
-**合并模型的模排列对称性:**
-
-深度学习的成功归功于我们能够相对轻松地解决某些大规模的非凸优化问题。尽管非凸优化是 NP 难的，但简单的算法（通常是SGD的变体）在实践中拟合大型神经网络时表现出令人惊讶的有效性。在考虑了隐藏单元所有可能的排列对称性之后，我们认为神经网络损失包含（几乎）一个单一的极值点。我们引入了三种算法来置换一个模型的单元，使它们与参考模型的单元对齐。这种转换产生了一组功能等效的权重，它们位于参考模型附近的近似凸极值点中。在实验上，我们在各种模型架构和数据集中展示了单极值点现象，包括首次（据我们所知）在 CIFAR-10 和 CIFAR-100 上独立训练的 ResNet 模型之间的零障碍线性模式连接性演示。此外，我们还发现了将模型宽度和训练时间与各种模型和数据集的模式连通性相关的有趣现象。最后，我们讨论了单极值点理论的缺点，包括线性模式连通性假设的反例。
-
-
-**偏理论的深度学习训练优化研究**
-
-</blockquote>
-</details>
-
 
