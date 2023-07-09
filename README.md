@@ -786,6 +786,20 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 </details>
 
 
+<details>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Deep Classifier Mimicry without Data Access</a> </summary>
+<br>
+<blockquote>
+
+- 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
+- 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
+- 与许多需要访问原始数据或依赖于复杂模型假设的“最先进”的方法相比，CAKE的分类准确性具有竞争力。
+
+![](README.assets/边界知识蒸馏.PNG)
+</blockquote>
+</details>
+
+
 
 
 ##
