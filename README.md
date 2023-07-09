@@ -447,7 +447,7 @@ Method部分介绍了数据标签的构建方法，总体任务划分为text com
 
 
 
-<!-- <details>
+<details>
 <summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
 <br>
 <blockquote>
@@ -461,7 +461,7 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 ![](README.assets/PP.PNG)
 
 </blockquote>
-</details> -->
+</details>
 
 
 ### 思维链（Chain of Thought）
@@ -614,7 +614,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.04761">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04761">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
 <br>
 <blockquote>
 
