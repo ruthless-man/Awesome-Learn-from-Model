@@ -614,14 +614,22 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04761">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2306.02561">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
 <br>
 <blockquote>
 
 
-- PAIRRANKE: Compares the outputs from N LLMs (两两比较的方法)
+**ACL 2023**
 
-GENFUSER: Fuses to generate the final output from the top K ranked outputs
+LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
+
+- PAIRRANKER：对N个LLM输出进行两两比较。对输入文本和一对候选标签进行联合编码，得到矩阵分值表，based on DeBERTa
+- GENFUSER：聚合排名为前K的LLM输出，Based on Flan-T5-XL
+- 引入了MixInstruct数据集（self-instruct格式，包含训练和测试集），用于测试集成型LLM
+
+
+![](README.assets/LLM-BLENDER.PNG)
+
 </blockquote>
 </details>
 
@@ -787,7 +795,7 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Deep Classifier Mimicry without Data Access</a> </summary>
+<summary> :white_check_mark: <a href="https://arxiv.org/abs/2306.02090">Deep Classifier Mimicry without Data Access</a> </summary>
 <br>
 <blockquote>
 
