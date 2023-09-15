@@ -1,268 +1,89 @@
-:white_check_mark: 已阅读
-:x: 未阅读
-⬜ 已泛读
-🟧 待分类
+# Learn from Model: A suvery (paper list)
+
+**Abstract**
+
+> Large Pre-trained Models (LPMs) have demonstrated remarkable performance across a wide range of tasks (especially in the fields of natural language processing and computer vision), primarily attributed to their ability to comprehend instructions and access extensive, high-quality data. This not only showcases their current effectiveness but also sets a promising trajectory towards the development of artificial general intelligence. 
+> Unfortunately, due to competitive reasons, the raw data of the model used for large model training are often inaccessible, so the use of end-to-end models for downstream tasks has become a new research trend, which we call **learn from model (LFM)** in this article. LFM focuses on the research, modification, and design of LPMs based on the only model interface, so as to better understand the model structure and weights (in a black box environment), and to generalize the model to downstream tasks. The study of LFM techniques can be broadly categorized into six major areas: model tuning, model distillation, model reuse, meta learning, model editing and model augmentation. Each category encompasses a repertoire of methods and strategies that aim to enhance the capabilities and performance of LPMs.
+> This paper gives a comprehensive review of the current methods based on LPMs from the perspective of LFM, in order to help readers better understand the current research status and ideas. To conclude, we summarize the survey by highlighting several critical areas for future exploration and addressing open issues that require further attention from the research community. As the field of LFM continues to evolve, it is essential to explore new directions, tackle challenges, and collaborate to unlock the full potential of LPMs in the advancement of artificial intelligence. The relevant papers we investigated in this article can be accessed at https://github.com/ruthless-man/Awesome-Learn-from-Model.
 
 
-# 论文列表
-
-## 模型安全（Model Safety）
-**模型攻击的分类：**
-- 对抗样本（adversarial examples）：故意对输入样例添加难以察觉的扰动使模型以高置信度给出一个错误的输出。  
-- 通用对抗补丁（universal adversarial patch）：对抗样本的一种特殊形式，对抗样本是对每一个样本生成其特定的扰动，而UAP对任何样本生成通用的精心构造的扰动。 
-- 数据投毒（data poisoning）：数据投毒攻击发生在数据收集与预处理阶段，目标是影响模型推理时的准确率。 
-- 后门攻击（backdoor attack）：代码投毒code poisoning，外包outsourcing，预训练pretrained，数据收集data collection，协作学习collaborative learning，部署后post-deployment。
+## Model Tuning
 
 
+### Weight Enginerring
 
+#### Fine Tuning
 
+- P.  Liu  et  al.   Pre-train,  prompt,  and  predict:  A  systematic  survey  of prompting  methods  in  natural  language  processing. ACM  Computing Surveys , 55(9):1–35, 2023.
+- [[arXiv](https://arxiv.org/abs/2104.08691)] B.  Lester  et  al.    The  power  of  scale  for  parameter-efficient  prompt tuning. arXiv preprint arXiv:2104.08691 , 2021.
+- B. Min et al.  Recent advances in natural language processing via large pre-trained language models: A survey. ACM Computing Surveys , 2021.
+- N. Tajbakhsh et al.  Convolutional neural networks for medical image analysis:  Full  training  or  fine  tuning? IEEE  transactions  on  medical imaging , 35(5):1299–1312, 2016.
+- E.  B.  Zaken  et  al.   Bitfit:  Simple  parameter-efficient  fine-tuning  for transformer-based  masked  language-models. CoRR ,  abs/2106.10199, 2021.
+- M.  Wortsman  et  al. Robust  fine-tuning  of  zero-shot  models. In Proceedings  of  the  IEEE/CVF  Conference  on  Computer  Vision  and Pattern Recognition , pp. 7959–7971, 2022.
+- A. Radford et al.  Improving language understanding by generative pretraining.  2018.
+- [[arXiv](https://arxiv.org/abs/2008.03156)] A.  Aghajanyan  et  al.   Better  fine-tuning  by  reducing  representational collapse. arXiv preprint arXiv:2008.03156 , 2020.
+- [[arXiv](https://arxiv.org/abs/2202.10054)] A. Kumar et al.  Fine-tuning can distort pretrained features and underperform out-of-distribution. arXiv preprint arXiv:2202.10054 , 2022.
+- N. Ruiz et al.  Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pp. 22500–22510, 2023.
+- C. Chen et al.   Deep learning on computational-resource-limited platforms: a survey. Mobile Information Systems , 2020:1–19, 2020.
+- Y. Sun et al. Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning. Advances in Neural Information Processing Systems , 35:37484–37496, 2022.
+- T. L. Hayes et al.  Remind your neural network to prevent catastrophic forgetting.  In European Conference on Computer Vision , pp. 466–483. Springer, 2020.
+- Z.  Fu  et  al.   On  the  effectiveness  of  parameter-efficient  fine-tuning. In Proceedings  of  the  AAAI  Conference  on  Artificial  Intelligence , volume 37, pp. 12799–12807, 2023.
+- [[arXiv](https://arxiv.org/abs/2301.12314)] A.  Razdaibiedina  et  al.   Progressive  prompts:  Continual  learning  for language models. arXiv preprint arXiv:2301.12314 , 2023.
 
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2004.15015">Imitation Attacks and Defenses for Black-box Machine Translation Systems</a> </summary>
+### Adapter Tuning
 
+- N.  Houlsby  et  al.    Parameter-efficient  transfer  learning  for  nlp.    In International Conference on Machine Learning , pp. 2790–2799. PMLR, 2019.
+- N. Ding et al.  Parameter-efficient fine-tuning of large-scale pre-trained language models. Nature Machine Intelligence , 5(3):220–235, 2023.
+- [[arXiv](https://arxiv.org/abs/2005.00247)] J. Pfeiffer et al.   Adapterfusion: Non-destructive task composition for transfer learning. arXiv preprint arXiv:2005.00247 , 2020.
+- [[arXiv](https://arxiv.org/abs/2106.03164)] R. He et al.  On the effectiveness of adapter-based tuning for pretrained language model adaptation. arXiv preprint arXiv:2106.03164 , 2021.
+- R. Karimi Mahabadi et al. Compacter: Efficient low-rank hypercomplex adapter  layers. In  M.  Ranzato  et  al.,  editors, Advances  in  Neural Information  Processing  Systems ,  volume  34,  pp.  1022–1035.  Curran Associates, Inc., 2021.
+- [[arXiv](https://arxiv.org/abs/2106.01463)] H.  Le  et  al. Lightweight  adapter  tuning  for  multilingual  speech translation. arXiv preprint arXiv:2106.01463 , 2021.
+- [[arXiv](https://arxiv.org/abs/2205.12410)] Y.  Wang  et  al.    Adamix:  Mixture-of-adapter  for  parameter-efficient tuning  of  large  language  models. arXiv  preprint  arXiv:2205.12410 , 2022.
+- Z.-C. Chen et al.  Exploring efficient-tuning methods in self-supervised speech models.  In 2022 IEEE Spoken Language Technology Workshop (SLT) , pp. 1120–1127. IEEE, 2023.
+- S.  Vander  Eeckt  and  H.  Van  Hamme.    Using  adapters  to  overcome catastrophic  forgetting  in  end-to-end  automatic  speech  recognition. In ICASSP  2023-2023  IEEE  International  Conference  on  Acoustics, Speech and Signal Processing (ICASSP) , pp. 1–5. IEEE, 2023.
 
-<blockquote>
+## Input engineering
 
-**机器翻译黑箱系统的攻击和窃取研究**
+### Prompt Tuning
 
-提出了一种修改生产模型输出的防御方法，以误导模仿模型的优化。这种防御会降低对手的BLEU分数和攻击成功率，但代价是降低了防守方的BLEU和推理速度。
-
-- 基于知识蒸馏的方式提出了由生产模型获得模仿模型的方式
-- 基于白盒对抗攻击的方式利用模仿模型得到对抗性示例然后用于生产模型
-
-**这篇文章政治倾向不良（使用了谷歌误译的例子），不做引用**
-
-</blockquote>
-</details>
-
-
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://openreview.net/forum?id=LoJ6oXzc_P3">STEALING AND DEFENDING TRANSFORMER-BASED ENCODERS</a> </summary>
-<blockquote>
-
-**关注模型窃取和防御**
-
-
-- 设计了模型窃取的算法，并且只需要原始训练集四十分之一的数据量就能达到原模型的效果
-- 针对防御，提出了DSI水印机制，在视觉模型和语言模型上都有一定的效果（语言模型的防御是后面加的，结果还是被Reject了）
-
-![](README.assets/DSI.PNG)
-
-</blockquote>
-</details>
-
-
-<details>
-<summary> ⬜ <a href="https://proceedings.neurips.cc/paper/2021/hash/50a074e6a8da4662ae0a29edde722179-Abstract.html">Variational model inversion attacks</a> </summary>
-<br>
-<blockquote>
-
-**NIPS 2021**
-
-关注模型反演(MI)攻击，即只能访问训练过的分类器的情况下恢复训练集，这篇属于是白盒攻击  
-
-1.将模型反演(MI)攻击问题看作是一个变分推理(VI)问题  
-2.使用一组深度规范化流来实现框架  
-
-![](README.assets/变分.PNG)
-
-</blockquote>
-</details>
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://dl.acm.org/doi/abs/10.1145/3543507.3583348">Training-free Lexical Backdoor Attacks on Language Models</a> </summary>
-<br>
-<blockquote>
-
-**2023 WWW**
-
-后门攻击介绍：Backdoor learning: A survey 
-
-从分词器（tokenizer）的视角设计了一种无需训练的词法后门攻击(TFLexAttack)，主要思路就是直接把模型的分析器给改了，其他地方不动，将triggers秘密植入语言模型中，本文是用白盒攻击。  
-- 策略1：TFLexAttack-substitution：通过标记替换操作给定单词的词汇嵌入
-- 策略2：TFLexAttack-insertion：通过标记插入在上下文上修改给定单词
-![](README.assets/backdoor.PNG)
-![](README.assets/back-algorithm.PNG)
-
-
-</blockquote>
-</details>
+- [[Arxiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
+  > 开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。
+  > 我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。
+  > 我们的框架还可以找到改变非结构化文本生成的对抗性提示。例如，我们发现对抗性提示会鼓励积极情绪或增加生成文本中字母“q”的频率。
+- Textual Few-Shot Classification For API-based Models
+- [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
+  > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
+  1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
+  2.基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
+  3.受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。  
+  实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
+  **结论**：
+  本分析的重点是PLM的参数有效方法，即delta调谐。我们首先描述了这个问题，并提供了一个分类来系统地调查德尔塔调谐的发展。在经验证据的束缚下，我们提出了两个框架，从优化和最优控制的角度对delta调谐进行理论讨论。我们的讨论为delta调谐方法的新设计提供了理论参考，并有望激发对PLM模型自适应的更深入理解。从经验上讲，我们在100多项NLP任务中进行了广泛的实验，以公平地评估和探索组合性质、规模的影响和德尔塔调整的可转移性。就性能而言，delta调优可能略微落后于或相当于对各种任务的微调，并且随着模型的扩展，差距会缩小；就效率而言，delta调优可以显著减少存储空间和内存使用，并加速反向传播。总之，德尔塔调谐在刺激大型PLM方面显示出相当大的潜力，我们希望该范式能够得到进一步的理论研究和实证实践。
+  ![](README.assets/image-20230430221334240.png)
+  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
+- [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
+  > 以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
+  以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
+  以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
+  预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
+  以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持
+- [[Arxiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
+  > **模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
+- [[Arxiv](https://arxiv.org/abs/2101.00190)] Prefix-Tuning: Optimizing Continuous Prompts for Generation
+  > **Adapter-tuning简单易用，插入可训练模块**  
+  **Prefix-Tuning前缀调优：上游前缀控制一个下游LM，而下游LM保持不变，因此不同的前缀+相同LM可以实现多功能**  
+  Lightweight fine-tuning：（1）removing parameters，（2）summation tuning （3）Adapter tuning
+  ![](README.assets/prefix.PNG)
+- [[paper](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
+  > **连续prompt的无梯度实现，基于随机嵌入DFO**  
+  本文为这种场景提供了一种解决方案（BBT），以在不访问模型参数和梯度的情况下完成通用语言理解任务，从而使大规模PTM能够更好地造福用户，也就是说结合parameter-efficient tuning和基于random embedding的非梯度优化算法，就使用推理API把下游任务做好的愿景。prompt的优化几乎是不耗费算力的，因此这一优化过程可以在任何终端设备进行，根本不需要GPU，所有算力需求集中在大模型服务端。此外，这种优化方式还解藕了优化过程和模型前向传播的复杂度，原本的梯度下降中，反向传播的时间和内存占用与模型前向传播成正比，随着模型越来越大，优化也变得越来越昂贵；而black-box tuning的优化过程本身不耗费什么时间和内存，且复杂度仅依赖于本征维度d的大小，与前向传播的复杂度无关。
+  **有意义的观点：Aghajanyan等人（2021）的经验表明，预训练模型参数越多，其本征维度反而越小，大规模预训练隐含地压缩了下游NLP任务的内在维度。**
+- [[paper](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a Gradient-Free Future with Large Language Models
+  > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.14195">How to robustify black-box ml models? a zeroth-order optimization perspective</a> </summary>
-<br>
-<blockquote>
-
-建议查看前缀论文Zoo: Zeroth order optimization based black-box attacks to deep neural networks without training substitute models
-
-**基于对抗训练（AT）的防御机制**
-
-通过将去噪平滑(DS)与零阶优化(ZO)相结合，构建了一个可行的黑盒防御框架。然而，论文发现直接应用ZO优化使得防御无效且难以扩展。然后，提出了ZO-AE-DS，加上了自编码器(AE)来弥合FO和ZO优化之间的差距。
-
-![](README.assets/ZO-AE-DS.PNG)
-</blockquote>
-</details>
-
-
-
-##
-
-## 微调（Fine Tuning）
-
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12192">Aligning Text-to-Image Models using Human Feedback</a> </summary>
-
-<br>
-<blockquote>
-
-**步骤：**
-- 1.使用多个文本提示，基于图像生成模型生成多个图形，然后收集二进制的人类反馈。
-- 2.基于CLIP输入：文本+图像，输出：人类反馈训练一个反馈（奖励）函数，反馈函数的损失由MSE和交叉熵损失组成
-- 3.基于这个模型来微调生成模型，一个文本生成的多个图的评分用加权和处理后反向训练
-损失函数：
-$$\mathcal{L}(\theta)=\underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text {model }}}{\mathbb{E}}\left[-r_\phi(\mathbf{x}, \mathbf{z}) \log p_\theta(\mathbf{x} \mid \mathbf{z})\right]+\beta \underset{(\mathbf{x}, \mathbf{z}) \sim \mathcal{D}^{\text {pre }}}{\mathbb{E}}\left[-\log p_\theta(\mathbf{x} \mid \mathbf{z})\right]$$
-损失函数第一项用我们自己设计的文本，反馈也用我们训练的，第二项用的是现有数据集，已经有标签了，不需要我们的反馈函数去打分，第二项就是为了防止过拟合的
-
-**缺陷：**
-图片生成的质量下降，原因可能是损失中第二项用到的数据量不够
-![](README.assets/RLHF.PNG)
-</blockquote>
-</details>
-
-
-
-
-##
-
-
-
-
-## 提示调优（Prompt Tuning）
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04237" target="_blank">Adversarial Prompting for Black Box Foundation Models</a> </summary>
-<br>
-<ul>
-  <li>开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。</li>
-  <li>我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。</li>
-  <li>我们的框架还可以找到改变非结构化文本生成的对抗性提示。例如，我们发现对抗性提示会鼓励积极情绪或增加生成文本中字母“q”的频率。</li>
-</ul>
-</details>
-
-
-<details>
-<summary> :white_check_mark: 沈老师推荐Textual Few-Shot Classification For API-based Models </summary>
-
-</details>
-
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://www.nature.com/articles/s42256-023-00626-4">Parameter-efficient fine-tuning of large-scale pre-trained language models</a> </summary>
-<blockquote>
-<br>
-
-**Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
-
-1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
-2.基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
-3.受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。  
-
-
-实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
-
-**结论**：
-本分析的重点是PLM的参数有效方法，即delta调谐。我们首先描述了这个问题，并提供了一个分类来系统地调查德尔塔调谐的发展。在经验证据的束缚下，我们提出了两个框架，从优化和最优控制的角度对delta调谐进行理论讨论。我们的讨论为delta调谐方法的新设计提供了理论参考，并有望激发对PLM模型自适应的更深入理解。从经验上讲，我们在100多项NLP任务中进行了广泛的实验，以公平地评估和探索组合性质、规模的影响和德尔塔调整的可转移性。就性能而言，delta调优可能略微落后于或相当于对各种任务的微调，并且随着模型的扩展，差距会缩小；就效率而言，delta调优可以显著减少存储空间和内存使用，并加速反向传播。总之，德尔塔调谐在刺激大型PLM方面显示出相当大的潜力，我们希望该范式能够得到进一步的理论研究和实证实践。
-![](README.assets/image-20230430221334240.png)
-![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
-</blockquote>
-
-</details>
-
-
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2304.03589">On Efficient Training of Large-Scale Deep Learning Models: A Literature Review</a> </summary>
-
-<br>
-<blockquote>
-以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
-以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
-以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
-预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
-以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持
-</blockquote>
-</details>
-
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04863">Knowledge is a Region in Weight Space for Fine-tuned Language Models</a> </summary>
-<br>
-<blockquote>
-
-**模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
-
-</blockquote>
-</details>
-
-
-
-
-
-
-
-
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2101.00190">Prefix-Tuning: Optimizing Continuous Prompts for Generation</a> </summary>
-<br>
-<blockquote>
-
-**Adapter-tuning简单易用，插入可训练模块**  
-**Prefix-Tuning前缀调优：上游前缀控制一个下游LM，而下游LM保持不变，因此不同的前缀+相同LM可以实现多功能**  
-Lightweight fine-tuning：（1）removing parameters，（2）summation tuning （3）Adapter tuning
-![](README.assets/prefix.PNG)
-</blockquote>
-</details>
-
-
-<details>
-<summary> :white_check_mark: <a href="https://proceedings.mlr.press/v162/sun22e.html">Black-Box Tuning for Language-Model-as-a-Service (BBTv1)</a> </summary>
-<br>
-<blockquote>
-
-**连续prompt的无梯度实现，基于随机嵌入DFO**  
-本文为这种场景提供了一种解决方案（BBT），以在不访问模型参数和梯度的情况下完成通用语言理解任务，从而使大规模PTM能够更好地造福用户，也就是说结合parameter-efficient tuning和基于random embedding的非梯度优化算法，就使用推理API把下游任务做好的愿景。prompt的优化几乎是不耗费算力的，因此这一优化过程可以在任何终端设备进行，根本不需要GPU，所有算力需求集中在大模型服务端。此外，这种优化方式还解藕了优化过程和模型前向传播的复杂度，原本的梯度下降中，反向传播的时间和内存占用与模型前向传播成正比，随着模型越来越大，优化也变得越来越昂贵；而black-box tuning的优化过程本身不耗费什么时间和内存，且复杂度仅依赖于本征维度d的大小，与前向传播的复杂度无关。
-**有意义的观点：Aghajanyan等人（2021）的经验表明，预训练模型参数越多，其本征维度反而越小，大规模预训练隐含地压缩了下游NLP任务的内在维度。**
-</blockquote>
-</details>
-
-
-<details>
-<summary> :white_check_mark: <a href="https://aclanthology.org/2022.emnlp-main.259/">BBTv2: Towards a Gradient-Free Future with Large Language Models</a> </summary>
-<br>
-<blockquote>
-
-**在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
-</blockquote>
-</details>
-
-
-
-<details>
-<summary> :white_check_mark: <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
+<summary>  <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
 <br>
 <blockquote>
 NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
@@ -284,7 +105,7 @@ prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2302.09236">Scalable Prompt Generation for Semi-supervised Learning with Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.09236">Scalable Prompt Generation for Semi-supervised Learning with Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -300,7 +121,7 @@ prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02909">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.02909">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> </summary>
 <br>
 <blockquote>
 为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
@@ -320,7 +141,7 @@ DP主要就是在输入x的前后都插入prompt
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language
+<summary>  <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language
 Pre-training via Soft Prompts</a> </summary>
 <br>
 <blockquote>
@@ -333,7 +154,7 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2212.09257">PromptBoosting: Black-Box Text Classification with Ten Forward Passes</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2212.09257">PromptBoosting: Black-Box Text Classification with Ten Forward Passes</a> </summary>
 <br>
 <blockquote>
 
@@ -348,7 +169,7 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
 <br>
 <blockquote>
 
@@ -360,7 +181,7 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2302.03668">Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.03668">Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery</a> </summary>
 <br>
 <blockquote>
 提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。
@@ -378,7 +199,7 @@ Pre-training via Soft Prompts</a> </summary>
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
 <br>
 <blockquote>
 
@@ -401,7 +222,7 @@ $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
 <br>
 <blockquote>
 
@@ -415,7 +236,7 @@ $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.06571">Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.06571">Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -430,7 +251,7 @@ $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
 <br>
 <blockquote>
 
@@ -448,7 +269,7 @@ Method部分介绍了数据标签的构建方法，总体任务划分为text com
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -467,7 +288,7 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 ### 思维链（Chain of Thought）
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.12822">Automatic Prompt Augmentation and Selection with Chain-of-Thought from Labeled Data</a> </summary>
 <br>
 <blockquote>
 
@@ -489,7 +310,7 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.12246">Active Prompting with Chain-of-Thought for Large Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.12246">Active Prompting with Chain-of-Thought for Large Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -518,7 +339,7 @@ $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -534,7 +355,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
 
 **CVPR 2023**
 
@@ -546,7 +367,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14225">Weighted Sampling for Masked Language Modeling</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.14225">Weighted Sampling for Masked Language Modeling</a> </summary>
 <br>
 <blockquote>
 
@@ -559,7 +380,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2203.06904">Delta tuning: A comprehensive study of parameter efficient methods for pre-trained language models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2203.06904">Delta tuning: A comprehensive study of parameter efficient methods for pre-trained language models</a> </summary>
 <br>
 <blockquote>
 
@@ -574,7 +395,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2109.01134">Learning to Prompt for Vision-Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2109.01134">Learning to Prompt for Vision-Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -590,7 +411,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> ⬜ <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
+<summary>  <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
 </a> </summary>
 <br>
 <blockquote>
@@ -603,7 +424,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
 <br>
 <blockquote>
 
@@ -614,7 +435,7 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2306.02561">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2306.02561">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
 <br>
 <blockquote>
 
@@ -641,7 +462,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2112.15278">Data-Free Knowledge Transfer: A Survey</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2112.15278">Data-Free Knowledge Transfer: A Survey</a> </summary>
 <br>
 <blockquote>
 
@@ -671,7 +492,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/1710.07535">Data-free knowledge distillation for deep neural networks</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/1710.07535">Data-free knowledge distillation for deep neural networks</a> </summary>
 <br>
 <blockquote>
 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
@@ -684,7 +505,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
 <br>
 <blockquote>
 
@@ -706,7 +527,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!</a> </summary>
 <br>
 <blockquote>
 
@@ -728,7 +549,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
+<summary>  <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
 </a> </summary>
 <blockquote>
 
@@ -749,7 +570,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2212.05956">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2212.05956">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
 <br>
 <blockquote>
 
@@ -764,7 +585,7 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data</a> </summary>
 <br>
 <blockquote>
 
@@ -780,7 +601,7 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders</a> </summary>
 <br>
 <blockquote>
 
@@ -795,7 +616,7 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2306.02090">Deep Classifier Mimicry without Data Access</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2306.02090">Deep Classifier Mimicry without Data Access</a> </summary>
 <br>
 <blockquote>
 
@@ -816,7 +637,7 @@ SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效�
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12652">REPLUG: Retrieval-Augmented Black-Box Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2301.12652">REPLUG: Retrieval-Augmented Black-Box Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -857,7 +678,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
 <br>
 <blockquote>
 
@@ -880,7 +701,7 @@ github链接：https://github.com/microsoft/unilm
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.07121">Universal Guidance for Diffusion Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.07121">Universal Guidance for Diffusion Models</a> </summary>
 <br>
 <blockquote>
 
@@ -898,7 +719,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
 <br>
 <blockquote>
 
@@ -931,7 +752,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2306.03900">Model Spider: Learning to Rank Pre-Trained Models Efficiently
+<summary>  <a href="https://arxiv.org/abs/2306.03900">Model Spider: Learning to Rank Pre-Trained Models Efficiently
 </a> </summary>
 <br>
 <blockquote>
@@ -975,7 +796,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 ## 知识探索（Knowledge Exploration）
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/1909.01066">Language Models as Knowledge Bases?</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/1909.01066">Language Models as Knowledge Bases?</a> </summary>
 <br>
 <blockquote>
 
@@ -996,7 +817,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </details>
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
 <br>
 <blockquote>
 
@@ -1013,7 +834,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.11293">Understanding Finetuning for Factual Knowledge Extraction from Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2301.11293">Understanding Finetuning for Factual Knowledge Extraction from Language Models</a> </summary>
 <br>
 <blockquote>
 
@@ -1032,7 +853,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2301.12810">Crawling The Internal Knowledge-Base of Language Models</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2301.12810">Crawling The Internal Knowledge-Base of Language Models</a> </summary>
 <br>
 <blockquote>
 目的是获得一个可解释和透明的表示，使人类能够检查LM知道什么，不知道什么，为什么会犯某些错误，以及LM编码的偏见是什么。
@@ -1072,7 +893,7 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 
 
 <details>
-<summary> ⬜ <a href="https://arxiv.org/abs/2302.07842">Augmented Language Models: a Survey</a> </summary>
+<summary>  <a href="https://arxiv.org/abs/2302.07842">Augmented Language Models: a Survey</a> </summary>
 <br>
 <blockquote>
 
@@ -1091,7 +912,7 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/pdf/2006.05525.pdf">Knowledge distillation: A survey
+<summary>  <a href="https://arxiv.org/pdf/2006.05525.pdf">Knowledge distillation: A survey
 </a> </summary>
 <br>
 <blockquote>
@@ -1154,7 +975,7 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
 
 
 <details>
-<summary> :white_check_mark: <a href="https://arxiv.org/abs/2302.11529">Modular Deep Learning
+<summary>  <a href="https://arxiv.org/abs/2302.11529">Modular Deep Learning
 </a> </summary>
 <br>
 <blockquote>
@@ -1171,13 +992,3 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
 模块化深度学习提供了一种很有前途的解决方案，可以开发出专门针对多个任务而没有负面干扰的模型，并且可以系统性泛化到非相同分布的任务。
 </blockquote>
 </details>
-
-
-
-
-
-
-##
-
-## 待分类
-
