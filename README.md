@@ -51,7 +51,7 @@
   > 我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。
   > 我们的框架还可以找到改变非结构化文本生成的对抗性提示。例如，我们发现对抗性提示会鼓励积极情绪或增加生成文本中字母“q”的频率。
 - Textual Few-Shot Classification For API-based Models
-- [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
+- :star: [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
   > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
   1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
   2.基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
@@ -80,210 +80,68 @@
   **有意义的观点：Aghajanyan等人（2021）的经验表明，预训练模型参数越多，其本征维度反而越小，大规模预训练隐含地压缩了下游NLP任务的内在维度。**
 - [[paper](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a Gradient-Free Future with Large Language Models
   > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
-
-
-<details>
-<summary>  <a href="https://dl.acm.org/doi/full/10.1145/3560815">Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing</a> </summary>
-<br>
-<blockquote>
-NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
-- 1.基础的提示工程  
-- 2.答案提示  
-- 3.多提示学习  
-- 4.提示感知方法  
-
-http://pretrain.nlpedia.ai/  
-
-prompting 更加依赖先验，而 fine-tuning 更加依赖后验
-
-</blockquote>
-</details>
-
-
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.09236">Scalable Prompt Generation for Semi-supervised Learning with Language Models</a> </summary>
-<br>
-<blockquote>
-
-![](README.assets/SSL.PNG)
-
-研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
-
-</blockquote>
-</details>
-
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.02909">Dynamic Prompting: A Unified Framework for Prompt Tuning</a> </summary>
-<br>
-<blockquote>
-为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
-
-prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。  
-
-![](README.assets/DP.PNG)
-
-DP主要就是在输入x的前后都插入prompt  
-首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
-然后，设计合适的prompt长度  
-最后，设计合适的prompt表示词
-
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.08958">Towards Unifying Medical Vision-and-Language
-Pre-training via Soft Prompts</a> </summary>
-<br>
-<blockquote>
-提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
-</blockquote>
-</details>
-
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2212.09257">PromptBoosting: Black-Box Text Classification with Ten Forward Passes</a> </summary>
-<br>
-<blockquote>
-
-**集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
-
-针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
-
-![](README.assets/PROMPT_BOOSTING.PNG)
-</blockquote>
-</details>
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2205.12548">RLPrompt: Optimizing discrete text prompts with reinforcement learning</a> </summary>
-<br>
-<blockquote>
-
-**基于强化学习的离散提示优化**
-训练一个parameter-efficient policy network
-</blockquote>
-</details>
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.03668">Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery</a> </summary>
-<br>
-<blockquote>
-提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。
-
-1.作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
-2.所提出的方法在优化硬提示的过程中使用连续的"软"提示作为中间变量，从而实现了鲁棒的优化并促进了提示的探索和发现  
-3.该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好  
-
-</blockquote>
-</details>
-
-
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.00690">Rethinking Efficient Tuning Methods from a Unified Perspective</a> </summary>
-<br>
-<blockquote>
-
-(i)推导了主流PETL(Parameter efficient transfer learning)方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。    
-(ii)我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
-(iii)对迁移学习的全面研究证明了U-Tuning的通用性和强大性。  
-
-
-将PTEL分为了MHA Based Tuning（包含了Prefix tuning和Prompt tuning）和FFN Based Tuning（Adapter tuning），如下图所示
-![](README.assets/prefix+ada+pro.PNG)
-
-U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：  
-$\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
-
-</blockquote>
-</details>
-
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.07320">Model-tuning Via Prompts Makes NLP Models Adversarially Robust</a> </summary>
-<br>
-<blockquote>
-
-**通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
-
-
-![](README.assets/MVP.PNG)
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.06571">Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Models</a> </summary>
-<br>
-<blockquote>
-
-
-**多模态相关**
-
-引入了一种新的梯度调节元提示学习(GRAM)框架，该框架仅使用未标记的图像-文本预训练数据，在元学习范式中联合元学习有效的软提示初始化以更好地适应和轻量级梯度调节功能以实现强跨域泛化
-</blockquote>
-</details>
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.08518">UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation</a> </summary>
-<br>
-<blockquote>
-
-设计了一个轻量级的通用检索器UPRISE，给定一个Zero-Shot任务输入，该检索器可以自动从预先构建的数据池中检索提示（看上去是硬提示），原理是冻结LLM，然后通过模型输出来反向梯度优化检索器，然后训练好的检索器可以根据输入x选择合适的prompt插入到x前面，再一起输入LLM。文章提出跨模型（小模型到大模型）和跨任务（已有任务到没见过的任务）两种标准进行实验分析（在小模型GPT-Neo-2.7B上进行训练调优，然后在BLOOM-7.1B，OPT-66B，GPT3-175B上进行测试）。
-![](README.assets/UPRISE.PNG)
-![](README.assets/UPRISE2.PNG)
-
-Method部分介绍了数据标签的构建方法，总体任务划分为text completion和multiple-choice两种，然后介绍了检索器的结构，微调和推理的方法。
-
-![](README.assets/UP3.PNG)
-
-</blockquote>
-</details>
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2301.12314">Progressive Prompts: Continual Learning for Language Models</a> </summary>
-<br>
-<blockquote>
-
-**ICLR 2023**
-
-**思路：**
-在模型面对一连串任务的情况下，为每个任务单独设计训练一个Prompt,同时前面的任务的prompt也会结合进来，但是不会被训练，同时对于每一个任务训练prompt的时候，遵循的训练方法是训练的时候优化MLP，然后训练完之后，输入到下一个任务的prompt是$P_k^{\prime}$：
-$$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
-
-![](README.assets/PP.PNG)
-
-</blockquote>
-</details>
-
+- [[paper](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
+  > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
+  - 1.基础的提示工程  
+  - 2.答案提示  
+  - 3.多提示学习  
+  - 4.提示感知方法  
+  http://pretrain.nlpedia.ai/  
+  prompting 更加依赖先验，而 fine-tuning 更加依赖后验
+- [[Arxiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
+> ![](README.assets/SSL.PNG)
+  研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
+- [[Arxiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
+  > 为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
+  prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。  
+  ![](README.assets/DP.PNG)
+  DP主要就是在输入x的前后都插入prompt  
+  首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
+  然后，设计合适的prompt长度  
+  最后，设计合适的prompt表示词
+- [[Arxiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language
+Pre-training via Soft Prompts
+  > 提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
+- [[Arxiv](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
+  > **集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
+  针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
+  > ![prompt_boosting](README.assets/PROMPT_BOOSTING.PNG)
+- [[Arxiv](https://arxiv.org/abs/2205.12548)] RLPrompt: Optimizing discrete text prompts with reinforcement learning
+  > **基于强化学习的离散提示优化**
+    训练一个parameter-efficient policy network
+- [[Arxiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
+  > 提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。  
+  >
+  > 1. 作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
+  > 2. 所提出的方法在优化硬提示的过程中使用连续的"软"提示作为中间变量，从而实现了鲁棒的优化并促进了提示的探索和发现  
+  > 3. 该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好
+  >
+- [[Arxiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
+  >
+  > 1. 推导了主流PETL(Parameter efficient transfer learning)方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。
+  > 2. 我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
+  > 3. 对迁移学习的全面研究证明了U-Tuning的通用性和强大性。 
+  > 将PTEL分为了MHA Based Tuning（包含了Prefix tuning和Prompt tuning）和FFN Based Tuning（Adapter tuning），如下图所示
+  > ![](README.assets/prefix+ada+pro.PNG)
+  U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：  
+  $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
+- [[Arxiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
+> **通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
+  ![](README.assets/MVP.PNG)
+- [[Arxiv](https://arxiv.org/abs/2303.06571)] Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Model
+  > **多模态相关**
+  引入了一种新的梯度调节元提示学习(GRAM)框架，该框架仅使用未标记的图像-文本预训练数据，在元学习范式中联合元学习有效的软提示初始化以更好地适应和轻量级梯度调节功能以实现强跨域泛化
+- [[Arxiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
+  > 设计了一个轻量级的通用检索器UPRISE，给定一个Zero-Shot任务输入，该检索器可以自动从预先构建的数据池中检索提示（看上去是硬提示），原理是冻结LLM，然后通过模型输出来反向梯度优化检索器，然后训练好的检索器可以根据输入x选择合适的prompt插入到x前面，再一起输入LLM。文章提出跨模型（小模型到大模型）和跨任务（已有任务到没见过的任务）两种标准进行实验分析（在小模型GPT-Neo-2.7B上进行训练调优，然后在BLOOM-7.1B，OPT-66B，GPT3-175B上进行测试）。
+  ![](README.assets/UPRISE.PNG)
+  ![](README.assets/UPRISE2.PNG)
+  Method部分介绍了数据标签的构建方法，总体任务划分为text completion和multiple-choice两种，然后介绍了检索器的结构，微调和推理的方法。
+  ![](README.assets/UP3.PNG)
+- [[Arxiv](https://arxiv.org/abs/2301.12314)] [**ICLR 2023**] Progressive Prompts: Continual Learning for Language Models
+  > **思路：**
+  在模型面对一连串任务的情况下，为每个任务单独设计训练一个Prompt,同时前面的任务的prompt也会结合进来，但是不会被训练，同时对于每一个任务训练prompt的时候，遵循的训练方法是训练的时候优化MLP，然后训练完之后，输入到下一个任务的prompt是$P_k^{\prime}$：
+  $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
+  ![](README.assets/PP.PNG)
 
 ### 思维链（Chain of Thought）
 
