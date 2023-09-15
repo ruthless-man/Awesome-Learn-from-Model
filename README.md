@@ -221,10 +221,21 @@ Pre-training via Soft Prompts
 - :star: [[Arxiv](https://arxiv.org/abs/2002.06715)] Y.  Wen  et  al.   BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning, February 2020.
   > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
 - :star: [Arxviv](https://arxiv.org/abs/2307.08114) T. Y. Liu and S. Soatto.  Tangent Model Composition for Ensembling and Continual Fine-tuning, July 2023.
-  > <img src="README.assets/tangent_model_composition.png" style="width: 600px; display: block; margin: 0 auto;"/>
+  > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
 
 ### Model fusion
 
+### Weight Interpolation
+
+- :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
+- D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
+- :star: [ICML 2022][[Arxiv](http://arxiv.org/abs/2203.05482)] M. Wortsman et al.  Model soups: averaging weights of multiple finetuned  models  improves  accuracy  without  increasing  inference  time. In International  Conference  on  Machine  Learning ,  pp.  23965–23998. PMLR, 2022.
+
+### Mode Connectivity and Loss landscape
+
+- :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
+- D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
+  
 
 <details>
 <summary>  <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
