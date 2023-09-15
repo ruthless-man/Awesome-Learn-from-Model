@@ -143,9 +143,81 @@ Pre-training via Soft Prompts
   $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
   ![](README.assets/PP.PNG)
 
+## Model Distillation
 
+- [[Arxiv](https://arxiv.org/abs/2112.15278)] Data-Free Knowledge Transfer: A Survey
+  > **Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
+  > 1. Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
+  > - （1）噪声优化 
+  > - （2）生成重建 
+  > - （3）对抗探索  
+  > 应用方向：量化剪枝，增量学习，模型攻击
+  > 2. Source-(Data) Free Domain Adaptation (SFDA) 无数据领域自适应：通过目标数据查询和探索跨领域知识，两个模型的结构共享（就是参数不一样），面对不同的任务  
+  实现方法：（1）自监督训练：伪标签聚类；伪标签过滤 （2）虚拟源知识转移：源印象；风格迁移  
+  应用方向：语义分割，目标检测  
+  > **未来研究方向**
+  > 1. 更高效的数据重建  
+  > 2. 适应性的知识迁移  
+  > 3. 联合学习  
+  > 4. Transformer or GNN
+- [[Arxiv](https://arxiv.org/abs/1710.07535)] Data-free knowledge distillation for deep neural networks
+  > 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
+  > 传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
+  > 在MNIST和CelebA上进行实验分析
+- [[Arxiv](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
+  > **GAN知识蒸馏 cvpr2023**
+  > 对抗生成网络 + 知识蒸馏 = 无数据知识蒸馏  
+  > ![](README.assets/无数据知识蒸馏.jpg)
+  > 主要处理的问题就是在学生网络更新的过程中的分布偏移  
+  > 1.提出了一种新的元学习启发的知识蒸馏中学生网络更新的策略，旨在保持学生在知识保留上的表现，同时从当前  分布的样本中获取知识。  
+  > 2.策略在知识获取和知识保留之间强制执行隐式梯度对齐，也就是说提出的学生更新策略对这两个任务执行了一个  共同的梯度方向，减少了两个目标之间的干扰。  
+  > 3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
+  > ![](README.assets/元学习元训练.PNG)
+  > ![](README.assets/无数据知识蒸馏.PNG)
+- [[Arxiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
+  >  **信息抽取领域的大小模型协同**
+  > 问题：  
+  > 1. 在少样本IE任务中，Large-LM是否真的优于Small-LM?  
+  > 2. 更多的标注数据能否提高Large-LM和Small-LM?  
+  > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
+  > 思路：将小模型不太确定的测试样本再给大模型重新选择一下  
+  > ![](README.assets/large.PNG)
+- [[Arxiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
+  > 将预训练语言模型的知识生命周期划分为五个：  
+  > **1.知识获取：关注模型怎么从文本中提取知识**
+  > 建模方法有：因果建模，掩码建模，Seq2Seq建模，去噪建模
+  > **2.知识表示：关注知识怎么转化为模型的底层参数**  
+  > 分析方法有：基于梯度，基于因果，基于注意
+  > **3.知识探索：评估当前包含不同类型知识的plm的效果。**  
+  > **4.知识编辑：编辑或删除模型中的知识**  
+  > 约束微调，内存微调，元学习微调
+  > **5.知识应用：从训练好的模型中提取可用的知识**
+- [[Arxiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
+  > **采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
+  > SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
+  > ![](README.assets/SWA.PNG)
+- [[Arxiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
+  > **设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
+  > **思路：**
+  > 不仅是将老师和学生在输出层的标签进行匹配，同时还要将他们中间阶段的特征图进行匹配
+- [[Arxiv](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
+  > **CVPR 2023**
+  提出了通用到特定的蒸馏(G2SD)，将任务不可知和任务特定的知识从MAE转移到轻量级的vit，为两阶段视觉模型蒸馏设定了坚实的基线  
+  实现方式：
+  第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
+  第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
+  ![](README.assets/GS2D.PNG)
+- [[Arxiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
+  > - 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
+  > - 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
+  > - 与许多需要访问原始数据或依赖于复杂模型假设的“最先进”的方法相比，CAKE的分类准确性具有竞争力。
+  > ![](README.assets/边界知识蒸馏.PNG)
 
-## 模型融合（Model fusion）
+## Model Reuse
+
+### Model Ensemble
+
+### Model fusion
 
 
 <details>
@@ -264,175 +336,6 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 </blockquote>
 </details>
 
-## 知识蒸馏（Knowledge Distillation）
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2112.15278">Data-Free Knowledge Transfer: A Survey</a> </summary>
-<br>
-<blockquote>
-
-**Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
-1.Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
-
-- （1）噪声优化 
-- （2）生成重建 
-- （3）对抗探索  
-
-应用方向：量化剪枝，增量学习，模型攻击
-
-2.Source-(Data) Free Domain Adaptation (SFDA) 无数据领域自适应：通过目标数据查询和探索跨领域知识，两个模型的结构共享（就是参数不一样），面对不同的任务  
-实现方法：（1）自监督训练：伪标签聚类；伪标签过滤 （2）虚拟源知识转移：源印象；风格迁移  
-应用方向：语义分割，目标检测  
-
-**未来研究方向**
-1.更高效的数据重建  
-2.适应性的知识迁移  
-3.联合学习  
-4.Transformer or GNN
-
-
-</blockquote>
-</details>
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/1710.07535">Data-free knowledge distillation for deep neural networks</a> </summary>
-<br>
-<blockquote>
-提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
-传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
-在MNIST和CelebA上进行实验分析
-</blockquote>
-</details>
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.14290">Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation</a> </summary>
-<br>
-<blockquote>
-
-**GAN知识蒸馏 cvpr2023**
-
-对抗生成网络 + 知识蒸馏 = 无数据知识蒸馏  
-![](README.assets/无数据知识蒸馏.jpg)
-
-主要处理的问题就是在学生网络更新的过程中的分布偏移  
-1.提出了一种新的元学习启发的知识蒸馏中学生网络更新的策略，旨在保持学生在知识保留上的表现，同时从当前分布的样本中获取知识。  
-2.策略在知识获取和知识保留之间强制执行隐式梯度对齐，也就是说提出的学生更新策略对这两个任务执行了一个共同的梯度方向，减少了两个目标之间的干扰。  
-3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
-![](README.assets/元学习元训练.PNG)
-
-![](README.assets/无数据知识蒸馏.PNG)
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.08559">Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!</a> </summary>
-<br>
-<blockquote>
-
-**信息抽取领域的大小模型协同**
-问题：  
-（1）在少样本IE任务中，Large-LM是否真的优于Small-LM?  
-（2）更多的标注数据能否提高Large-LM和Small-LM?  
-（3）LLMs和SLMs是否分别擅长处理不同类型的样本?  
-
-
-思路：将小模型不太确定的测试样本再给大模型重新选择一下  
-![](README.assets/large.PNG)
-</blockquote>
-</details>
-
-
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2303.07616">The Life Cycle of Knowledge in Big Language Models: A Survey
-</a> </summary>
-<blockquote>
-
-将预训练语言模型的知识生命周期划分为五个：  
-**1.知识获取：关注模型怎么从文本中提取知识**
-建模方法有：因果建模，掩码建模，Seq2Seq建模，去噪建模
-**2.知识表示：关注知识怎么转化为模型的底层参数**  
-分析方法有：基于梯度，基于因果，基于注意
-**3.知识探索：评估当前包含不同类型知识的plm的效果。**  
-**4.知识编辑：编辑或删除模型中的知识**  
-约束微调，内存微调，元学习微调
-**5.知识应用：从训练好的模型中提取可用的知识**
-
-
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2212.05956">Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging</a> </summary>
-<br>
-<blockquote>
-
-**采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
-
-SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
-
-![](README.assets/SWA.PNG)
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.14771">Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data</a> </summary>
-<br>
-<blockquote>
-
-**设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
-
-**思路：**
-不仅是将老师和学生在输出层的标签进行匹配，同时还要将他们中间阶段的特征图进行匹配
-
-</blockquote>
-</details>
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.14771">Generic-to-Specific Distillation of Masked Autoencoders</a> </summary>
-<br>
-<blockquote>
-
-**CVPR 2023**
-提出了通用到特定的蒸馏(G2SD)，将任务不可知和任务特定的知识从MAE转移到轻量级的vit，为两阶段视觉模型蒸馏设定了坚实的基线  
-实现方式：
-第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
-第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
-![](README.assets/GS2D.PNG)
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2306.02090">Deep Classifier Mimicry without Data Access</a> </summary>
-<br>
-<blockquote>
-
-- 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
-- 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
-- 与许多需要访问原始数据或依赖于复杂模型假设的“最先进”的方法相比，CAKE的分类准确性具有竞争力。
-
-![](README.assets/边界知识蒸馏.PNG)
-</blockquote>
-</details>
 
 ## 检索增强（Retrieval Augmented）
 
