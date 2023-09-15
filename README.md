@@ -82,12 +82,13 @@
   > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
 - [[paper](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
   > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
-  - 1.基础的提示工程  
-  - 2.答案提示  
-  - 3.多提示学习  
-  - 4.提示感知方法  
-  http://pretrain.nlpedia.ai/  
-  prompting 更加依赖先验，而 fine-tuning 更加依赖后验
+  >
+  > 1. 基础的提示工程  
+  > 2. 答案提示  
+  > 3. 多提示学习  
+  > 4. 提示感知方法  
+  > http://pretrain.nlpedia.ai/  
+  > prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 - [[Arxiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
 > ![](README.assets/SSL.PNG)
   研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
@@ -225,17 +226,31 @@ Pre-training via Soft Prompts
 
 ### Model fusion
 
-### Weight Interpolation
+#### Weight Interpolation
 
 - :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
 - D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
 - :star: [ICML 2022][[Arxiv](http://arxiv.org/abs/2203.05482)] M. Wortsman et al.  Model soups: averaging weights of multiple finetuned  models  improves  accuracy  without  increasing  inference  time. In International  Conference  on  Machine  Learning ,  pp.  23965–23998. PMLR, 2022.
+- P. Izmailov et al. Averaging Weights Leads to Wider Optima and Better Generalization, February 2019.
+- J.  Kaddour.   Stop  Wasting  My  Time!  Saving  Days  of  ImageNet  and BERT Training with Latest Weight Averaging, October 2022.
+- S.  Sanyal  et  al. Understanding  the  Effectiveness  of  Early  Weight Averaging for Training Large Language Models, June 2023.
+- H.  B.  McMahan  et  al.    Communication-Efficient  Learning  of  Deep Networks from Decentralized Data, January 2023.
+- [ICLR 2023] G. Ilharco et al.  Editing models with task arithmetic.  In The Eleventh International  Conference  on  Learning  Representations,  ICLR  2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023.
 
-### Mode Connectivity and Loss landscape
+#### Mode Connectivity and Loss landscape
 
 - :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
 - D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
-  
+- :star: [[arXiv](https://arxiv.org/abs/1802.10026)] T. Garipov et al.  Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs, October 2018.  arXiv:1802.10026 [cs, stat].
+- [ICLR 2023][[arXiv](https://arxiv.org/abs/2209.04836)] S. K. Ainsworth et al.  Git Re-Basin: Merging Models modulo Permutation Symmetries, March 2023.   arXiv:2209.04836 [cs] Read Status: Read Read Status Date: 2023-08-31T10:29:51.597Z.
+- [[arXiv](https://arxiv.org/abs/2305.03053)] George  Stoica  et  al. ZipIt!  Merging  Models  from  Different  Tasks without Training, May 2023.  arXiv:2305.03053 [cs].
+
+#### Straightforward Optimization
+
+-  S. P. Singh and M. Jaggi.  Model Fusion via Optimal Transport, May 2023.
+- [[arXiv](https://arxiv.org/abs/2212.09849)] X.  Jin  et  al. Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models, April 2023.  arXiv:2212.09849 [cs].
+- Y. Lou et  al.   Towards Efficient Front-End Visual  Sensing for Digital Retina: A Model-Centric Paradigm. IEEE Transactions on Multimedia , 22(11):3002–3013, 2020.  ISBN: 1901014738.
+- [[arXiv](https://arxiv.org/abs/2111.09832)] M.  Matena  and  C.  Raffel. Merging  Models  with  Fisher-Weighted Averaging, August 2022.  arXiv:2111.09832 [cs].
 
 <details>
 <summary>  <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
