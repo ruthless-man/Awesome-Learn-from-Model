@@ -2,7 +2,7 @@
 
 **Abstract**
 
-> Large Pre-trained Models (LPMs) have demonstrated remarkable performance across a wide range of tasks (especially in the fields of natural language processing and computer vision), primarily attributed to their ability to comprehend instructions and access extensive, high-quality data. This not only showcases their current effectiveness but also sets a promising trajectory towards the development of artificial general intelligence. 
+> Large Pre-trained Models (LPMs) have demonstrated remarkable performance across a wide range of tasks (especially in the fields of natural language processing and computer vision), primarily attributed to their ability to comprehend instructions and access extensive, high-quality data. This not only showcases their current effectiveness but also sets a promising trajectory towards the development of artificial general intelligence.
 > Unfortunately, due to competitive reasons, the raw data of the model used for large model training are often inaccessible, so the use of end-to-end models for downstream tasks has become a new research trend, which we call **learn from model (LFM)** in this article. LFM focuses on the research, modification, and design of LPMs based on the only model interface, so as to better understand the model structure and weights (in a black box environment), and to generalize the model to downstream tasks. The study of LFM techniques can be broadly categorized into six major areas: model tuning, model distillation, model reuse, meta learning, model editing and model augmentation. Each category encompasses a repertoire of methods and strategies that aim to enhance the capabilities and performance of LPMs.
 > This paper gives a comprehensive review of the current methods based on LPMs from the perspective of LFM, in order to help readers better understand the current research status and ideas. To conclude, we summarize the survey by highlighting several critical areas for future exploration and addressing open issues that require further attention from the research community. As the field of LFM continues to evolve, it is essential to explore new directions, tackle challenges, and collaborate to unlock the full potential of LPMs in the advancement of artificial intelligence. The relevant papers we investigated in this article can be accessed at https://github.com/ruthless-man/Awesome-Learn-from-Model.
 
@@ -404,44 +404,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 </blockquote>
 </details>
 
-## 多模态模型（Multimodal Learning）
 
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.14045">Language is not all you need: Aligning perception with language model</a> </summary>
-<br>
-<blockquote>
-
-**语言不是你需要的全部：对齐感知与语言模型，主要是针对多模态大模型的研究**
-
-github链接：https://github.com/microsoft/unilm  
-
-
-作者在Web规模的多模态语料库中从头开始训练Kosmos-1，语料库的内容包含了任意交错的文本和图像、图像-标题对以及文本数据
-
-没有任何梯度更新或微调的情况下，在广泛的任务中评估了各种设置，包括零次学习、少次学习和多模态思维链的提示。
-
-实验结果表明，Kosmos-1在以下方面效果较好：  
-（1）语言理解、生成，甚至是无OCR的NLP（直接输入文档图像）  
-（2）感知-语言任务，包括多模态对话、图像说明、视觉问答  
-（3）视觉任务，例如带有说明的图像识别（通过文本指令指定分类）
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.07121">Universal Guidance for Diffusion Models</a> </summary>
-<br>
-<blockquote>
-
-**实现多模态的Guidance指令来控制Diffusion Models**
-
-Guided Image Generation：采用冻结的预训练扩散模型作为基础模型，修改采样方法，利用引导函数$f$的反馈来引导图像生成。
-![](README.assets/通用制导算法.PNG)
-
-</blockquote>
-</details>
 
 ## 模型编辑（Model Editing）
 
@@ -462,139 +425,8 @@ Guided Image Generation：采用冻结的预训练扩散模型作为基础模型
 </blockquote>
 </details>
 
-## 模型重用（Model Reuse）
 
-
-<details>
-<summary> :x: <a href="https://ieeexplore.ieee.org/document/9949516">Nonlinear Multi-Model Reuse
-</a> </summary>
-<br>
-<blockquote>
-
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2306.03900">Model Spider: Learning to Rank Pre-Trained Models Efficiently
-</a> </summary>
-<br>
-<blockquote>
-
-**高效选择合适的预训练模型用于新任务的方法**
-
-- 提出了一种新的模型蜘蛛方法来对任务和ptm进行标记，该方法能够在给定下游任务的模型动物园中高效准确地对ptm进行排序
-- MODEL SPIDER学习在单独的任务训练集上对ptm进行标记和排序，并且在资源预算允许的情况下，它可以合并某些ptm的特定于任务的前向结果。
-
-![](README.assets/蜘蛛侠.PNG)
-
-</blockquote>
-</details>
-
-
-
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2306.03828">Quick-Tune: Quickly Learning Which Pretrained Model to Finetune and How
-</a> </summary>
-<br>
-<blockquote>
-
-**为新的数据集（新任务）选择一个准确的预训练模型及其最优超参数**
-
-- 设计广泛的搜索空间：创建了一个涵盖常见微调策略的搜索空间，用于训练和评估模型与数据集组合。
-
-- 创建大型元数据集：通过在搜索空间中训练和评估 20,000 个模型与数据集组合，我们生成了一个大型元数据集，用于元学习多保真度性能预测器。
-
-- 元学习多保真度性能预测器：利用元数据集，我们训练了一个多保真度性能预测器，用于预测不同模型在不同数据集上的性能。
-
-</blockquote>
-</details>
-
-## 知识探索（Knowledge Exploration）
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/1909.01066">Language Models as Knowledge Bases?</a> </summary>
-<br>
-<blockquote>
-
-**EMNLP**
-
-该篇文章想要探索的问题是，通过在大型的文本语料上进行预训练，语言模型是否已经（或是有潜力）学习到并存储下了一些事实知识（主体-关系-客体形式的三元组或是问题-答案对）？  
-
-针对这个问题，本文首先定义了一种判断语言模型是否包含某种知识的方法。以Bert作为例子，对于某个三元组（小明，出生在，上海），本文首先将这一知识通过模板转换为自然语言的形式—小明出生在[MASK]，如果Bert能够成功的预测出被[MASK]掉的词语，那么我们就认为Bert掌握了这一知识。
-
-![](README.assets/EMNLP.PNG)
-
-为了对预训练模型所包含的知识进行探索，本文进一步以上述完形填空的形式，从一些现有的知识源中构建了四个用于知识探测的数据集
-
-实验部分，本文分别对两个单向的语言模型fairseq-fconv和Transformer-XL以及两个双向的语言模型ELMo和BERT进行了实验测试，使用$precision@k(p@k)$来表示模型预测的前K个词中，命中正确答案的准确率。结果表明，BERT-LARGE已经可以较为精确的对知识进行预测，这初步回答了该篇论文所提出的问题，语言模型中已经包含了相当数量的知识。
-
-本文是较早对语言模型中包含的事实知识进行正式、系统化探索的论文，提出了将语言模型作为知识库这一概念，并构建了LAMA数据集用于对模型存储知识的能力进行评估。
-</blockquote>
-</details>
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2210.07574">Is synthetic data from generative models ready for image recognition?</a> </summary>
-<br>
-<blockquote>
-
-**ICLR**
-用于图像识别的生成数据：  
-1.传统仿真流水线生成的生成数据集（从图形引擎合成3D模型或场景的2D渲染）  
-2.Diffusion，GAN生成模型合成得到
-
-从生成数据角度出发对于零样本分类，少样本分类和预训练数据合成三个角度开展了实验分析，工作量比较大  
-结论：合成数据可以促进image recognition，合成数据在预训练方面甚至超过imagenet。  
-局限性：受限于资源无法计算更大尺寸的图片大小
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2301.11293">Understanding Finetuning for Factual Knowledge Extraction from Language Models</a> </summary>
-<br>
-<blockquote>
-
-
-**知识提取相关**
-
-**工作**：聚焦提取事实知识的语言模型微调过程，发现微调可能对知识提取产生负面影响，并提出了两套当前最优方案1：model mixing（将一个微调模型与一个零射击或少射击模型进行混合） and 2：mixture finetuning with the LM’s pre-training task（知识提取任务与LM的原始预训练任务的混合），以助于弥补负面影响并提高性能。
-
-**背景**：此前在LM的研究上有一种新的知识图（Knowledge Graph，KG）构建范式，在这种范式中，LMs可以作为一种简单有效的管道，将网络上的异构数据源转换为结构化的KG表示，但是存在频率冲击（Frequency Shock）和范围转移（Range Shift）几种问题。
-
-
-</blockquote>
-</details>
-
-
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2301.12810">Crawling The Internal Knowledge-Base of Language Models</a> </summary>
-<br>
-<blockquote>
-目的是获得一个可解释和透明的表示，使人类能够检查LM知道什么，不知道什么，为什么会犯某些错误，以及LM编码的偏见是什么。
-
-**贡献：**
-- 1.设计了一个从LM中提取知识图谱（KG）方法
-- 2.基于Prompt的方法将任务分解为多个子任务
-![](README.assets/CRAW.PNG)
-主要内容：
-- 1.Relation Generation
-- 2.Relation Paraphrasing
-- 3.Object Generation
-- 4.Learning to Output “Don’t Know”
-- 5.Subject Paraphrasing
-- 6.LMCRAWL
-![](README.assets/CRAW-TABLE.PNG)
-
-
-
-</blockquote>
-</details>
-
-## 相关综述（Related Survey）
+<!-- ## 相关综述（Related Survey）
 
 
 <details>
@@ -693,4 +525,6 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
 **总结:**  
 模块化深度学习提供了一种很有前途的解决方案，可以开发出专门针对多个任务而没有负面干扰的模型，并且可以系统性泛化到非相同分布的任务。
 </blockquote>
-</details>
+</details> -->
+
+
