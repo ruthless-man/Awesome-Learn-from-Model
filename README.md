@@ -369,7 +369,7 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 </details>
 
 
-## 检索增强（Retrieval Augmented）
+## 模型增强（Model Augmentation）
 
 
 <details>
