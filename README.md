@@ -225,7 +225,7 @@ Pre-training via Soft Prompts
 
 - T. G. Dietterich.  Ensemble methods in machine learning.  In Multiple Classifier Systems , pp. 1–15, Berlin, Heidelberg, 2000. Springer Berlin Heidelberg.
 - :star: [[Arxiv](https://arxiv.org/abs/2002.06715)] Y.  Wen  et  al.   BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning, February 2020.
-  > <img src="README.assets/batch_ensemble.PNG" style="width: 600px; display: block; margin: 0 auto;"/>
+  > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
 
 - :star: [Arxviv](https://arxiv.org/abs/2307.08114) T. Y. Liu and S. Soatto.  Tangent Model Composition for Ensembling and Continual Fine-tuning, July 2023.
   > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
