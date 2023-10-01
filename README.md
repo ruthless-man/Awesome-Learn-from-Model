@@ -18,22 +18,36 @@
 
 - [[arxiv](https://arxiv.org/abs/2008.03156)]A. Aghajanyan et al. Better fine-tuning by reducing representational collapse. arXiv preprint arXiv:2008.03156, 2020.
 
-- P.  Liu  et  al.   Pre-train,  prompt,  and  predict:  A  systematic survey of prompting  methods in  natural  language  processing. ACM  Computing Surveys , 55(9):1–35, 2023.
+- [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train,  prompt,  and  predict:  A  systematic survey of prompting  methods in  natural  language  processing
 
 - [[arXiv](https://arxiv.org/abs/2104.08691)] B.  Lester  et  al.    The  power  of  scale  for  parameter-efficient  prompt tuning. arXiv preprint arXiv:2104.08691 , 2021.
-- B. Min et al.  Recent advances in natural language processing via large pre-trained language models: A survey. ACM Computing Surveys , 2021.
-- N. Tajbakhsh et al.  Convolutional neural networks for medical image analysis:  Full  training  or  fine  tuning? IEEE  transactions  on  medical imaging , 35(5):1299–1312, 2016.
-- E.  B.  Zaken  et  al.   Bitfit:  Simple  parameter-efficient  fine-tuning  for transformer-based  masked  language-models. CoRR ,  abs/2106.10199, 2021.
-- M.  Wortsman  et  al. Robust  fine-tuning  of  zero-shot  models. In Proceedings  of  the  IEEE/CVF  Conference  on  Computer  Vision  and Pattern Recognition , pp. 7959–7971, 2022.
 
-- [[arXiv](https://arxiv.org/abs/2008.03156)] A.  Aghajanyan  et  al.   Better  fine-tuning  by  reducing  representational collapse. arXiv preprint arXiv:2008.03156 , 2020.
-- [[arXiv](https://arxiv.org/abs/2202.10054)] A. Kumar et al.  Fine-tuning can distort pretrained features and underperform out-of-distribution. arXiv preprint arXiv:2202.10054 , 2022.
-- N. Ruiz et al.  Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pp. 22500–22510, 2023.
-- C. Chen et al.   Deep learning on computational-resource-limited platforms: a survey. Mobile Information Systems , 2020:1–19, 2020.
-- Y. Sun et al. Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning. Advances in Neural Information Processing Systems , 35:37484–37496, 2022.
-- T. L. Hayes et al.  Remind your neural network to prevent catastrophic forgetting.  In European Conference on Computer Vision , pp. 466–483. Springer, 2020.
-- Z.  Fu  et  al.   On  the  effectiveness  of  parameter-efficient  fine-tuning. In Proceedings  of  the  AAAI  Conference  on  Artificial  Intelligence , volume 37, pp. 12799–12807, 2023.
-- [[arXiv](https://arxiv.org/abs/2301.12314)] A.  Razdaibiedina  et  al.   Progressive  prompts:  Continual  learning  for language models. arXiv preprint arXiv:2301.12314 , 2023.
+- [[ACM Computing Surveys](https://dl.acm.org/doi/abs/10.1145/3605943)] Recent advances in natural language processing via large pre-trained language models: A survey
+
+
+- [[TMI](https://ieeexplore.ieee.org/abstract/document/7426826)] Convolutional neural networks for medical image analysis: Full training or fine  tuning? IEEE transactions on medical imaging
+
+
+
+- [[ACL](https://aclanthology.org/2022.acl-short.1/)] Bitfit:  Simple  parameter-efficient  fine-tuning  for transformer-based  masked  language-models. CoRR
+
+
+
+- [[CVPR](https://openaccess.thecvf.com/content/CVPR2022/html/Wortsman_Robust_Fine-Tuning_of_Zero-Shot_Models_CVPR_2022_paper.html?ref=roboflow-blog)] Robust  fine-tuning  of  zero-shot  models 
+
+
+- [[arXiv](https://arxiv.org/abs/2008.03156)] Better fine-tuning by reducing representational collapse
+
+- [[arXiv](https://arxiv.org/abs/2202.10054)] Fine-tuning can distort pretrained features and underperform out-of-distribution 
+
+- [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation
+
+
+- [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html)] Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning
+
+- [[AAAI](https://arxiv.org/abs/2202.10054)] On the effectiveness of parameter-efficient fine-tuning
+
+
 
 ### Adapter Tuning
 
@@ -60,59 +74,58 @@
 
 ### Prompt Tuning
 
-- [[Arxiv](https://arxiv.org/abs/2101.00190)] X. L. Li and P. Liang. Prefix-tuning: Optimizing continuous prompts for generation, 2021.
+- [[Arxiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation, 2021.
 
 
-- [[Arxiv](https://arxiv.org/abs/2301.12314)] A. Razdaibiedina et al. Progressive prompts: Continual learning for language models. arXiv preprint arXiv:2301.12314, 2023.
+- [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models. arXiv preprint arXiv:2301.12314, 2023.
 
-- [[Arxiv](https://arxiv.org/abs/2205.12548)] M. Deng et al. Rlprompt: Optimizing discrete text prompts with reinforcement learning. arXiv preprint arXiv:2205.12548, 2022.
+- [[Arxiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
   > **基于强化学习的离散提示优化**
     训练一个parameter-efficient policy network
 
-
-- [[Arxiv](https://arxiv.org/abs/2303.06571)] J. Li et al. Gradient-regulated meta-prompt learning for generalizable vision-language models, 2023.
-
-
-
-
+- [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
+  > **连续prompt的无梯度实现，基于随机嵌入DFO**  
+  本文为这种场景提供了一种解决方案（BBT），以在不访问模型参数和梯度的情况下完成通用语言理解任务，从而使大规模PTM能够更好地造福用户，也就是说结合parameter-efficient tuning和基于random embedding的非梯度优化算法，就使用推理API把下游任务做好的愿景。prompt的优化几乎是不耗费算力的，因此这一优化过程可以在任何终端设备进行，根本不需要GPU，所有算力需求集中在大模型服务端。此外，这种优化方式还解藕了优化过程和模型前向传播的复杂度，原本的梯度下降中，反向传播的时间和内存占用与模型前向传播成正比，随着模型越来越大，优化也变得越来越昂贵；而black-box tuning的优化过程本身不耗费什么时间和内存，且复杂度仅依赖于本征维度d的大小，与前向传播的复杂度无关。
+  **有意义的观点：Aghajanyan等人（2021）的经验表明，预训练模型参数越多，其本征维度反而越小，大规模预训练隐含地压缩了下游NLP任务的内在维度。**
 
 
+- [[EMNLP](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a gradient-free future with large language models
 
 
-
+- [[Arxiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
 - [[Arxiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
   > 开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。
   > 我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。
   > 我们的框架还可以找到改变非结构化文本生成的对抗性提示。例如，我们发现对抗性提示会鼓励积极情绪或增加生成文本中字母“q”的频率。
-- Textual Few-Shot Classification For API-based Models
+
 - :star: [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
   > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
   1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
   2.基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
   3.受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。  
   实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
-  **结论**：
-  本分析的重点是PLM的参数有效方法，即delta调谐。我们首先描述了这个问题，并提供了一个分类来系统地调查德尔塔调谐的发展。在经验证据的束缚下，我们提出了两个框架，从优化和最优控制的角度对delta调谐进行理论讨论。我们的讨论为delta调谐方法的新设计提供了理论参考，并有望激发对PLM模型自适应的更深入理解。从经验上讲，我们在100多项NLP任务中进行了广泛的实验，以公平地评估和探索组合性质、规模的影响和德尔塔调整的可转移性。就性能而言，delta调优可能略微落后于或相当于对各种任务的微调，并且随着模型的扩展，差距会缩小；就效率而言，delta调优可以显著减少存储空间和内存使用，并加速反向传播。总之，德尔塔调谐在刺激大型PLM方面显示出相当大的潜力，我们希望该范式能够得到进一步的理论研究和实证实践。
-  ![](README.assets/image-20230430221334240.png)
-  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
+ 
+  <!-- ![](README.assets/image-20230430221334240.png)
+  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png) -->
+
+
+
 - [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
   > 以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
   以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
   以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
   预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
   以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持
+
+
 - [[Arxiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
   > **模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
-- [[Arxiv](https://arxiv.org/abs/2101.00190)] Prefix-Tuning: Optimizing Continuous Prompts for Generation
-  > **Adapter-tuning简单易用，插入可训练模块**  
-  **Prefix-Tuning前缀调优：上游前缀控制一个下游LM，而下游LM保持不变，因此不同的前缀+相同LM可以实现多功能**  
-  Lightweight fine-tuning：（1）removing parameters，（2）summation tuning （3）Adapter tuning
-  ![](README.assets/prefix.PNG)
-- [[paper](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
-  > **连续prompt的无梯度实现，基于随机嵌入DFO**  
-  本文为这种场景提供了一种解决方案（BBT），以在不访问模型参数和梯度的情况下完成通用语言理解任务，从而使大规模PTM能够更好地造福用户，也就是说结合parameter-efficient tuning和基于random embedding的非梯度优化算法，就使用推理API把下游任务做好的愿景。prompt的优化几乎是不耗费算力的，因此这一优化过程可以在任何终端设备进行，根本不需要GPU，所有算力需求集中在大模型服务端。此外，这种优化方式还解藕了优化过程和模型前向传播的复杂度，原本的梯度下降中，反向传播的时间和内存占用与模型前向传播成正比，随着模型越来越大，优化也变得越来越昂贵；而black-box tuning的优化过程本身不耗费什么时间和内存，且复杂度仅依赖于本征维度d的大小，与前向传播的复杂度无关。
-  **有意义的观点：Aghajanyan等人（2021）的经验表明，预训练模型参数越多，其本征维度反而越小，大规模预训练隐含地压缩了下游NLP任务的内在维度。**
+
+
+
+
+
 - [[paper](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a Gradient-Free Future with Large Language Models
   > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
 - [[paper](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
@@ -162,20 +175,45 @@ Pre-training via Soft Prompts
 - [[Arxiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
 > **通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
   ![](README.assets/MVP.PNG)
-- [[Arxiv](https://arxiv.org/abs/2303.06571)] Gradient-Regulated Meta-Prompt Learning for Generalizable Vision-Language Model
-  > **多模态相关**
-  引入了一种新的梯度调节元提示学习(GRAM)框架，该框架仅使用未标记的图像-文本预训练数据，在元学习范式中联合元学习有效的软提示初始化以更好地适应和轻量级梯度调节功能以实现强跨域泛化
+
+
+
 - [[Arxiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
   > 设计了一个轻量级的通用检索器UPRISE，给定一个Zero-Shot任务输入，该检索器可以自动从预先构建的数据池中检索提示（看上去是硬提示），原理是冻结LLM，然后通过模型输出来反向梯度优化检索器，然后训练好的检索器可以根据输入x选择合适的prompt插入到x前面，再一起输入LLM。文章提出跨模型（小模型到大模型）和跨任务（已有任务到没见过的任务）两种标准进行实验分析（在小模型GPT-Neo-2.7B上进行训练调优，然后在BLOOM-7.1B，OPT-66B，GPT3-175B上进行测试）。
   ![](README.assets/UPRISE.PNG)
   ![](README.assets/UPRISE2.PNG)
   Method部分介绍了数据标签的构建方法，总体任务划分为text completion和multiple-choice两种，然后介绍了检索器的结构，微调和推理的方法。
   ![](README.assets/UP3.PNG)
-- [[Arxiv](https://arxiv.org/abs/2301.12314)] [**ICLR 2023**] Progressive Prompts: Continual Learning for Language Models
-  > **思路：**
-  在模型面对一连串任务的情况下，为每个任务单独设计训练一个Prompt,同时前面的任务的prompt也会结合进来，但是不会被训练，同时对于每一个任务训练prompt的时候，遵循的训练方法是训练的时候优化MLP，然后训练完之后，输入到下一个任务的prompt是$P_k^{\prime}$：
-  $$P_k^{\prime}=\operatorname{MLP}\left(P_k\right)+P_k$$
-  ![](README.assets/PP.PNG)
+
+
+
+
+### InstructioN Tuning
+
+
+- [[COLING](https://arxiv.org/abs/2209.09900)] Linguist: Language model instruction tuning to generate annotated utterances for intent classification and slot tagging
+
+- [[Arxiv](https://arxiv.org/abs/2304.08485)] Visual Instruction Tuning
+
+
+
+- [[Arxiv](https://arxiv.org/abs/2307.03601)] Gpt4roi: Instruction tuning large language model on region-of-interest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Model Distillation
 
