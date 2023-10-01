@@ -226,6 +226,9 @@ Pre-training via Soft Prompts
 - T. G. Dietterich.  Ensemble methods in machine learning.  In Multiple Classifier Systems , pp. 1–15, Berlin, Heidelberg, 2000. Springer Berlin Heidelberg.
 - :star: [[Arxiv](https://arxiv.org/abs/2002.06715)] Y.  Wen  et  al.   BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning, February 2020.
   > <img src="README.assets/batch_ensemble.PNG" style="width: 600px; display: block; margin: 0 auto;"/>
+
+![哦哦](README.assets/batch_ensemble.PNG)
+
 - :star: [Arxviv](https://arxiv.org/abs/2307.08114) T. Y. Liu and S. Soatto.  Tangent Model Composition for Ensembling and Continual Fine-tuning, July 2023.
   > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
 
@@ -246,7 +249,7 @@ Pre-training via Soft Prompts
 
 - :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
 - D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
-- :star: [arXiv](https://arxiv.org/abs/1802.10026) T. Garipov et al.  Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs, October 2018.  arXiv:1802.10026 [cs, stat].
+- :star: [[arXiv](https://arxiv.org/abs/1802.10026)] T. Garipov et al.  Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs, October 2018.  arXiv:1802.10026 [cs, stat].
 - [ICLR 2023][[arXiv](https://arxiv.org/abs/2209.04836)] S. K. Ainsworth et al.  Git Re-Basin: Merging Models modulo Permutation Symmetries, March 2023.   arXiv:2209.04836 [cs] Read Status: Read Read Status Date: 2023-08-31T10:29:51.597Z.
 - [[arXiv](https://arxiv.org/abs/2305.03053)] George  Stoica  et  al. ZipIt!  Merging  Models  from  Different  Tasks without Training, May 2023.  arXiv:2305.03053 [cs].
 
