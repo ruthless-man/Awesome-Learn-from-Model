@@ -14,13 +14,18 @@
 
 #### Fine Tuning
 
-- P.  Liu  et  al.   Pre-train,  prompt,  and  predict:  A  systematic  survey  of prompting  methods  in  natural  language  processing. ACM  Computing Surveys , 55(9):1–35, 2023.
+- [[mikecaptain](https://www.mikecaptain.com/resources/pdf/GPT-1.pdf)] A. Radford et al. Improving language understanding by generative pretraining. 2018
+
+- [[arxiv](https://arxiv.org/abs/2008.03156)]A. Aghajanyan et al. Better fine-tuning by reducing representational collapse. arXiv preprint arXiv:2008.03156, 2020.
+
+- P.  Liu  et  al.   Pre-train,  prompt,  and  predict:  A  systematic survey of prompting  methods in  natural  language  processing. ACM  Computing Surveys , 55(9):1–35, 2023.
+
 - [[arXiv](https://arxiv.org/abs/2104.08691)] B.  Lester  et  al.    The  power  of  scale  for  parameter-efficient  prompt tuning. arXiv preprint arXiv:2104.08691 , 2021.
 - B. Min et al.  Recent advances in natural language processing via large pre-trained language models: A survey. ACM Computing Surveys , 2021.
 - N. Tajbakhsh et al.  Convolutional neural networks for medical image analysis:  Full  training  or  fine  tuning? IEEE  transactions  on  medical imaging , 35(5):1299–1312, 2016.
 - E.  B.  Zaken  et  al.   Bitfit:  Simple  parameter-efficient  fine-tuning  for transformer-based  masked  language-models. CoRR ,  abs/2106.10199, 2021.
 - M.  Wortsman  et  al. Robust  fine-tuning  of  zero-shot  models. In Proceedings  of  the  IEEE/CVF  Conference  on  Computer  Vision  and Pattern Recognition , pp. 7959–7971, 2022.
-- A. Radford et al.  Improving language understanding by generative pretraining.  2018.
+
 - [[arXiv](https://arxiv.org/abs/2008.03156)] A.  Aghajanyan  et  al.   Better  fine-tuning  by  reducing  representational collapse. arXiv preprint arXiv:2008.03156 , 2020.
 - [[arXiv](https://arxiv.org/abs/2202.10054)] A. Kumar et al.  Fine-tuning can distort pretrained features and underperform out-of-distribution. arXiv preprint arXiv:2202.10054 , 2022.
 - N. Ruiz et al.  Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition , pp. 22500–22510, 2023.
@@ -32,12 +37,21 @@
 
 ### Adapter Tuning
 
-- N.  Houlsby  et  al.    Parameter-efficient  transfer  learning  for  nlp.    In International Conference on Machine Learning , pp. 2790–2799. PMLR, 2019.
-- N. Ding et al.  Parameter-efficient fine-tuning of large-scale pre-trained language models. Nature Machine Intelligence , 5(3):220–235, 2023.
-- [[arXiv](https://arxiv.org/abs/2005.00247)] J. Pfeiffer et al.   Adapterfusion: Non-destructive task composition for transfer learning. arXiv preprint arXiv:2005.00247 , 2020.
-- [[arXiv](https://arxiv.org/abs/2106.03164)] R. He et al.  On the effectiveness of adapter-based tuning for pretrained language model adaptation. arXiv preprint arXiv:2106.03164 , 2021.
-- R. Karimi Mahabadi et al. Compacter: Efficient low-rank hypercomplex adapter  layers. In  M.  Ranzato  et  al.,  editors, Advances  in  Neural Information  Processing  Systems ,  volume  34,  pp.  1022–1035.  Curran Associates, Inc., 2021.
-- [[arXiv](https://arxiv.org/abs/2106.01463)] H.  Le  et  al. Lightweight  adapter  tuning  for  multilingual  speech translation. arXiv preprint arXiv:2106.01463 , 2021.
+- [[arXiv](https://arxiv.org/abs/2106.01463)] H. Le et al. Lightweight adapter tuning for multilingual speech translation. arXiv preprint arXiv:2106.01463, 2021.
+
+- [[arxiv](https://arxiv.org/abs/2211.03831)] L. Caccia et al. Multi-head adapter routing for cross-task generalization, 2023.
+
+- [[arxiv](https://arxiv.org/abs/2205.12410)] Y. Wang et al. Adamix: Mixture-of-adapter for parameter-efficient tuning of large language models. arXiv preprint arXiv:2205.12410, 2022.
+
+
+- [[arxiv](https://arxiv.org/abs/2304.01933)] Z. Hu et al. Llm-adapters: An adapter family for parameter-efficient fine-tuning of large language models. arXiv preprint arXiv:2304.01933, 2023.
+
+
+
+- [[arXiv](https://arxiv.org/abs/2005.00247)] J. Pfeiffer et al.   Adapterfusion: Non-destructive task composition for transfer learning. arXiv preprint arXiv:2005.00247, 2020.
+- [[arXiv](https://arxiv.org/abs/2106.03164)] R. He et al.  On the effectiveness of adapter-based tuning for pretrained language model adaptation. arXiv preprint arXiv:2106.03164, 2021.
+- R. Karimi Mahabadi et al. Compacter: Efficient low-rank hypercomplex adapter  layers. In  M.  Ranzato  et  al.,  editors, Advances  in  Neural Information  Processing  Systems,  volume  34,  pp.  1022–1035.  Curran Associates, Inc., 2021.
+
 - [[arXiv](https://arxiv.org/abs/2205.12410)] Y.  Wang  et  al.    Adamix:  Mixture-of-adapter  for  parameter-efficient tuning  of  large  language  models. arXiv  preprint  arXiv:2205.12410 , 2022.
 - Z.-C. Chen et al.  Exploring efficient-tuning methods in self-supervised speech models.  In 2022 IEEE Spoken Language Technology Workshop (SLT) , pp. 1120–1127. IEEE, 2023.
 - S.  Vander  Eeckt  and  H.  Van  Hamme.    Using  adapters  to  overcome catastrophic  forgetting  in  end-to-end  automatic  speech  recognition. In ICASSP  2023-2023  IEEE  International  Conference  on  Acoustics, Speech and Signal Processing (ICASSP) , pp. 1–5. IEEE, 2023.
@@ -45,6 +59,27 @@
 ## Input engineering
 
 ### Prompt Tuning
+
+- [[Arxiv](https://arxiv.org/abs/2101.00190)] X. L. Li and P. Liang. Prefix-tuning: Optimizing continuous prompts for generation, 2021.
+
+
+- [[Arxiv](https://arxiv.org/abs/2301.12314)] A. Razdaibiedina et al. Progressive prompts: Continual learning for language models. arXiv preprint arXiv:2301.12314, 2023.
+
+- [[Arxiv](https://arxiv.org/abs/2205.12548)] M. Deng et al. Rlprompt: Optimizing discrete text prompts with reinforcement learning. arXiv preprint arXiv:2205.12548, 2022.
+  > **基于强化学习的离散提示优化**
+    训练一个parameter-efficient policy network
+
+
+- [[Arxiv](https://arxiv.org/abs/2303.06571)] J. Li et al. Gradient-regulated meta-prompt learning for generalizable vision-language models, 2023.
+
+
+
+
+
+
+
+
+
 
 - [[Arxiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
   > 开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。
@@ -107,9 +142,7 @@ Pre-training via Soft Prompts
   > **集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
   针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
   > ![prompt_boosting](README.assets/PROMPT_BOOSTING.PNG)
-- [[Arxiv](https://arxiv.org/abs/2205.12548)] RLPrompt: Optimizing discrete text prompts with reinforcement learning
-  > **基于强化学习的离散提示优化**
-    训练一个parameter-efficient policy network
+
 - [[Arxiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
   > 提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。  
   >
