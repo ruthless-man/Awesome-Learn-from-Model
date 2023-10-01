@@ -42,42 +42,54 @@
 
 - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation
 
+- [[Arxiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
+  > **模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html)] Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning
 
 - [[AAAI](https://arxiv.org/abs/2202.10054)] On the effectiveness of parameter-efficient fine-tuning
 
-
+- :star: [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
+  > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
+  >delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
+  >基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
+  >受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
+ 
+  <!-- ![](README.assets/image-20230430221334240.png)
+  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png) -->
 
 ### Adapter Tuning
 
-- [[arXiv](https://arxiv.org/abs/2106.01463)] H. Le et al. Lightweight adapter tuning for multilingual speech translation. arXiv preprint arXiv:2106.01463, 2021.
+- [[arXiv](https://arxiv.org/abs/2106.01463)] Lightweight adapter tuning for multilingual speech translation
 
-- [[arxiv](https://arxiv.org/abs/2211.03831)] L. Caccia et al. Multi-head adapter routing for cross-task generalization, 2023.
+- [[arxiv](https://arxiv.org/abs/2211.03831)] Multi-head adapter routing for cross-task generalization
 
-- [[arxiv](https://arxiv.org/abs/2205.12410)] Y. Wang et al. Adamix: Mixture-of-adapter for parameter-efficient tuning of large language models. arXiv preprint arXiv:2205.12410, 2022.
-
-
-- [[arxiv](https://arxiv.org/abs/2304.01933)] Z. Hu et al. Llm-adapters: An adapter family for parameter-efficient fine-tuning of large language models. arXiv preprint arXiv:2304.01933, 2023.
+- [[arxiv](https://arxiv.org/abs/2205.12410)] Adamix: Mixture-of-adapter for parameter-efficient tuning of large language models
 
 
+- [[arxiv](https://arxiv.org/abs/2304.01933)] Llm-adapters: An adapter family for parameter-efficient fine-tuning of large language models
 
-- [[arXiv](https://arxiv.org/abs/2005.00247)] J. Pfeiffer et al.   Adapterfusion: Non-destructive task composition for transfer learning. arXiv preprint arXiv:2005.00247, 2020.
-- [[arXiv](https://arxiv.org/abs/2106.03164)] R. He et al.  On the effectiveness of adapter-based tuning for pretrained language model adaptation. arXiv preprint arXiv:2106.03164, 2021.
-- R. Karimi Mahabadi et al. Compacter: Efficient low-rank hypercomplex adapter  layers. In  M.  Ranzato  et  al.,  editors, Advances  in  Neural Information  Processing  Systems,  volume  34,  pp.  1022–1035.  Curran Associates, Inc., 2021.
 
-- [[arXiv](https://arxiv.org/abs/2205.12410)] Y.  Wang  et  al.    Adamix:  Mixture-of-adapter  for  parameter-efficient tuning  of  large  language  models. arXiv  preprint  arXiv:2205.12410 , 2022.
-- Z.-C. Chen et al.  Exploring efficient-tuning methods in self-supervised speech models.  In 2022 IEEE Spoken Language Technology Workshop (SLT) , pp. 1120–1127. IEEE, 2023.
-- S.  Vander  Eeckt  and  H.  Van  Hamme.    Using  adapters  to  overcome catastrophic  forgetting  in  end-to-end  automatic  speech  recognition. In ICASSP  2023-2023  IEEE  International  Conference  on  Acoustics, Speech and Signal Processing (ICASSP) , pp. 1–5. IEEE, 2023.
+
+- [[arXiv](https://arxiv.org/abs/2005.00247)] Adapterfusion: Non-destructive task composition for transfer learning
+
+- [[arXiv](https://arxiv.org/abs/2106.03164)] On the effectiveness of adapter-based tuning for pretrained language model adaptation
+
+
+- [[arXiv](https://arxiv.org/abs/2205.12410)] Adamix:  Mixture-of-adapter  for  parameter-efficient tuning  of  large  language  models
+
+- [[SLT](https://ieeexplore.ieee.org/abstract/document/10023274)] Exploring efficient-tuning methods in self-supervised speech models
+
+- [[ICASSP]( https://ieeexplore.ieee.org/abstract/document/10095837)]  Using  adapters  to  overcome catastrophic  forgetting  in  end-to-end  automatic  speech  recognition
 
 ## Input engineering
 
 ### Prompt Tuning
 
-- [[Arxiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation, 2021.
+- [[Arxiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
 
 
-- [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models. arXiv preprint arXiv:2301.12314, 2023.
+- [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models
 
 - [[Arxiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
   > **基于强化学习的离散提示优化**
@@ -91,7 +103,9 @@
 
 - [[EMNLP](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a gradient-free future with large language models
 
+  > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
 
+  
 - [[Arxiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
 - [[Arxiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
@@ -99,47 +113,21 @@
   > 我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。
   > 我们的框架还可以找到改变非结构化文本生成的对抗性提示。例如，我们发现对抗性提示会鼓励积极情绪或增加生成文本中字母“q”的频率。
 
-- :star: [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
-  > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
-  1.delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
-  2.基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
-  3.受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。  
-  实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
- 
-  <!-- ![](README.assets/image-20230430221334240.png)
-  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png) -->
-
-
-
-- [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
-  > 以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
-  以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
-  以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
-  预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
-  以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持
-
-
-- [[Arxiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
-  > **模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
-
-
-
-
-
-- [[paper](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a Gradient-Free Future with Large Language Models
-  > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
-- [[paper](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
+- [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
   > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
   >
-  > 1. 基础的提示工程  
-  > 2. 答案提示  
-  > 3. 多提示学习  
-  > 4. 提示感知方法  
+  > 基础的提示工程  
+  > 答案提示  
+  > 多提示学习  
+  > 提示感知方法  
   > http://pretrain.nlpedia.ai/  
   > prompting 更加依赖先验，而 fine-tuning 更加依赖后验
+
 - [[Arxiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
   > ![](README.assets/SSL.PNG)
     研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
+
+
 - [[Arxiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
   > 为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
   prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。  
@@ -148,21 +136,34 @@
   首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
   然后，设计合适的prompt长度  
   最后，设计合适的prompt表示词
-- [[Arxiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language
-Pre-training via Soft Prompts
+
+- [[Arxiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
   > 提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
-- [[Arxiv](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
+
+
+- [[ICML](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
   > **集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
   针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
   > ![prompt_boosting](README.assets/PROMPT_BOOSTING.PNG)
 
+
+
+<!-- - [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
+  > 以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
+  >以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
+  >以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
+  >预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
+  >以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持 -->
+
+
 - [[Arxiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
   > 提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。  
   >
-  > 1. 作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
-  > 2. 所提出的方法在优化硬提示的过程中使用连续的"软"提示作为中间变量，从而实现了鲁棒的优化并促进了提示的探索和发现  
-  > 3. 该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好
-  >
+  >作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
+  >所提出的方法在优化硬提示的过程中使用连续的"软"提示作为中间变量，从而实现了鲁棒的优化并促进了提示的探索和发现  
+  >该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好
+
+
 - [[Arxiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
   >
   > 1. 推导了主流PETL(Parameter efficient transfer learning)方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。
@@ -170,8 +171,10 @@ Pre-training via Soft Prompts
   > 3. 对迁移学习的全面研究证明了U-Tuning的通用性和强大性。 
   > 将PTEL分为了MHA Based Tuning（包含了Prefix tuning和Prompt tuning）和FFN Based Tuning（Adapter tuning），如下图所示
   > ![](README.assets/prefix+ada+pro.PNG)
-  U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：  
+  U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：
   $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
+
+
 - [[Arxiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
 > **通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
   ![](README.assets/MVP.PNG)
@@ -201,16 +204,17 @@ Pre-training via Soft Prompts
 
 
 
+- [[ICML](https://arxiv.org/abs/2301.13688)] The flan collection: Designing data and methods for effective instruction tuning
 
 
+- [[Arxiv](https://arxiv.org/abs/2304.03277)] Instruction tuning with gpt-4
 
 
+- [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html)] Training language models to follow instructions with human feedback
 
+- [[Arxiv](https://arxiv.org/abs/2302.03202)] Exploring the benefits of training expert language models over instruction tuning
 
-
-
-
-
+- [[Arxiv] https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
 
 
 
