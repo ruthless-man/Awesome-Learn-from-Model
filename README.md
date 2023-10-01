@@ -214,13 +214,48 @@
 
 - [[Arxiv](https://arxiv.org/abs/2302.03202)] Exploring the benefits of training expert language models over instruction tuning
 
-- [[Arxiv] https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
+- [[Arxiv] (https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
 
+
+## Database Augmentation
+
+### Language Database Augmentation
+
+
+- [[Arxiv]( https://arxiv.org/abs/1612.04426)] Improving neural language models with a continuous cache
+
+
+- [[Arxiv] (https://arxiv.org/abs/1911.00172)] Generalization through memorization: Nearest neighbor language models
+
+
+
+
+
+- [[Nips] (https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html)] Retrieval-augmented generation for knowledge-intensive nlp tasks 
+
+
+- [[Arxiv](https://arxiv.org/abs/2208.03299)] Few-shot learning with retrieval augmented language models
+
+
+- [[Arxiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
+
+
+### Multimodal Database Augmentation
+
+
+- [[Arxiv](https://arxiv.org/abs/2210.02928)] Murag: Multimodal retrieval-augmented generator for open question answering over images and text
+
+
+- [[Arxiv](https://arxiv.org/abs/2209.14491)] Re-Imagen: Retrieval-Augmented Text-to-Image Generator
+
+
+- [[openreview](https://openreview.net/forum?id=VZ8bs0fwoO)] Retrieval-Augmented Multimodal Language Modeling
+
+- [[Arxiv](https://arxiv.org/abs/2202.01110)] A Survey on Retrieval-Augmented Text Generation
 
 
 
 ## Model Distillation
-
 - [[Arxiv](https://arxiv.org/abs/2112.15278)] Data-Free Knowledge Transfer: A Survey
   > **Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
   > 1. Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
@@ -236,6 +271,7 @@
   > 2. 适应性的知识迁移  
   > 3. 联合学习  
   > 4. Transformer or GNN
+
 - [[Arxiv](https://arxiv.org/abs/1710.07535)] Data-free knowledge distillation for deep neural networks
   > 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
   > 传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
@@ -298,25 +334,31 @@
 
 ### Model Ensemble
 
-- T. G. Dietterich.  Ensemble methods in machine learning.  In Multiple Classifier Systems , pp. 1–15, Berlin, Heidelberg, 2000. Springer Berlin Heidelberg.
-- :star: [[Arxiv](https://arxiv.org/abs/2002.06715)] Y.  Wen  et  al.   BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning, February 2020.
+-  [[Multiple Classifier Systems](https://link.springer.com/chapter/10.1007/3-540-45014-9_1)] Ensemble methods in machine learning
+
+- :star: [[Arxiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
   > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
 
-- :star: [Arxviv](https://arxiv.org/abs/2307.08114) T. Y. Liu and S. Soatto.  Tangent Model Composition for Ensembling and Continual Fine-tuning, July 2023.
+- :star:[[Arxiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
   > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
+
 
 ### Model fusion
 
 #### Weight Interpolation
 
-- :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
-- D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
-- :star: [ICML 2022][[Arxiv](http://arxiv.org/abs/2203.05482)] M. Wortsman et al.  Model soups: averaging weights of multiple finetuned  models  improves  accuracy  without  increasing  inference  time. In International  Conference  on  Machine  Learning ,  pp.  23965–23998. PMLR, 2022.
-- P. Izmailov et al. Averaging Weights Leads to Wider Optima and Better Generalization, February 2019.
-- J.  Kaddour.   Stop  Wasting  My  Time!  Saving  Days  of  ImageNet  and BERT Training with Latest Weight Averaging, October 2022.
-- S.  Sanyal  et  al. Understanding  the  Effectiveness  of  Early  Weight Averaging for Training Large Language Models, June 2023.
-- H.  B.  McMahan  et  al.    Communication-Efficient  Learning  of  Deep Networks from Decentralized Data, January 2023.
-- [ICLR 2023] G. Ilharco et al.  Editing models with task arithmetic.  In The Eleventh International  Conference  on  Learning  Representations,  ICLR  2023, Kigali, Rwanda, May 1-5, 2023 . OpenReview.net, 2023.
+- :star: [[ICML](https://proceedings.mlr.press/v119/frankle20a)] Linear Mode Connectivity and the Lottery Ticket Hypothesis
+
+- [[openreview]( https://openreview.net/forum?id=TZQ3PKL3fPrOn)] convexity and linear mode connectivity in neural networks
+
+- :star: [[ICML](http://arxiv.org/abs/2203.05482)]  Model soups: averaging weights of multiple finetuned  models  improves  accuracy  without  increasing  inference time
+
+- [[arXiv](https://arxiv.org/abs/2209.14981)] Stop Wasting My Time! Saving  Days of ImageNet and BERT Training with Latest Weight Averaging
+
+- [[arXiv](https://arxiv.org/abs/2306.03241)]  Understanding  the  Effectiveness  of  Early  Weight Averaging for Training Large Language Models
+
+
+- [[ICLR]( https://arxiv.org/abs/2212.04089)]   Editing models with task arithmetic
 
 #### Mode Connectivity and Loss landscape
 
@@ -328,17 +370,17 @@
 
 #### Straightforward Optimization
 
--  S. P. Singh and M. Jaggi.  Model Fusion via Optimal Transport, May 2023.
-- [[arXiv](https://arxiv.org/abs/2212.09849)] X.  Jin  et  al. Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models, April 2023.  arXiv:2212.09849 [cs].
-- Y. Lou et  al.   Towards Efficient Front-End Visual  Sensing for Digital Retina: A Model-Centric Paradigm. IEEE Transactions on Multimedia , 22(11):3002–3013, 2020.  ISBN: 1901014738.
-- [[arXiv](https://arxiv.org/abs/2111.09832)] M.  Matena  and  C.  Raffel. Merging  Models  with  Fisher-Weighted Averaging, August 2022.  arXiv:2111.09832 [cs].
 
-<details>
+- [[Arxiv](https://arxiv.org/abs/2212.09849)] Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models
+
+- [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html)] Merging  Models  with  Fisher-Weighted Averaging
+
+<!-- <details>
 <summary>  <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
 <br>
-<blockquote>
+<blockquote> -->
 
-
+<!-- 
 思路基于2019年的文章：https://arxiv.org/abs/1911.00172
 k-Nearest将语言模型的输出与从目标域构建的数据存储中的topk最近匹配示例所做的预测相结合。这种组合允许模型在没有额外训练的情况下，通过将该领域的特定特征纳入其预测来适应新的目标领域。然而，检索增强域自适应的零样本特性常常导致有限的实用性，因为模型不是在目标域上训练的，而是仅基于在数据存储中可以找到的最近的示例来适应域。与在目标域上进行专门微调的模型相比，这可能会导致性能次优。  
 **KNN-Adapter+LM**  
@@ -346,10 +388,10 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 ![](README.assets/KNN.PNG)
 
 </blockquote>
-</details>
+</details> -->
 
 
-<details>
+<!-- <details>
 <summary>  <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
 
 **CVPR 2023**
@@ -358,37 +400,14 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
 CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.14225">Weighted Sampling for Masked Language Modeling</a> </summary>
-<br>
-<blockquote>
-
-**提出了两种加权采样方法来缓解传统掩蔽语言建模中的频率偏差问题：频率加加权采样和动态加权采样，计算出来每个token的屏蔽概率。**  
-**通过将加权采样应用于BERT，开发了一种新的PLM，即WSBERT。**
-<!-- ![](README.assets/KNN.PNG) -->
-
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2203.06904">Delta tuning: A comprehensive study of parameter efficient methods for pre-trained language models</a> </summary>
-<br>
-<blockquote>
-
-**内容和Parameter-efficient fine-tuning of large-scale pre-trained language models几乎相同**
-
-
-</blockquote>
-</details>
+</details> -->
 
 
 
 
 
+
+<!-- 
 <details>
 <summary>  <a href="https://arxiv.org/abs/2109.01134">Learning to Prompt for Vision-Language Models</a> </summary>
 <br>
@@ -401,11 +420,11 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 损失使用交叉熵损失
 ![](README.assets/Coop.PNG)
 </blockquote>
-</details>
+</details> -->
 
 
 
-<details>
+<!-- <details>
 <summary>  <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
 </a> </summary>
 <br>
@@ -429,11 +448,6 @@ CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多�
 </details>
 
 
-<details>
-<summary>  <a href="https://arxiv.org/abs/2306.02561">LLM-BLENDER: Ensembling Large Language Models with Pairwise Ranking and Generative Fusion</a> </summary>
-<br>
-<blockquote>
-
 
 **ACL 2023**
 
@@ -447,10 +461,10 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 ![](README.assets/LLM-BLENDER.PNG)
 
 </blockquote>
-</details>
+</details> -->
 
 
-## 模型增强（Model Augmentation）
+<!-- ## 模型增强（Model Augmentation）
 
 
 <details>
@@ -483,14 +497,35 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 
 </blockquote>
-</details>
+</details> -->
+
+## Meta Learning
+
+- [[TCSVT](https://ieeexplore.ieee.org/abstract/document/9745972)] Progressive meta-learning with curriculum
+
+- [[CVPR](https://openaccess.thecvf.com/content/CVPR2022/html/Chi_MetaFSCIL_A_Meta-Learning_Approach_for_Few-Shot_Class_Incremental_Learning_CVPR_2022_paper.html)] Metafscil: A meta-learning approach for few-shot class incremental learning.
+
+- [[ICML](https://arxiv.org/abs/2207.04179)] Transformer Neural Processes: Uncertainty-Aware Meta Learning Via Sequence Modeling
+
+
+- [[UAI](https://proceedings.mlr.press/v180/wang22a.html)] Meta-learning without data via Wasserstein distributionally-robust model fusion
+
+
+- [[CVPR]( https://openaccess.thecvf.com/content/WACV2022/html/Simon_Meta-Learning_for_Multi-Label_Few-Shot_Classification_WACV_2022_paper.html)] Meta-Learning for Multi-Label Few-Shot Classification
 
 
 
-## 模型编辑（Model Editing）
+- [[ECCV](https://link.springer.com/chapter/10.1007/978-3-031-20044-1_13)] Meta-Learning with Less Forgetting on Large-Scale Non-Stationary Task Distributions
 
 
 
+
+
+
+
+## Model Editing
+
+<!-- 
 <details>
 <summary>  <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
 <br>
@@ -504,7 +539,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 使用方法：（1）删除特定向量来降低本模型在某方面的能力   （2）添加其他模型的任务向量增强本模型某方面能力  （3）通过类比（平行四边形法则）的方式让模型获得新能力（即使没有该方向的数据）
 
 </blockquote>
-</details>
+</details> -->
 
 
 <!-- ## 相关综述（Related Survey）
