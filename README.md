@@ -16,7 +16,7 @@
 
 - [[mikecaptain](https://www.mikecaptain.com/resources/pdf/GPT-1.pdf)] Improving language understanding by generative pretraining
 
-- [[arxiv](https://arxiv.org/abs/2008.03156)] Better fine-tuning by reducing representational collapse
+- [[arXiv](https://arxiv.org/abs/2008.03156)] Better fine-tuning by reducing representational collapse
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train,  prompt,  and  predict:  A  systematic survey of prompting  methods in  natural  language  processing
 
@@ -42,7 +42,7 @@
 
 - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation
 
-- [[Arxiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
+- [[arXiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
   > **模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html)] Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning
@@ -62,12 +62,12 @@
 
 - [[arXiv](https://arxiv.org/abs/2106.01463)] Lightweight adapter tuning for multilingual speech translation
 
-- [[arxiv](https://arxiv.org/abs/2211.03831)] Multi-head adapter routing for cross-task generalization
+- [[arXiv](https://arxiv.org/abs/2211.03831)] Multi-head adapter routing for cross-task generalization
 
-- [[arxiv](https://arxiv.org/abs/2205.12410)] Adamix: Mixture-of-adapter for parameter-efficient tuning of large language models
+- [[arXiv](https://arxiv.org/abs/2205.12410)] Adamix: Mixture-of-adapter for parameter-efficient tuning of large language models
 
 
-- [[arxiv](https://arxiv.org/abs/2304.01933)] Llm-adapters: An adapter family for parameter-efficient fine-tuning of large language models
+- [[arXiv](https://arxiv.org/abs/2304.01933)] Llm-adapters: An adapter family for parameter-efficient fine-tuning of large language models
 
 
 
@@ -86,12 +86,12 @@
 
 ### Prompt Tuning
 
-- [[Arxiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
+- [[arXiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
 
 
 - [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models
 
-- [[Arxiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
+- [[arXiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
   > **基于强化学习的离散提示优化**
     训练一个parameter-efficient policy network
 
@@ -106,9 +106,9 @@
   > **在过去工作（Black-Box Tuning, ICML 2022）的基础上提出了BBTv2，使用深层 prompt 代替原有的输入层 prompt，并提出一种基于分治的无梯度优化方法对其进行交替优化，在多个少样本学习任务上仅优化千分之三的参数取得了和全参数微调相仿的性能。**
 
   
-- [[Arxiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
+- [[arXiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
-- [[Arxiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
+- [[arXiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
   > 开发了一个框架，用于使用令牌空间投影运算符来查找对抗性提示。该算子将连续的单词嵌入空间与离散的令牌空间桥接起来，并能够使用黑盒攻击来找到对抗性提示。
   > 我们展示了我们的框架如何自动找到独立的或预先准备好的提示，这些提示会导致文本到图像模型输出特定的图像类。我们可以进一步找到排除与目标类相关的令牌的对抗性提示。
   > 我们的框架还可以找到改变非结构化文本生成的对抗性提示。例如，我们发现对抗性提示会鼓励积极情绪或增加生成文本中字母“q”的频率。
@@ -123,12 +123,12 @@
   > http://pretrain.nlpedia.ai/  
   > prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
-- [[Arxiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
+- [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
   > ![](README.assets/SSL.PNG)
     研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
 
 
-- [[Arxiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
+- [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
   > 为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
   prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。  
   ![](README.assets/DP.PNG)
@@ -137,7 +137,7 @@
   然后，设计合适的prompt长度  
   最后，设计合适的prompt表示词
 
-- [[Arxiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
+- [[arXiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
   > 提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
 
 
@@ -156,7 +156,7 @@
   >以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持 -->
 
 
-- [[Arxiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
+- [[arXiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
   > 提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。  
   >
   >作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
@@ -164,7 +164,7 @@
   >该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好
 
 
-- [[Arxiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
+- [[arXiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
   >
   > 1. 推导了主流PETL(Parameter efficient transfer learning)方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。
   > 2. 我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
@@ -175,13 +175,13 @@
   $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
 
 
-- [[Arxiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
+- [[arXiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
 > **通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
   ![](README.assets/MVP.PNG)
 
 
 
-- [[Arxiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
+- [[arXiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
   > 设计了一个轻量级的通用检索器UPRISE，给定一个Zero-Shot任务输入，该检索器可以自动从预先构建的数据池中检索提示（看上去是硬提示），原理是冻结LLM，然后通过模型输出来反向梯度优化检索器，然后训练好的检索器可以根据输入x选择合适的prompt插入到x前面，再一起输入LLM。文章提出跨模型（小模型到大模型）和跨任务（已有任务到没见过的任务）两种标准进行实验分析（在小模型GPT-Neo-2.7B上进行训练调优，然后在BLOOM-7.1B，OPT-66B，GPT3-175B上进行测试）。
   ![](README.assets/UPRISE.PNG)
   ![](README.assets/UPRISE2.PNG)
@@ -196,25 +196,25 @@
 
 - [[COLING](https://arxiv.org/abs/2209.09900)] Linguist: Language model instruction tuning to generate annotated utterances for intent classification and slot tagging
 
-- [[Arxiv](https://arxiv.org/abs/2304.08485)] Visual Instruction Tuning
+- [[arXiv](https://arxiv.org/abs/2304.08485)] Visual Instruction Tuning
 
 
 
-- [[Arxiv](https://arxiv.org/abs/2307.03601)] Gpt4roi: Instruction tuning large language model on region-of-interest
+- [[arXiv](https://arxiv.org/abs/2307.03601)] Gpt4roi: Instruction tuning large language model on region-of-interest
 
 
 
 - [[ICML](https://arxiv.org/abs/2301.13688)] The flan collection: Designing data and methods for effective instruction tuning
 
 
-- [[Arxiv](https://arxiv.org/abs/2304.03277)] Instruction tuning with gpt-4
+- [[arXiv](https://arxiv.org/abs/2304.03277)] Instruction tuning with gpt-4
 
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/b1efde53be364a73914f58805a001731-Abstract-Conference.html)] Training language models to follow instructions with human feedback
 
-- [[Arxiv](https://arxiv.org/abs/2302.03202)] Exploring the benefits of training expert language models over instruction tuning
+- [[arXiv](https://arxiv.org/abs/2302.03202)] Exploring the benefits of training expert language models over instruction tuning
 
-- [[Arxiv] (https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
+- [[arXiv] (https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
 
 
 ## Database Augmentation
@@ -222,10 +222,10 @@
 ### Language Database Augmentation
 
 
-- [[Arxiv]( https://arxiv.org/abs/1612.04426)] Improving neural language models with a continuous cache
+- [[arXiv]( https://arxiv.org/abs/1612.04426)] Improving neural language models with a continuous cache
 
 
-- [[Arxiv] (https://arxiv.org/abs/1911.00172)] Generalization through memorization: Nearest neighbor language models
+- [[arXiv] (https://arxiv.org/abs/1911.00172)] Generalization through memorization: Nearest neighbor language models
 
 
 
@@ -234,29 +234,29 @@
 - [[Nips] (https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html)] Retrieval-augmented generation for knowledge-intensive nlp tasks 
 
 
-- [[Arxiv](https://arxiv.org/abs/2208.03299)] Few-shot learning with retrieval augmented language models
+- [[arXiv](https://arxiv.org/abs/2208.03299)] Few-shot learning with retrieval augmented language models
 
 
-- [[Arxiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
+- [[arXiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
 
 
 ### Multimodal Database Augmentation
 
 
-- [[Arxiv](https://arxiv.org/abs/2210.02928)] Murag: Multimodal retrieval-augmented generator for open question answering over images and text
+- [[arXiv](https://arxiv.org/abs/2210.02928)] Murag: Multimodal retrieval-augmented generator for open question answering over images and text
 
 
-- [[Arxiv](https://arxiv.org/abs/2209.14491)] Re-Imagen: Retrieval-Augmented Text-to-Image Generator
+- [[arXiv](https://arxiv.org/abs/2209.14491)] Re-Imagen: Retrieval-Augmented Text-to-Image Generator
 
 
 - [[openreview](https://openreview.net/forum?id=VZ8bs0fwoO)] Retrieval-Augmented Multimodal Language Modeling
 
-- [[Arxiv](https://arxiv.org/abs/2202.01110)] A Survey on Retrieval-Augmented Text Generation
+- [[arXiv](https://arxiv.org/abs/2202.01110)] A Survey on Retrieval-Augmented Text Generation
 
 
 
 ## Model Distillation
-- [[Arxiv](https://arxiv.org/abs/2112.15278)] Data-Free Knowledge Transfer: A Survey
+- [[arXiv](https://arxiv.org/abs/2112.15278)] Data-Free Knowledge Transfer: A Survey
   > **Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
   > 1. Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
   > - （1）噪声优化 
@@ -272,11 +272,11 @@
   > 3. 联合学习  
   > 4. Transformer or GNN
 
-- [[Arxiv](https://arxiv.org/abs/1710.07535)] Data-free knowledge distillation for deep neural networks
+- [[arXiv](https://arxiv.org/abs/1710.07535)] Data-free knowledge distillation for deep neural networks
   > 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
   > 传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
   > 在MNIST和CelebA上进行实验分析
-- [[Arxiv](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
+- [[arXiv](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
   > **GAN知识蒸馏 cvpr2023**
   > 对抗生成网络 + 知识蒸馏 = 无数据知识蒸馏  
   > ![](README.assets/无数据知识蒸馏.jpg)
@@ -286,7 +286,7 @@
   > 3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
   > ![](README.assets/元学习元训练.PNG)
   > ![](README.assets/无数据知识蒸馏.PNG)
-- [[Arxiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
+- [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
   >  **信息抽取领域的大小模型协同**
   > 问题：  
   > 1. 在少样本IE任务中，Large-LM是否真的优于Small-LM?  
@@ -294,7 +294,7 @@
   > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
   > 思路：将小模型不太确定的测试样本再给大模型重新选择一下  
   > ![](README.assets/large.PNG)
-- [[Arxiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
+- [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
   > 将预训练语言模型的知识生命周期划分为五个：  
   > **1.知识获取：关注模型怎么从文本中提取知识**
   > 建模方法有：因果建模，掩码建模，Seq2Seq建模，去噪建模
@@ -304,22 +304,22 @@
   > **4.知识编辑：编辑或删除模型中的知识**  
   > 约束微调，内存微调，元学习微调
   > **5.知识应用：从训练好的模型中提取可用的知识**
-- [[Arxiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
+- [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
   > **采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
   > SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
   > ![](README.assets/SWA.PNG)
-- [[Arxiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
+- [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
   > **设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
   > **思路：**
   > 不仅是将老师和学生在输出层的标签进行匹配，同时还要将他们中间阶段的特征图进行匹配
-- [[Arxiv](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
+- [[arXiv](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
   > **CVPR 2023**
   提出了通用到特定的蒸馏(G2SD)，将任务不可知和任务特定的知识从MAE转移到轻量级的vit，为两阶段视觉模型蒸馏设定了坚实的基线  
   实现方式：
   第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
   第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
   ![](README.assets/GS2D.PNG)
-- [[Arxiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
+- [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
   > - 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
   > - 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
   > - 与许多需要访问原始数据或依赖于复杂模型假设的“最先进”的方法相比，CAKE的分类准确性具有竞争力。
@@ -336,10 +336,10 @@
 
 -  [[Multiple Classifier Systems](https://link.springer.com/chapter/10.1007/3-540-45014-9_1)] Ensemble methods in machine learning
 
-- :star: [[Arxiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
+- :star: [[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
   > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
 
-- :star:[[Arxiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
+- :star:[[arXiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
   > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
 
 
@@ -371,7 +371,7 @@
 #### Straightforward Optimization
 
 
-- [[Arxiv](https://arxiv.org/abs/2212.09849)] Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models
+- [[arXiv](https://arxiv.org/abs/2212.09849)] Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html)] Merging  Models  with  Fisher-Weighted Averaging
 
@@ -525,12 +525,12 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
  - [[ICSE](https://dl.acm.org/doi/abs/10.1145/3510003.3510125 )] Cross-domain deep code search with meta learning
 
 
- - [[Arxiv](https://arxiv.org/abs/2305.18413 )] Learning to Learn from APIs: Black-Box Data-Free Meta-Learning
+ - [[arXiv](https://arxiv.org/abs/2305.18413 )] Learning to Learn from APIs: Black-Box Data-Free Meta-Learning
 
 
  - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Architecture_Dataset_and_Model-Scale_Agnostic_Data-Free_Meta-Learning_CVPR_2023_paper.html )] Architecture, Dataset and Model-Scale Agnostic Data-Free Meta-Learning
  
- - [[Arxiv](https://arxiv.org/abs/2307.04114#:~:text=FILM%3A%20How%20can%20Few-Shot%20Image%20Classification%20Benefit%20from,to%20novel%20classes%20with%20only%20a%20few%20samples.)]  FILM: How can Few-Shot Image Classification Benefit from Pre-Trained Language Models?
+ - [[arXiv](https://arxiv.org/abs/2307.04114#:~:text=FILM%3A%20How%20can%20Few-Shot%20Image%20Classification%20Benefit%20from,to%20novel%20classes%20with%20only%20a%20few%20samples.)]  FILM: How can Few-Shot Image Classification Benefit from Pre-Trained Language Models?
 
 
  - [[AAAI]( https://ojs.aaai.org/index.php/AAAI/article/view/26139 )] Training Meta-Surrogate Model for Transferable Adversarial Attack
@@ -543,7 +543,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
  - [[ICRA](https://ieeexplore.ieee.org/abstract/document/10160513 )] Meta-Learning-Based Optimal Control for Soft Robotic Manipulators to Interact with Unknown Environments
 
 
- - [[Arxiv](https://arxiv.org/abs/2212.06751)] Speeding Up Multi-Objective Hyperparameter Optimization by Task Similarity-Based Meta-Learning for the Tree-Structured Parzen Estimator
+ - [[arXiv](https://arxiv.org/abs/2212.06751)] Speeding Up Multi-Objective Hyperparameter Optimization by Task Similarity-Based Meta-Learning for the Tree-Structured Parzen Estimator
 
  - [[Neuromorphic Computing and Engineering](https://iopscience.iop.org/article/10.1088/2634-4386/ac8828/meta)]  Meta-learning spiking neural networks with surrogate gradient descent
 
@@ -571,34 +571,34 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 ### Parameter Based Model Editing
 #### Constrained Tuning
 
-- [[Arxiv](https://arxiv.org/abs/2301.09785)] Transformer-Patcher: One Mistake worth One Neuron
+- [[arXiv](https://arxiv.org/abs/2301.09785)] Transformer-Patcher: One Mistake worth One Neuron
 
-- [[Arxiv](https://arxiv.org/abs/2210.03329)] Calibrating Factual Knowledge in Pretrained Language Models
+- [[arXiv](https://arxiv.org/abs/2210.03329)] Calibrating Factual Knowledge in Pretrained Language Models
 
-- [[Arxiv](https://arxiv.org/abs/2305.01651)] Can LMs Learn New Entities from Descriptions? Challenges in Propagating Injected Knowledge
+- [[arXiv](https://arxiv.org/abs/2305.01651)] Can LMs Learn New Entities from Descriptions? Challenges in Propagating Injected Knowledge
 
-- [[Arxiv]( https://arxiv.org/abs/2211.03318)] Fixing Model Bugs with Natural Language Patches
+- [[arXiv]( https://arxiv.org/abs/2211.03318)] Fixing Model Bugs with Natural Language Patches
 
 
 #### Locate And Edit
-- [[Arxiv](https://arxiv.org/abs/2012.00363)] Modifying Memories in Transformer Models
+- [[arXiv](https://arxiv.org/abs/2012.00363)] Modifying Memories in Transformer Models
 
-- [[Arxiv](https://arxiv.org/abs/2210.07229)] Mass-Editing Memory in a Transformer
+- [[arXiv](https://arxiv.org/abs/2210.07229)] Mass-Editing Memory in a Transformer
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html)] Locating and Editing Factual Associations in GPT
 
 
 #### Meta Learning
-- [[Arxiv](https://arxiv.org/abs/2211.13317)] Rank-One Editing of Encoder-Decoder Models
+- [[arXiv](https://arxiv.org/abs/2211.13317)] Rank-One Editing of Encoder-Decoder Models
 
-- [[Arxiv](https://arxiv.org/abs/2301.11997)] Prompt-Based Editing for Text Style Transfer
+- [[arXiv](https://arxiv.org/abs/2301.11997)] Prompt-Based Editing for Text Style Transfer
 
  - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Conditional_Text_Image_Generation_With_Diffusion_Models_CVPR_2023_paper.html)]Conditional Text Image Generation With Diffusion Models
 
 
-- [[Arxiv](https://arxiv.org/abs/2301.12810)] Crawling the Internal Knowledge-Base of Language Models
+- [[arXiv](https://arxiv.org/abs/2301.12810)] Crawling the Internal Knowledge-Base of Language Models
 
-- [[Arxiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
+- [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
 
 
 
