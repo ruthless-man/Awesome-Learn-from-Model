@@ -14,13 +14,13 @@
 
 #### Fine Tuning
 
-- [[mikecaptain](https://www.mikecaptain.com/resources/pdf/GPT-1.pdf)] A. Radford et al. Improving language understanding by generative pretraining. 2018
+- [[mikecaptain](https://www.mikecaptain.com/resources/pdf/GPT-1.pdf)] Improving language understanding by generative pretraining. 2018
 
-- [[arxiv](https://arxiv.org/abs/2008.03156)]A. Aghajanyan et al. Better fine-tuning by reducing representational collapse. arXiv preprint arXiv:2008.03156, 2020.
+- [[arxiv](https://arxiv.org/abs/2008.03156)] Better fine-tuning by reducing representational collapse. arXiv preprint arXiv:2008.03156, 2020.
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train,  prompt,  and  predict:  A  systematic survey of prompting  methods in  natural  language  processing
 
-- [[arXiv](https://arxiv.org/abs/2104.08691)] B.  Lester  et  al.    The  power  of  scale  for  parameter-efficient  prompt tuning. arXiv preprint arXiv:2104.08691 , 2021.
+- [[arXiv](https://arxiv.org/abs/2104.08691)] The  power  of  scale  for  parameter-efficient  prompt tuning. arXiv preprint arXiv:2104.08691 , 2021.
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/abs/10.1145/3605943)] Recent advances in natural language processing via large pre-trained language models: A survey
 
