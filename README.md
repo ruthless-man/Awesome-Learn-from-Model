@@ -279,13 +279,13 @@
 - [[arXiv](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
   > **GAN知识蒸馏 cvpr2023**
   > 对抗生成网络 + 知识蒸馏 = 无数据知识蒸馏  
-  > ![](README.assets/无数据知识蒸馏.jpg)
+  ![](README.assets/无数据知识蒸馏.jpg)
   > 主要处理的问题就是在学生网络更新的过程中的分布偏移  
   > 1.提出了一种新的元学习启发的知识蒸馏中学生网络更新的策略，旨在保持学生在知识保留上的表现，同时从当前  分布的样本中获取知识。  
   > 2.策略在知识获取和知识保留之间强制执行隐式梯度对齐，也就是说提出的学生更新策略对这两个任务执行了一个  共同的梯度方向，减少了两个目标之间的干扰。  
   > 3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
-  > ![](README.assets/元学习元训练.PNG)
-  > ![](README.assets/无数据知识蒸馏.PNG)
+  ![](README.assets/元学习元训练.PNG)
+  ![](README.assets/无数据知识蒸馏.PNG)
 - [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
   >  **信息抽取领域的大小模型协同**
   > 问题：  
@@ -293,7 +293,7 @@
   > 2. 更多的标注数据能否提高Large-LM和Small-LM?  
   > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
   > 思路：将小模型不太确定的测试样本再给大模型重新选择一下  
-  > ![](README.assets/large.PNG)
+  ![](README.assets/large.PNG)
 - [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
   > 将预训练语言模型的知识生命周期划分为五个：  
   > **1.知识获取：关注模型怎么从文本中提取知识**
@@ -307,7 +307,7 @@
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
   > **采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
   > SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
-  > ![](README.assets/SWA.PNG)
+  ![](README.assets/SWA.PNG)
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
   > **设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
   > **思路：**
@@ -323,7 +323,7 @@
   > - 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
   > - 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
   > - 与许多需要访问原始数据或依赖于复杂模型假设的“最先进”的方法相比，CAKE的分类准确性具有竞争力。
-  > ![](README.assets/边界知识蒸馏.PNG)
+  ![](README.assets/边界知识蒸馏.PNG)
 
 
 
@@ -358,15 +358,19 @@
 - [[arXiv](https://arxiv.org/abs/2306.03241)]  Understanding  the  Effectiveness  of  Early  Weight Averaging for Training Large Language Models
 
 
-- [[ICLR]( https://arxiv.org/abs/2212.04089)]   Editing models with task arithmetic
+- [[ICLR]( https://arxiv.org/abs/2212.04089)]  Editing models with task arithmetic
 
 #### Mode Connectivity and Loss landscape
 
-- :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis, July 2020.
-- D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks.  In OPT 2022: Optimization for Machine Learning (NeurIPS 2022 Workshop) , 2022.
-- :star: [[arXiv](https://arxiv.org/abs/1802.10026)] T. Garipov et al.  Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs, October 2018.  arXiv:1802.10026 [cs, stat].
-- [ICLR 2023][[arXiv](https://arxiv.org/abs/2209.04836)] S. K. Ainsworth et al.  Git Re-Basin: Merging Models modulo Permutation Symmetries, March 2023.   arXiv:2209.04836 [cs] Read Status: Read Read Status Date: 2023-08-31T10:29:51.597Z.
-- [[arXiv](https://arxiv.org/abs/2305.03053)] George  Stoica  et  al. ZipIt!  Merging  Models  from  Different  Tasks without Training, May 2023.  arXiv:2305.03053 [cs].
+- :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis
+
+- D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks
+
+- :star: [[arXiv](https://arxiv.org/abs/1802.10026)] T. Garipov et al.  Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs
+
+- [[arXiv](https://arxiv.org/abs/2209.04836)] S. K. Ainsworth et al.  Git Re-Basin: Merging Models modulo Permutation Symmetries
+
+- [[arXiv](https://arxiv.org/abs/2305.03053)] George  Stoica  et  al. ZipIt!  Merging  Models  from  Different  Tasks without Training
 
 #### Straightforward Optimization
 
@@ -564,7 +568,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 
 - [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
-
+![](README.assets/editing.PNG)
 - [[ENNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
 
 
