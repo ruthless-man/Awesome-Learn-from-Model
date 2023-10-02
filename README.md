@@ -124,7 +124,7 @@
   > prompting 更加依赖先验，而 fine-tuning 更加依赖后验
 
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
-  > ![](README.assets/SSL.PNG)
+   ![](README.assets/SSL.PNG)
     研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
 
 
@@ -144,7 +144,7 @@
 - [[ICML](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
   > **集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
   针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
-  > ![prompt_boosting](README.assets/PROMPT_BOOSTING.PNG)
+  ![prompt_boosting](README.assets/PROMPT_BOOSTING.PNG)
 
 
 
@@ -170,7 +170,7 @@
   > 2. 我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
   > 3. 对迁移学习的全面研究证明了U-Tuning的通用性和强大性。 
   > 将PTEL分为了MHA Based Tuning（包含了Prefix tuning和Prompt tuning）和FFN Based Tuning（Adapter tuning），如下图所示
-  > ![](README.assets/prefix+ada+pro.PNG)
+  ![](README.assets/prefix+ada+pro.PNG)
   U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：
   $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
 
