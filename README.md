@@ -501,6 +501,8 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 ## Meta Learning
 
+### White-box Data-free Meta-learning
+
 - [[TCSVT](https://ieeexplore.ieee.org/abstract/document/9745972)] Progressive meta-learning with curriculum
 
 - [[CVPR](https://openaccess.thecvf.com/content/CVPR2022/html/Chi_MetaFSCIL_A_Meta-Learning_Approach_for_Few-Shot_Class_Incremental_Learning_CVPR_2022_paper.html)] Metafscil: A meta-learning approach for few-shot class incremental learning.
@@ -508,22 +510,97 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 - [[ICML](https://arxiv.org/abs/2207.04179)] Transformer Neural Processes: Uncertainty-Aware Meta Learning Via Sequence Modeling
 
 
+### Black-box Data-free Meta-learning
+
 - [[UAI](https://proceedings.mlr.press/v180/wang22a.html)] Meta-learning without data via Wasserstein distributionally-robust model fusion
 
 
 - [[CVPR]( https://openaccess.thecvf.com/content/WACV2022/html/Simon_Meta-Learning_for_Multi-Label_Few-Shot_Classification_WACV_2022_paper.html)] Meta-Learning for Multi-Label Few-Shot Classification
 
 
-
 - [[ECCV](https://link.springer.com/chapter/10.1007/978-3-031-20044-1_13)] Meta-Learning with Less Forgetting on Large-Scale Non-Stationary Task Distributions
 
+- [[CVPR]( https://openaccess.thecvf.com/content/CVPR2022/html/Wang_Learning_To_Learn_and_Remember_Super_Long_Multi-Domain_Task_Sequence_CVPR_2022_paper.html)] Learning To Learn and Remember Super Long Multi-Domain Task Sequence
+
+ - [[ICSE](https://dl.acm.org/doi/abs/10.1145/3510003.3510125 )] Cross-domain deep code search with meta learning
 
 
+ - [[Arxiv](https://arxiv.org/abs/2305.18413 )] Learning to Learn from APIs: Black-Box Data-Free Meta-Learning
 
+
+ - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Hu_Architecture_Dataset_and_Model-Scale_Agnostic_Data-Free_Meta-Learning_CVPR_2023_paper.html )] Architecture, Dataset and Model-Scale Agnostic Data-Free Meta-Learning
+ 
+ - [[Arxiv](https://arxiv.org/abs/2307.04114#:~:text=FILM%3A%20How%20can%20Few-Shot%20Image%20Classification%20Benefit%20from,to%20novel%20classes%20with%20only%20a%20few%20samples.)]  FILM: How can Few-Shot Image Classification Benefit from Pre-Trained Language Models?
+
+
+ - [[AAAI]( https://ojs.aaai.org/index.php/AAAI/article/view/26139 )] Training Meta-Surrogate Model for Transferable Adversarial Attack
+
+ - [[SP]( https://ieeexplore.ieee.org/abstract/document/10179406 )] D-DAE: Defense-Penetrating Model Extraction Attacks
+ 
+ - [[Neurocomputing]( https://www.sciencedirect.com/science/article/abs/pii/S0925231222012759)]  MGML: Momentum group meta-learning for few-shot image classification
+
+
+ - [[ICRA](https://ieeexplore.ieee.org/abstract/document/10160513 )] Meta-Learning-Based Optimal Control for Soft Robotic Manipulators to Interact with Unknown Environments
+
+
+ - [[Arxiv](https://arxiv.org/abs/2212.06751)] Speeding Up Multi-Objective Hyperparameter Optimization by Task Similarity-Based Meta-Learning for the Tree-Structured Parzen Estimator
+
+ - [[Neuromorphic Computing and Engineering](https://iopscience.iop.org/article/10.1088/2634-4386/ac8828/meta)]  Meta-learning spiking neural networks with surrogate gradient descent
+
+- [[PMLR](https://proceedings.mlr.press/v162/jiang22a.html)] The Role of Deconfounding in Meta-learning
+
+- [[ITSP](https://ieeexplore.ieee.org/abstract/document/9953561)] Distributed Reptile Algorithm for Meta-Learning Over Multi-Agent Systems
+
+- [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f50f282a3093d36471008b045bd478af-Abstract-Conference.html)] Efficient and Effective Multi-task Grouping via Meta Learning on Task Combinations
+
+ - [[Computers & Graphics](https://www.sciencedirect.com/science/article/abs/pii/S0097849323000651)] An overview on Meta-learning approaches for Few-shot Weakly-supervised Segmentation
 
 
 
 ## Model Editing
+
+
+### Memory Based Model Editing
+
+
+- [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
+
+- [[ENNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
+
+
+### Parameter Based Model Editing
+#### Constrained Tuning
+
+- [[Arxiv](https://arxiv.org/abs/2301.09785)] Transformer-Patcher: One Mistake worth One Neuron
+
+- [[Arxiv](https://arxiv.org/abs/2210.03329)] Calibrating Factual Knowledge in Pretrained Language Models
+
+- [[Arxiv](https://arxiv.org/abs/2305.01651)] Can LMs Learn New Entities from Descriptions? Challenges in Propagating Injected Knowledge
+
+- [[Arxiv]( https://arxiv.org/abs/2211.03318)] Fixing Model Bugs with Natural Language Patches
+
+
+#### Locate And Edit
+- [[Arxiv](https://arxiv.org/abs/2012.00363)] Modifying Memories in Transformer Models
+
+- [[Arxiv](https://arxiv.org/abs/2210.07229)] Mass-Editing Memory in a Transformer
+
+- [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/6f1d43d5a82a37e89b0665b33bf3a182-Abstract-Conference.html)] Locating and Editing Factual Associations in GPT
+
+
+#### Meta Learning
+- [[Arxiv](https://arxiv.org/abs/2211.13317)] Rank-One Editing of Encoder-Decoder Models
+
+- [[Arxiv](https://arxiv.org/abs/2301.11997)] Prompt-Based Editing for Text Style Transfer
+
+ - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Conditional_Text_Image_Generation_With_Diffusion_Models_CVPR_2023_paper.html)]Conditional Text Image Generation With Diffusion Models
+
+
+- [[Arxiv](https://arxiv.org/abs/2301.12810)] Crawling the Internal Knowledge-Base of Language Models
+
+- [[Arxiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
+
+
 
 <!-- 
 <details>
