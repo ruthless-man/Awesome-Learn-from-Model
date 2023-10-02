@@ -117,11 +117,11 @@
 - [[arXiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
 - [[arXiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
--We have developed a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.
+>We have developed a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.
 
--We demonstrate how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.
+>We demonstrate how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.
 
--Our framework can also discover adversarial prompts that alter the generation of unstructured text. For instance, we found that adversarial prompts encourage positive emotions or increase the frequency of the letter "q" in the generated text.
+>Our framework can also discover adversarial prompts that alter the generation of unstructured text. For instance, we found that adversarial prompts encourage positive emotions or increase the frequency of the letter "q" in the generated text.
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
   > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
