@@ -50,10 +50,10 @@
 - [[AAAI](https://arxiv.org/abs/2202.10054)] On the effectiveness of parameter-efficient fine-tuning
 
 - :star: [[nature](https://www.nature.com/articles/s42256-023-00626-4)] Parameter-efficient fine-tuning of large-scale pre-trained language models
-  > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
+  <!-- > **Fine-tuning的进阶升级版（冻结99%以上的参数进行任务适配），旨在全面分析delta-tuning（增量微调，使模型自适应变得低成本）的最新进展**  
   >delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
   >基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
-  >受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
+  >受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。    -->
   ![](README.assets/image-20230430221334240.png)
   ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
 
@@ -87,11 +87,11 @@
 
 - [[arXiv](https://arxiv.org/abs/2109.01134)] Learning to Prompt for Vision-Language Model
 
-**研究Prompt在大型视觉-语言模型的应用，也是用自适应的上下文学习来提升对图片的分类精度。**
-提供了两种实现来处理不同性质的任务:  
-1.基于统一上下文，与所有类共享相同的上下文，并且在大多数类别上都能很好地工作，也就是unified context，不管样本是什么类别，其learnable context都是一样的。    
-2.基于特定于类的上下文，每个类学习一组特定的上下文令牌，适合于一些细粒度的类别，class-specific context，每个类别都有自己特有的learnable context。  
-损失使用交叉熵损失
+**To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification. **
+Two implementations are provided to handle tasks of different nature:  
+>Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
+>Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
+
 ![](README.assets/Coop.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
@@ -100,11 +100,11 @@
 - [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models
 
 - [[arXiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
-  > **基于强化学习的离散提示优化**
+  > **Discrete cue optimization based on reinforcement learning**
     训练一个parameter-efficient policy network
 
 - [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
-  > **连续prompt的无梯度实现，基于随机嵌入DFO**  
+  > **Gradientless implementation of continuous prompt, based on random embedded DFO**  
   This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity.
 
 
@@ -117,41 +117,41 @@
 - [[arXiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
 - [[arXiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
->We have developed a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.
->We demonstrate how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.
+>We have developed a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.  
+>We demonstrate how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.  
 >Our framework can also discover adversarial prompts that alter the generation of unstructured text. For instance, we found that adversarial prompts encourage positive emotions or increase the frequency of the letter "q" in the generated text.
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
-  > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
+  <!-- > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
   >
   > 基础的提示工程  
   > 答案提示  
   > 多提示学习  
   > 提示感知方法  
   > http://pretrain.nlpedia.ai/  
-  > prompting 更加依赖先验，而 fine-tuning 更加依赖后验
+  > prompting 更加依赖先验，而 fine-tuning 更加依赖后验 -->
 
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
    ![](README.assets/SSL.PNG)
-    研究半监督学习下的提示设计，第一个在SSL设置中完全消除人工参与设计多个提示符和语言表达器的人，并获得与使用手动提示符和语言表达器的SoTA方法相似甚至更好的性能
+>Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
 
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
-  > 为了填补这一空白，我们提出了动态提示(dynamic prompting)：位置、长度和提示表示都可以针对不同的任务和实例进行动态优化，使用SuperGlue作为benchmark。
-  prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。  
+  > To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark.
+  <!-- prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。   -->
   ![](README.assets/DP.PNG)
-  DP主要就是在输入x的前后都插入prompt  
+  <!-- DP主要就是在输入x的前后都插入prompt  
   首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
   然后，设计合适的prompt长度  
-  最后，设计合适的prompt表示词
+  最后，设计合适的prompt表示词 -->
 
 - [[arXiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
-  > 提出了PTUnifier，使医学预训练模型能够兼容不同模式的输入
+  > The PTUnifier is proposed to make the medical pretraining model compatible with different input modes
 
 
 - [[ICML](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
-  > **集成学习Boosting+Prompt，本文提出了PROMPTBOOSTING，首先建立小提示池,然后通过ADABOOST从这些提示中创建一组弱学习器并将它们集成在一起来实现优异的性能**
-  针对黑盒模型的无梯度提示优化技巧存在一些问题，比如需要对LMs进行大量的查询，考虑到预训练LMs不断增长的规模和计算成本，这是非常低效的，并且可能导致较大的近似误差  
+  > **Ensemble learning Boosting+Prompt, this paper proposes PROMPTBOOSTING, which first builds a pool of small prompts, and then through ADABOOST creates a set of weak learners from these prompts and integrates them together to achieve excellent performance**
+>Gradient-free cueing optimization techniques for black-box models have some problems, such as requiring a large number of queries on the LMs, which is very inefficient given the growing size and computational cost of pre-trained LMs, and can lead to large approximation errors
   ![prompt_boosting](README.assets/PROMPT_BOOSTING.PNG)
 
 
@@ -167,48 +167,44 @@
 
 >System-Centric Approaches: These include efficient distributed frameworks and open-source libraries that provide sufficient hardware support for implementing the aforementioned acceleration algorithms.
 - [[arXiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
-  > 提出一种基于梯度的优化方法，为文本到图像和文本到文本的应用生成鲁棒和灵活的硬文本提示。  
-  >
-  >作者提出一种通过高效的基于梯度的优化学习硬文本提示的简单方案，该方案改编自梯度重投影方案和针对量化网络的大规模离散优化文献  
-  >所提出的方法在优化硬提示的过程中使用连续的"软"提示作为中间变量，从而实现了鲁棒的优化并促进了提示的探索和发现  
-  >该方法被用于文本到图像和文本到文本的应用，学到的硬提示在图像生成和语言分类任务中都表现良好
+>A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
+>We propose a simple scheme for learning hard text prompts through efficient gradient-based optimization, adapted from gradient reprojection schemes and large-scale discrete optimization literature for quantization networks.    
+>The proposed method uses continuous "soft" prompts as intermediate variables in the process of optimizing hard prompts, thus achieving robust optimization and facilitating prompt exploration and discovery.  
+> The method is used for text-to-image and text-to-text applications, and the hard tips learned perform well in both image generation and language classification tasks.
 
 
 - [[arXiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
-  >
-  > 1. 推导了主流PETL(Parameter efficient transfer learning)方法的并行形式（提示，Adapter，Prefix），它降低了耦合程度，并促进了大型预训练模型的参数高效部署。
-  > 2. 我们提出了一个统一的调优框架U-Tuning，它包含现有的PETL方法，并允许衍生新的方法。  
-  > 3. 对迁移学习的全面研究证明了U-Tuning的通用性和强大性。 
-  > 将PTEL分为了MHA Based Tuning（包含了Prefix tuning和Prompt tuning）和FFN Based Tuning（Adapter tuning），如下图所示
+> The parallel form (prompt, Adapter, Prefix) of the mainstream Parameter efficient transfer learning (PETL) method is derived, which reduces the coupling degree and promotes the parameter efficient deployment of large pre-trained models.  
+> We propose a unified tuning framework, U-Tuning, which contains existing PETL methods and allows new methods to be derived.  
+> The comprehensive research on transfer learning proves the versatility and power of U-Tuning.  
+> PTEL is divided into MHA Based Tuning (including Prefix tuning and Prompt tuning) and FFN Based Tuning (Adapter tuning), as shown in the following figure.  
   ![](README.assets/prefix+ada+pro.PNG)
-  U-tuning的设计遵循了冻结函数+可变部分的设计，因此可以延伸到多种适应性结构中去：
+>The U-tuning design follows the freeze function + variable part design, so it can be extended to a variety of adaptive structures:  
   $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
 
 
 - [[arXiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
-> **通过提示调优来实现全模型的微调来增强对抗鲁棒性（词语替换攻击）**
+> **Fine-tuning of the entire model through prompt tuning for increased robustness against (word substitution attacks)**
   ![](README.assets/MVP.PNG)
 
 
 
 - [[arXiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
->The article describes the design of a lightweight universal retriever called UPRISE. Given a zero-shot task input, the retriever automatically retrieves prompts from a pre-constructed data pool, which appear to be hard prompts. The approach involves freezing the language model (LLM) and performing gradient-based optimization on the retriever using the model's outputs. The trained retriever can then select an appropriate prompt to insert in front of the input x, which is then fed into the LLM.
-
+>The article describes the design of a lightweight universal retriever called UPRISE. Given a zero-shot task input, the retriever automatically retrieves prompts from a pre-constructed data pool, which appear to be hard prompts. The approach involves freezing the language model (LLM) and performing gradient-based optimization on the retriever using the model's outputs. The trained retriever can then select an appropriate prompt to insert in front of the input x, which is then fed into the LLM.  
 >The paper presents experimental analyses based on two criteria: cross-model (from small-scale models like GPT-Neo-2.7B to large-scale models like BLOOM-7.1B, OPT-66B, and GPT3-175B) and cross-task (from previously seen tasks to unseen tasks). The training and fine-tuning of the retriever are conducted on the small-scale model GPT-Neo-2.7B, while the testing is performed on the larger-scale models mentioned above.
 
   ![](README.assets/UPRISE.PNG)
   ![](README.assets/UPRISE2.PNG)
-  Method部分介绍了数据标签的构建方法，总体任务划分为text completion和multiple-choice两种，然后介绍了检索器的结构，微调和推理的方法。
+  >The Method part introduces the construction method of data tags, the overall task is divided into text completion and multiple-choice, and then introduces the structure, fine tuning and inference method of the retrieval device.
   ![](README.assets/UP3.PNG)
 
 
 
 - [[CVPR](https://arxiv.org/abs/2303.02151)] Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners
 
-- 提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。
-
-- 融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
-- CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
+> Propose a cascade of base models to incorporate diverse knowledge from different pre-training paradigms for better small-sample learning.  
+> Four models are integrated: 1.CLIP language comparison 2.DINO visual comparison 3.DALL-E image generation 4.GPT3 language generation.  
+> CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
 
 
 ### InstructioN Tuning
@@ -242,12 +238,10 @@
 
 - [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
 
-**增强语言模型（ALM）**
-LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外部工具能力的工作（推理指将复杂任务分解为更简单的子任务，工具包括调用模块等），并指出这个方向有可能解决传统语言模型所面临的可解释性，一致性以及扩展性的问题。
-
-- 观点1：大规模语言模型由于模型幻视等问题在大规模推广时受到限制，很多LLM的能力随着模型参数量增加到一定限度才会涌现，LLM的模型规模跟数据需求在很多情况下都是不符合实际的。
-
-- 观点2：将ALM分为（1） Reason: 推理，将潜在复杂任务分解为简单子任务的能力，而这些子任务是语言模型可以自身解决或者调用其他工具解决。（2）Tool: 工具，语言模型通过规则或者特殊token调用外部模块的能力，包括检索外部信息的检索系统，或者可以调用机器手臂的工具等。（3）Act：行为，ALM调用的工具会对虚拟或者真实世界产生影响并观测到结果。
+**Enhanced Language Model (ALM)**
+>This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
+>Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
+>Idea 2: Divide ALM into (1) Reason: inference, the ability to break down potentially complex tasks into simple subtasks that the language model can solve on its own or by invoking other tools. (2) Tool: The ability of the language model to call external modules through rules or special tokens, including a retrieval system to retrieve external information, or a tool that can call the robot arm. (3) Act: Actions, tools invoked by ALM will have an impact on the virtual or real world and observe the results.  
 
 
 
@@ -270,15 +264,15 @@ LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外
 
 
 - [[arXiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
-**处理生成文本中的事实性错误**
+**Handle factual errors in generated text**
 
-以往的白盒检索增强中一般是冻结检索器，优化大模型，也就是让LM适应retriever。
+>In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.
 
-**思路:** 本文提出了一种黑盒式的检索增强组件REPLUG，优化检索组件，冻结大模型，让retriever适应LM，然后使用了一个集成的框架，其实就是把多个检索到的文档分别和输入x结合送到LM中，得到的结果再用权重的方式集成，老套路了。用余弦相似度去提取和x最接近的文本，然后分别结合x输入LM，得到集成结果，根据KL散度来训练检索器。
+**IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
 ![](README.assets/Replug1.PNG)
 ![](README.assets/Replug2.PNG)
 
-损失函数（检索似然和语言模型似然之间的KL散度）：
+Loss function (retrieves KL divergence between likelihood and language model likelihood) :
 $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
 
 
@@ -302,48 +296,44 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 - [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
 
 
-知识蒸馏由知识类型，蒸馏算法，师生架构三部分组成
+Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
 ![](README.assets/KD.PNG)
 
-**根据使用到的知识阶段进行划分：**
+**Divided according to the stage of knowledge used:**
 
-- Response-Based Knowledge 只用最后一层logit
+- Response-Based Knowledge 
 $$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
 
-- Feature-Based Knowledge 还用到中间层特征
+- Feature-Based Knowledge
 $$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
 
-- Relation-Based Knowledge 基于关系的知识探索不同层或数据样本之间的关系
+- Relation-Based Knowledge 
 $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
 
 ![](README.assets/relation-based.PNG)
 
 
 
-**根据教师学生模型是否同步更新进行划分：**
+**According to whether the teacher-student model is updated synchronously:**
 
-- 离线蒸馏：先训练教师模型，然后离线训练学生模型
-- 在线蒸馏：两个模型同时更新，不区分教师和学生模型
-- 自我蒸馏：两个模型的架构完全一致，可以看成是学生自己学习
+> Offline distillation: First train the teacher model, then train the student model offline.  
+> Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
+>Self-distillation: The architecture of the two models is exactly the same, and it can be seen as the student's own learning.
 
 
-**根据蒸馏算法进行划分：**
+**According to the distillation algorithm:**
 
-- 对抗蒸馏
-- 多教师蒸馏
-- 跨通道蒸馏
-- 图蒸馏
-- 注意力蒸馏
-- 无数据蒸馏
-- 量化蒸馏
-- 终生蒸馏
-- 神经结构搜索蒸馏
+>Counter distillation  
+> Multi teacher distillation  
+>Cross-channel distillation  
+>graph distillation  
+>Attention distillation  
+>No data distillation  
+> Quantitative distillation  
+>Lifetime distillation  
+> Neural structure search distillation  
 
-**根据应用进行划分**
-- CV
-- NLP
-- 语音识别
-- 推荐系统
+
 
 
 - [[arXiv](https://arxiv.org/abs/2112.15278)] Data-Free Knowledge Transfer: A Survey
@@ -367,28 +357,26 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
   > 传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
   > 在MNIST和CelebA上进行实验分析
 
-- [[arXiv](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
-  > **GAN知识蒸馏 cvpr2023**
-  > 对抗生成网络 + 知识蒸馏 = 无数据知识蒸馏  
+- [[CVPR](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
   ![](README.assets/无数据知识蒸馏.jpg)
-  > 主要处理的问题就是在学生网络更新的过程中的分布偏移  
-  > 1.提出了一种新的元学习启发的知识蒸馏中学生网络更新的策略，旨在保持学生在知识保留上的表现，同时从当前  分布的样本中获取知识。  
-  > 2.策略在知识获取和知识保留之间强制执行隐式梯度对齐，也就是说提出的学生更新策略对这两个任务执行了一个  共同的梯度方向，减少了两个目标之间的干扰。  
-  > 3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
+> The main problem dealt with is the distribution deviation in the process of student network updating.  
+> A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
+> The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
+>  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
   ![](README.assets/元学习元训练.PNG)
   ![](README.assets/无数据知识蒸馏.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
-  >  **信息抽取领域的大小模型协同**
+  <!-- >  **信息抽取领域的大小模型协同**
   > 问题：  
   > 1. 在少样本IE任务中，Large-LM是否真的优于Small-LM?  
   > 2. 更多的标注数据能否提高Large-LM和Small-LM?  
   > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
-  > 思路：将小模型不太确定的测试样本再给大模型重新选择一下  
+  > 思路：将小模型不太确定的测试样本再给大模型重新选择一下   -->
   ![](README.assets/large.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
-  > 将预训练语言模型的知识生命周期划分为五个：  
+  <!-- > 将预训练语言模型的知识生命周期划分为五个：  
   > **1.知识获取：关注模型怎么从文本中提取知识**
   > 建模方法有：因果建模，掩码建模，Seq2Seq建模，去噪建模
   > **2.知识表示：关注知识怎么转化为模型的底层参数**  
@@ -396,30 +384,30 @@ $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i,
   > **3.知识探索：评估当前包含不同类型知识的plm的效果。**  
   > **4.知识编辑：编辑或删除模型中的知识**  
   > 约束微调，内存微调，元学习微调
-  > **5.知识应用：从训练好的模型中提取可用的知识**
+  > **5.知识应用：从训练好的模型中提取可用的知识** -->
 
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
   > **采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
-  > SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
+  > The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method
   ![](README.assets/SWA.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
-  > **设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
-  > **思路：**
-  > 不仅是将老师和学生在输出层的标签进行匹配，同时还要将他们中间阶段的特征图进行匹配
+  > **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
+  > **IDEA:Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched**
 
-- [[arXiv](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
-  > **CVPR 2023**
-  提出了通用到特定的蒸馏(G2SD)，将任务不可知和任务特定的知识从MAE转移到轻量级的vit，为两阶段视觉模型蒸馏设定了坚实的基线  
-  实现方式：
-  第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
-  第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
+
+- [[CVPR](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
+
+>A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation
+>Implementation method:
+>The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.
+>Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
   ![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
-  > - 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
-  > - 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
-  > - 与许多需要访问原始数据或依赖于复杂模型假设的“最先进”的方法相比，CAKE的分类准确性具有竞争力。
+> Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
+> The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
+> CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
   ![](README.assets/边界知识蒸馏.PNG)
 
 
