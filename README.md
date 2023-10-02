@@ -54,9 +54,8 @@
   >delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
   >基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
   >受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。   
- 
-  <!-- ![](README.assets/image-20230430221334240.png)
-  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png) -->
+  ![](README.assets/image-20230430221334240.png)
+  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
 
 ### Adapter Tuning
 
@@ -85,6 +84,15 @@
 ## Input engineering
 
 ### Prompt Tuning
+
+- [[arXiv](https://arxiv.org/abs/2109.01134)] Learning to Prompt for Vision-Language Model
+
+**研究Prompt在大型视觉-语言模型的应用，也是用自适应的上下文学习来提升对图片的分类精度。**
+提供了两种实现来处理不同性质的任务:  
+1.基于统一上下文，与所有类共享相同的上下文，并且在大多数类别上都能很好地工作，也就是unified context，不管样本是什么类别，其learnable context都是一样的。    
+2.基于特定于类的上下文，每个类学习一组特定的上下文令牌，适合于一些细粒度的类别，class-specific context，每个类别都有自己特有的learnable context。  
+损失使用交叉熵损失
+![](README.assets/Coop.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
 
@@ -148,12 +156,12 @@
 
 
 
-<!-- - [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
+- [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
   > 以数据为中心：包括数据集正则化、数据采样和以数据为中心的课程学习技术，可以显著降低数据样本的计算复杂度  
   >以模型为中心：包括基础模块加速、压缩训练、模型初始化和以模型为中心的课程学习技术，其重点是通过减少参数计算和提供更好的初始化来加速训练  
   >以优化为中心：包括学习率的选择、大批量的使用、有效目标的设计和模型平均技术，关注大规模模型的训练策略，提高模型的通用性  
   >预算训练：包括在资源受限情况下的一些独特的加速方法，例如对总迭代的限制  
-  >以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持 -->
+  >以系统为中心：包括一些高效的分布式框架和开源库，为上述加速算法的实现提供足够的硬件支持 
 
 
 - [[arXiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
@@ -226,6 +234,18 @@
 
 ## Database Augmentation
 
+
+- [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
+
+**增强语言模型（ALM）**
+LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外部工具能力的工作（推理指将复杂任务分解为更简单的子任务，工具包括调用模块等），并指出这个方向有可能解决传统语言模型所面临的可解释性，一致性以及扩展性的问题。
+
+- 观点1：大规模语言模型由于模型幻视等问题在大规模推广时受到限制，很多LLM的能力随着模型参数量增加到一定限度才会涌现，LLM的模型规模跟数据需求在很多情况下都是不符合实际的。
+
+- 观点2：将ALM分为（1） Reason: 推理，将潜在复杂任务分解为简单子任务的能力，而这些子任务是语言模型可以自身解决或者调用其他工具解决。（2）Tool: 工具，语言模型通过规则或者特殊token调用外部模块的能力，包括检索外部信息的检索系统，或者可以调用机器手臂的工具等。（3）Act：行为，ALM调用的工具会对虚拟或者真实世界产生影响并观测到结果。
+
+
+
 ### Language Database Augmentation
 
 
@@ -273,6 +293,54 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 
 ## Model Distillation
+
+- [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
+
+
+知识蒸馏由知识类型，蒸馏算法，师生架构三部分组成
+![](README.assets/KD.PNG)
+
+**根据使用到的知识阶段进行划分：**
+
+- Response-Based Knowledge 只用最后一层logit
+$$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
+
+- Feature-Based Knowledge 还用到中间层特征
+$$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
+
+- Relation-Based Knowledge 基于关系的知识探索不同层或数据样本之间的关系
+$$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
+
+![](README.assets/relation-based.PNG)
+
+
+
+**根据教师学生模型是否同步更新进行划分：**
+
+- 离线蒸馏：先训练教师模型，然后离线训练学生模型
+- 在线蒸馏：两个模型同时更新，不区分教师和学生模型
+- 自我蒸馏：两个模型的架构完全一致，可以看成是学生自己学习
+
+
+**根据蒸馏算法进行划分：**
+
+- 对抗蒸馏
+- 多教师蒸馏
+- 跨通道蒸馏
+- 图蒸馏
+- 注意力蒸馏
+- 无数据蒸馏
+- 量化蒸馏
+- 终生蒸馏
+- 神经结构搜索蒸馏
+
+**根据应用进行划分**
+- CV
+- NLP
+- 语音识别
+- 推荐系统
+
+
 - [[arXiv](https://arxiv.org/abs/2112.15278)] Data-Free Knowledge Transfer: A Survey
   > **Data-Free Knowledge Transfer (DFKT)无数据知识迁移**  
   > 1. Data-Free Knowledge Distillation (DFKD) 无数据知识蒸馏：将训练数据集的原始信息提取并传递到一个压缩学生模型中，知识传递,仍处于同一个任务下  
@@ -293,6 +361,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
   > 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
   > 传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
   > 在MNIST和CelebA上进行实验分析
+
 - [[arXiv](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
   > **GAN知识蒸馏 cvpr2023**
   > 对抗生成网络 + 知识蒸馏 = 无数据知识蒸馏  
@@ -303,6 +372,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
   > 3.最后，本文通过在多个数据集上展示本文的方法与先前技术的广泛验证和比较来支持本文的假设。  
   ![](README.assets/元学习元训练.PNG)
   ![](README.assets/无数据知识蒸馏.PNG)
+
 - [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
   >  **信息抽取领域的大小模型协同**
   > 问题：  
@@ -311,6 +381,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
   > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
   > 思路：将小模型不太确定的测试样本再给大模型重新选择一下  
   ![](README.assets/large.PNG)
+
 - [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
   > 将预训练语言模型的知识生命周期划分为五个：  
   > **1.知识获取：关注模型怎么从文本中提取知识**
@@ -321,14 +392,17 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
   > **4.知识编辑：编辑或删除模型中的知识**  
   > 约束微调，内存微调，元学习微调
   > **5.知识应用：从训练好的模型中提取可用的知识**
+
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
   > **采用high constant learning rate下的随机加权平均(SWA)，一种鼓励收敛到更平坦的最小值的方法，以微调PLM，首次将SWA引入NLP领域**
   > SWA优点在于没有引入额外的计算成本，同时在紧凑型PLM的效果和SOTA KD方法相当
   ![](README.assets/SWA.PNG)
+
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
   > **设计了一种快速特征亲和损失（Fast Feature Affinity，FFA）用来提升知识蒸馏的效果**
   > **思路：**
   > 不仅是将老师和学生在输出层的标签进行匹配，同时还要将他们中间阶段的特征图进行匹配
+
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
   > **CVPR 2023**
   提出了通用到特定的蒸馏(G2SD)，将任务不可知和任务特定的知识从MAE转移到轻量级的vit，为两阶段视觉模型蒸馏设定了坚实的基线  
@@ -336,6 +410,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
   第一阶段：MAE教师解码器中间层的隐藏特征输出用于指导学生模型的训练。  
   第二阶段：对于特定任务的蒸馏，配备任务层的微调MAE向学生模型教授特定任务的知识(例如分类分数)。学生模型从前一个蒸馏阶段初始化，而任务层随机初始化。学生模型的预测被限制为与MAE的预测以及真实标签相一致。
   ![](README.assets/GS2D.PNG)
+
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
   > - 提出了对比性演绎知识提取（Contrastive Abductive Knowledge Extraction，CAKE），这是一种不依赖于模型的知识蒸馏过程，无需访问原始数据。相反，通过对比性扩散过程生成合成样本，这些样本位于教师模型的决策边界附近。
   > - 通过实证研究强调了CAKE各组件的贡献，展示了教师和学生神经网络在深度和容量方面的差异，并分析了在教师和学生模型不同（MLP，CNN，ResNet和ViT）时CAKE的有效性。
@@ -377,6 +452,14 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 - [[ICLR]( https://arxiv.org/abs/2212.04089)]  Editing models with task arithmetic
 
+**基于任务向量算术的模型编辑**  
+从非常有趣的角度进行模型权重的修改，原理上比较清晰，论文主要的工作是一直在做实验验证这些观点  
+
+提出一种用任务向量编辑预训练模型的新方法，任务向量是通过将预训练模型权重减去该模型在任务中微调后权重而产生的。任务向量上的算术运算，如取负和相加，使得用户可修改和组合预训练模型的行为，也可以用来创建新的模型，在多个任务或由类比关系连接的任务上有更好的性能。这种方法高效易用，可实现无需额外推理成本的模型编辑。
+
+使用方法：（1）删除特定向量来降低本模型在某方面的能力   （2）添加其他模型的任务向量增强本模型某方面能力  （3）通过类比（平行四边形法则）的方式让模型获得新能力（即使没有该方向的数据）
+
+
 #### Mode Connectivity and Loss landscape
 
 - :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis
@@ -394,6 +477,8 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 - [[arXiv](https://arxiv.org/abs/2212.09849)] Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html)] Merging  Models  with  Fisher-Weighted Averaging
+
+- [[arXiv](https://arxiv.org/abs/2302.07027)]AdapterSoup: Weight Averaging to Improve Generalization of Pretrained Language Models
 
 <!-- <details>
 <summary>  <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
@@ -418,25 +503,13 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 
-<!-- 
-<details>
-<summary>  <a href="https://arxiv.org/abs/2109.01134">Learning to Prompt for Vision-Language Models</a> </summary>
-<br>
-<blockquote>
-
-**研究Prompt在大型视觉-语言模型的应用，也是用自适应的上下文学习来提升对图片的分类精度。**
-提供了两种实现来处理不同性质的任务:  
-1.基于统一上下文，与所有类共享相同的上下文，并且在大多数类别上都能很好地工作，也就是unified context，不管样本是什么类别，其learnable context都是一样的。    
-2.基于特定于类的上下文，每个类学习一组特定的上下文令牌，适合于一些细粒度的类别，class-specific context，每个类别都有自己特有的learnable context。  
-损失使用交叉熵损失
-![](README.assets/Coop.PNG)
-</blockquote>
-</details> -->
 
 
 
-<!-- <details>
-<summary>  <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
+
+
+
+<!-- <summary>  <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
 </a> </summary>
 <br>
 <blockquote>
@@ -456,26 +529,10 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 **基于自监督生成标签的方式，让语言模型可以自己决定什么时候使用外部工具，使用什么外部工具，怎么使用外部工具。**
 ![](README.assets/Toolformer.PNG)
 </blockquote>
-</details>
-
-
-
-**ACL 2023**
-
-LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
-
-- PAIRRANKER：对N个LLM输出进行两两比较。对输入文本和一对候选标签进行联合编码，得到矩阵分值表，based on DeBERTa
-- GENFUSER：聚合排名为前K的LLM输出，Based on Flan-T5-XL
-- 引入了MixInstruct数据集（self-instruct格式，包含训练和测试集），用于测试集成型LLM
-
-
-![](README.assets/LLM-BLENDER.PNG)
-
-</blockquote>
 </details> -->
 
 
-- [[arXiv](https://arxiv.org/abs/2302.07027)]AdapterSoup: Weight Averaging to Improve Generalization of Pretrained Language Models
+
 
 
 ## Meta Learning
@@ -581,122 +638,12 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 
 
 
-<!-- 
-<details>
-<summary>  <a href="https://arxiv.org/abs/2212.04089">Editing Models with Task Arithmetic</a> </summary>
-<br>
-<blockquote>
-
-**基于任务向量算术的模型编辑（ICLR 2023）**  
-从非常有趣的角度进行模型权重的修改，原理上比较清晰，论文主要的工作是一直在做实验验证这些观点  
-
-提出一种用任务向量编辑预训练模型的新方法，任务向量是通过将预训练模型权重减去该模型在任务中微调后权重而产生的。任务向量上的算术运算，如取负和相加，使得用户可修改和组合预训练模型的行为，也可以用来创建新的模型，在多个任务或由类比关系连接的任务上有更好的性能。这种方法高效易用，可实现无需额外推理成本的模型编辑。
-
-使用方法：（1）删除特定向量来降低本模型在某方面的能力   （2）添加其他模型的任务向量增强本模型某方面能力  （3）通过类比（平行四边形法则）的方式让模型获得新能力（即使没有该方向的数据）
-
-</blockquote>
-</details> -->
-
-
-<!-- ## 相关综述（Related Survey）
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.07842">Augmented Language Models: a Survey</a> </summary>
-<br>
-<blockquote>
-
-**增强语言模型（ALM）**
-LeCun参与的工作，系统归纳了语言模型的推理能力以及使用外部工具能力的工作（推理指将复杂任务分解为更简单的子任务，工具包括调用模块等），并指出这个方向有可能解决传统语言模型所面临的可解释性，一致性以及扩展性的问题。
-
-- 观点1：大规模语言模型由于模型幻视等问题在大规模推广时受到限制，很多LLM的能力随着模型参数量增加到一定限度才会涌现，LLM的模型规模跟数据需求在很多情况下都是不符合实际的。
-
-- 观点2：将ALM分为（1） Reason: 推理，将潜在复杂任务分解为简单子任务的能力，而这些子任务是语言模型可以自身解决或者调用其他工具解决。（2）Tool: 工具，语言模型通过规则或者特殊token调用外部模块的能力，包括检索外部信息的检索系统，或者可以调用机器手臂的工具等。（3）Act：行为，ALM调用的工具会对虚拟或者真实世界产生影响并观测到结果。
-
-参照博客 https://zhuanlan.zhihu.com/p/611492200
-
-</blockquote>
-</details>
 
 
 
-<details>
-<summary>  <a href="https://arxiv.org/pdf/2006.05525.pdf">Knowledge distillation: A survey
-</a> </summary>
-<br>
-<blockquote>
-
-**IJCV 2021**
-
-知识蒸馏由知识类型，蒸馏算法，师生架构三部分组成
-![](README.assets/KD.PNG)
-
-
-**根据使用到的知识阶段进行划分：**
-
-- Response-Based Knowledge 只用最后一层logit
-$$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
-
-- Feature-Based Knowledge 还用到中间层特征
-$$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
-
-- Relation-Based Knowledge 基于关系的知识探索不同层或数据样本之间的关系
-$$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
-
-![](README.assets/relation-based.PNG)
 
 
 
-**根据教师学生模型是否同步更新进行划分：**
 
-- 离线蒸馏：先训练教师模型，然后离线训练学生模型
-- 在线蒸馏：两个模型同时更新，不区分教师和学生模型
-- 自我蒸馏：两个模型的架构完全一致，可以看成是学生自己学习
-
-
-**根据蒸馏算法进行划分：**
-
-- 对抗蒸馏
-- 多教师蒸馏
-- 跨通道蒸馏
-- 图蒸馏
-- 注意力蒸馏
-- 无数据蒸馏
-- 量化蒸馏
-- 终生蒸馏
-- 神经结构搜索蒸馏
-
-**根据应用进行划分**
-- CV
-- NLP
-- 语音识别
-- 推荐系统
-
-
-
-</blockquote>
-</details>
-
-## 模块化（Modularity）
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.11529">Modular Deep Learning
-</a> </summary>
-<br>
-<blockquote>
-
-**关于模块化迁移学习的survey**
-
-- 观点1：多任务微调中，来自不同任务的学习信号可能会相互负向干扰。
-- 观点2：模块化深度学习通过将计算与路由分离，并在本地更新模块来实现正向迁移和系统性泛化；
-- 观点3：该框架由自主参数高效模块组成，信息有条件地被路由到模块的子集，随后被聚合；
-- 观点4：模块化还有其他用途，包括扩展语言模型、因果推理、程序归纳和强化学习中的规划；
-- 观点5：模块化深度学习已经成功地部署在具体的应用中，如跨语言和跨模态的知识转移。
-
-**总结:**  
-模块化深度学习提供了一种很有前途的解决方案，可以开发出专门针对多个任务而没有负面干扰的模型，并且可以系统性泛化到非相同分布的任务。
-</blockquote>
-</details> -->
 
 
