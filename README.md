@@ -43,7 +43,7 @@
 - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation
 
 - [[arXiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
-  > **模型形成的权重空间有助于参数的寻找，深入了解了模型之间的关系，位于两个相似模型之间的模型可以获得两者的知识。**
+  > **The weight space formed by the model helps to find the parameters, and the relationship between the models is deeply understood. The model located between two similar models can obtain the knowledge of both.**
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html)] Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning
 
