@@ -569,7 +569,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 
 - [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
 ![](README.assets/editing.PNG)
-- [[ENNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
+- [[EMNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
 
 
 ### Parameter Based Model Editing
@@ -598,7 +598,7 @@ $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \m
 - [[arXiv](https://arxiv.org/abs/2301.11997)] Prompt-Based Editing for Text Style Transfer
 
  - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Conditional_Text_Image_Generation_With_Diffusion_Models_CVPR_2023_paper.html)]Conditional Text Image Generation With Diffusion Models
-
+![](README.assets/CDM.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2301.12810)] Crawling the Internal Knowledge-Base of Language Models
 
