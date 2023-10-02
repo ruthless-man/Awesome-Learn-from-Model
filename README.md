@@ -190,6 +190,13 @@
 
 
 
+- [[CVPR](https://arxiv.org/abs/2303.02151)] Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners
+
+- 提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。
+
+- 融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
+- CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
+
 
 ### InstructioN Tuning
 
@@ -238,6 +245,16 @@
 
 
 - [[arXiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
+**处理生成文本中的事实性错误**
+
+以往的白盒检索增强中一般是冻结检索器，优化大模型，也就是让LM适应retriever。
+
+**思路:** 本文提出了一种黑盒式的检索增强组件REPLUG，优化检索组件，冻结大模型，让retriever适应LM，然后使用了一个集成的框架，其实就是把多个检索到的文档分别和输入x结合送到LM中，得到的结果再用权重的方式集成，老套路了。用余弦相似度去提取和x最接近的文本，然后分别结合x输入LM，得到集成结果，根据KL散度来训练检索器。
+![](README.assets/Replug1.PNG)
+![](README.assets/Replug2.PNG)
+
+损失函数（检索似然和语言模型似然之间的KL散度）：
+$$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
 
 
 ### Multimodal Database Augmentation
@@ -374,7 +391,6 @@
 
 #### Straightforward Optimization
 
-
 - [[arXiv](https://arxiv.org/abs/2212.09849)] Dataless  Knowledge  Fusion  by  Merging  Weights  of Language Models
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html)] Merging  Models  with  Fisher-Weighted Averaging
@@ -395,16 +411,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 </details> -->
 
 
-<!-- <details>
-<summary>  <a href="https://arxiv.org/abs/2303.02151">Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners</a> </summary>
 
-**CVPR 2023**
-
-提出一种基础模型的级联，以纳入来自不同预训练范式的多样化知识，从而更好地进行少样本学习。
-
-融合了四个模型： 1.CLIP语言对比  2.DINO视觉对比  3.DALL-E图像生成  4.GPT3语言生成
-CaFo：首先GPT-3生成文本输入用于提示CLIP，用DALL-E来生成更多可训练数据，并且引入了一个可学习的缓存模型来自适应地混合来自CLIP和DINO的预测，最终分类效果很好
-</details> -->
 
 
 
@@ -468,40 +475,8 @@ LLM-BLENDER=PAIRRANKER+GENFUSER（排序+聚合）
 </details> -->
 
 
-<!-- ## 模型增强（Model Augmentation）
+- [[arXiv](https://arxiv.org/abs/2302.07027)]AdapterSoup: Weight Averaging to Improve Generalization of Pretrained Language Models
 
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2301.12652">REPLUG: Retrieval-Augmented Black-Box Language Models</a> </summary>
-<br>
-<blockquote>
-
-**处理生成文本中的事实性错误**
-
-以往的白盒检索增强中一般是冻结检索器，优化大模型，也就是让LM适应retriever。
-
-**思路:** 本文提出了一种黑盒式的检索增强组件REPLUG，优化检索组件，冻结大模型，让retriever适应LM，然后使用了一个集成的框架，其实就是把多个检索到的文档分别和输入x结合送到LM中，得到的结果再用权重的方式集成，老套路了。用余弦相似度去提取和x最接近的文本，然后分别结合x输入LM，得到集成结果，根据KL散度来训练检索器。
-![](README.assets/Replug1.PNG)
-![](README.assets/Replug2.PNG)
-
-损失函数（检索似然和语言模型似然之间的KL散度）：
-$$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
-
-</blockquote>
-</details>
-
-
-
-
-
-<details>
-<summary> :x: <a href="https://arxiv.org/abs/2302.07027">AdapterSoup: Weight Averaging to Improve Generalization of Pretrained Language Models</a> </summary>
-<br>
-<blockquote>
-
-
-</blockquote>
-</details> -->
 
 ## Meta Learning
 
