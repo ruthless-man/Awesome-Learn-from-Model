@@ -133,7 +133,7 @@
 
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
    ![](README.assets/SSL.PNG)
->Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
+  >Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
 
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
@@ -199,7 +199,11 @@
 - [[CVPR](https://arxiv.org/abs/2303.02151)] Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners
 
   > Propose a cascade of base models to incorporate diverse knowledge from different pre-training paradigms for better small-sample learning.  
-  > Four models are integrated: 1.CLIP language comparison 2.DINO visual comparison 3.DALL-E image generation 4.GPT3 language generation.  
+  > Four models are integrated:  
+   1.CLIP language comparison  
+   2.DINO visual comparison  
+   3.DALL-E image generation  
+   4.GPT3 language generation. 
   > CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
 
 
