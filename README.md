@@ -257,8 +257,8 @@
     >![](README.assets/Replug1.PNG)
     >![](README.assets/Replug2.PNG)
 
-  >Loss function (retrieves KL divergence between likelihood and language model likelihood) :
-  > $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
+  > -  Loss function (retrieves KL divergence between likelihood and language model likelihood) :
+  > -   $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
 
 
 ### Multimodal Database Augmentation
@@ -283,7 +283,7 @@
     > - Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
     >![](README.assets/KD.PNG)
     >![](README.assets/relation-based.PNG)
-    
+
     > **According to whether the teacher-student model is updated synchronously:** 
     > -  Offline distillation: First train the teacher model, then train the student model offline.  
     > -  Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
