@@ -117,8 +117,8 @@
 - [[arXiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
 - [[arXiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
-  >We have developed a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.  
-  >We demonstrate how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.  
+  >Developing a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.  
+  >Demonstrating how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.  
   >Our framework can also discover adversarial prompts that alter the generation of unstructured text. For instance, we found that adversarial prompts encourage positive emotions or increase the frequency of the letter "q" in the generated text.
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
@@ -163,9 +163,9 @@
   >Budgeted Training: This involves unique acceleration methods under resource-constrained scenarios, such as restrictions on the total number of iterations.  
   >System-Centric Approaches: These include efficient distributed frameworks and open-source libraries that provide sufficient hardware support for implementing the aforementioned acceleration algorithms.
 - [[arXiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
- >A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
- >We propose a simple scheme for learning hard text prompts through efficient gradient-based optimization, adapted from gradient reprojection schemes and large-scale discrete optimization literature for quantization networks.    
- >The proposed method uses continuous "soft" prompts as intermediate variables in the process of optimizing hard prompts, thus achieving robust optimization and facilitating prompt exploration and discovery.  
+  >A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
+  >We propose a simple scheme for learning hard text prompts through efficient gradient-based optimization, adapted from gradient reprojection schemes and large-scale discrete optimization literature for quantization networks.    
+  >The proposed method uses continuous "soft" prompts as intermediate variables in the process of optimizing hard prompts, thus achieving robust optimization and facilitating prompt exploration and discovery.  
   > The method is used for text-to-image and text-to-text applications, and the hard tips learned perform well in both image generation and language classification tasks.
 
 
@@ -188,7 +188,6 @@
 - [[arXiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
   >The article describes the design of a lightweight universal retriever called UPRISE. Given a zero-shot task input, the retriever automatically retrieves prompts from a pre-constructed data pool, which appear to be hard prompts. The approach involves freezing the language model (LLM) and performing gradient-based optimization on the retriever using the model's outputs. The trained retriever can then select an appropriate prompt to insert in front of the input x, which is then fed into the LLM.  
   >The paper presents experimental analyses based on two criteria: cross-model (from small-scale models like GPT-Neo-2.7B to large-scale models like BLOOM-7.1B, OPT-66B, and GPT3-175B) and cross-task (from previously seen tasks to unseen tasks). The training and fine-tuning of the retriever are conducted on the small-scale model GPT-Neo-2.7B, while the testing is performed on the larger-scale models mentioned above.
-
   ![](README.assets/UPRISE.PNG)
   ![](README.assets/UPRISE2.PNG)
   >The Method part introduces the construction method of data tags, the overall task is divided into text completion and multiple-choice, and then introduces the structure, fine tuning and inference method of the retrieval device.
