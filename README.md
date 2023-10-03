@@ -43,7 +43,7 @@
 - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation
 
 - [[arXiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
-  > **The weight space formed by the model helps to find the parameters, and the relationship between the models is deeply understood. The model located between two similar models can obtain the knowledge of both.**
+  >  - **The weight space formed by the model helps to find the parameters, and the relationship between the models is deeply understood. The model located between two similar models can obtain the knowledge of both.**
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html)] Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning
 
@@ -87,10 +87,10 @@
 
 - [[arXiv](https://arxiv.org/abs/2109.01134)] Learning to Prompt for Vision-Language Model
 
-  > **To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification.**  
-  >Two implementations are provided to handle tasks of different nature:  
-  >Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
-  >Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
+  > -  **To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification.**  
+  > - Two implementations are provided to handle tasks of different nature:  
+  > - Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
+  > - Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
 
   >![](README.assets/Coop.PNG)
 
@@ -104,22 +104,22 @@
     Training a parameter-efficient policy network
 
 - [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
-  > **Gradientless implementation of continuous prompt, based on random embedded DFO**  
-  This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity.
+  >  - **Gradientless implementation of continuous prompt, based on random embedded DFO**  
+  -  This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity.
 
 
 
 - [[EMNLP](https://aclanthology.org/2022.emnlp-main.259/)] BBTv2: Towards a gradient-free future with large language models
 
-  > **Building upon our previous work on Black-Box Tuning (BBT, ICML 2022), we propose BBTv2, which introduces deep prompts as a replacement for the original input layer prompt. We also present a divide-and-conquer non-gradient optimization method to iteratively optimize the deep prompts. Remarkably, by optimizing only 0.3% of the parameters, we achieve performance comparable to full parameter fine-tuning on multiple few-shot learning tasks.**
+  > -  **Building upon our previous work on Black-Box Tuning (BBT, ICML 2022), we propose BBTv2, which introduces deep prompts as a replacement for the original input layer prompt. We also present a divide-and-conquer non-gradient optimization method to iteratively optimize the deep prompts. Remarkably, by optimizing only 0.3% of the parameters, we achieve performance comparable to full parameter fine-tuning on multiple few-shot learning tasks.**
 
   
 - [[arXiv](https://arxiv.org/abs/2303.06571)] Gradient-regulated meta-prompt learning for generalizable vision-language models
 
 - [[arXiv](https://arxiv.org/abs/2302.04237)] Adversarial Prompting for Black Box Foundation Models
-  >Developing a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.  
-  >Demonstrating how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.  
-  >Our framework can also discover adversarial prompts that alter the generation of unstructured text. For instance, we found that adversarial prompts encourage positive emotions or increase the frequency of the letter "q" in the generated text.
+  > - Developing a framework that utilizes token space projection operators to discover adversarial prompts. This operator bridges the continuous word embedding space with the discrete token space and is capable of using black-box attacks to find adversarial prompts.  
+  > - Demonstrating how our framework automatically discovers independent or pre-designed prompts that result in specific image classes being outputted by a text-to-image model. Furthermore, we can find adversarial prompts that exclude tokens related to the target class.  
+  > - Our framework can also discover adversarial prompts that alter the generation of unstructured text. For instance, we found that adversarial prompts encourage positive emotions or increase the frequency of the letter "q" in the generated text.
 
 - [[ACM Computing Surveys](https://dl.acm.org/doi/full/10.1145/3560815)] Pre-train, Prompt, and Predict: A Systematic Survey of Prompting Methods in Natural Language Processing
   <!-- > NLP中完全监督的范式发挥的作用越来越小，目光逐渐转向了大模型和微调，微调又开始被提示工程所代替
@@ -132,12 +132,13 @@
   > prompting 更加依赖先验，而 fine-tuning 更加依赖后验 -->
 
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
-   > ![](README.assets/SSL.PNG)
-  >Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
+
+  > - Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
+     > ![](README.assets/SSL.PNG)
 
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
-  > To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark.
+  >  - To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark.
   <!-- prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。   -->
      >![](README.assets/DP.PNG)
   <!-- DP主要就是在输入x的前后都插入prompt  
@@ -146,64 +147,60 @@
   最后，设计合适的prompt表示词 -->
 
 - [[arXiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
-  > The PTUnifier is proposed to make the medical pretraining model compatible with different input modes
+  > -  The PTUnifier is proposed to make the medical pretraining model compatible with different input modes
 
 
 - [[ICML](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
-  > **Ensemble learning Boosting+Prompt, this paper proposes PROMPTBOOSTING, which first builds a pool of small prompts, and then through ADABOOST creates a set of weak learners from these prompts and integrates them together to achieve excellent performance**
-  >Gradient-free cueing optimization techniques for black-box models have some problems, such as requiring a large number of queries on the LMs, which is very inefficient given the growing size and computational cost of pre-trained LMs, and can lead to large approximation errors
-    >![](README.assets/PROMPT_BOOSTING.PNG)
+  > -  **Ensemble learning Boosting+Prompt, this paper proposes PROMPTBOOSTING, which first builds a pool of small prompts, and then through ADABOOST creates a set of weak learners from these prompts and integrates them together to achieve excellent performance**
+  > - Gradient-free cueing optimization techniques for black-box models have some problems, such as requiring a large number of queries on the LMs, which is very inefficient given the growing size and computational cost of pre-trained LMs, and can lead to large approximation errors
+  >![](README.assets/PROMPT_BOOSTING.PNG)
 
 
 
 - [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
-  >Data-Centric Approaches: These include techniques such as data set regularization, data sampling, and data-centric curriculum learning, which can significantly reduce the computational complexity of data samples.  
-  >Model-Centric Approaches: These encompass methods like accelerating basic modules, training compression, model initialization, and model-centric curriculum learning. The focus here is on accelerating training by reducing parameter computation and providing better initialization.  
-  >Optimization-Centric Approaches: These involve strategies such as learning rate selection, utilizing large batches, designing effective objectives, and model averaging techniques. They concentrate on training strategies for large-scale models to enhance their generalizability.  
-  >Budgeted Training: This involves unique acceleration methods under resource-constrained scenarios, such as restrictions on the total number of iterations.  
-  >System-Centric Approaches: These include efficient distributed frameworks and open-source libraries that provide sufficient hardware support for implementing the aforementioned acceleration algorithms.
+  > - Data-Centric Approaches: These include techniques such as data set regularization, data sampling, and data-centric curriculum learning, which can significantly reduce the computational complexity of data samples.  
+  > - Model-Centric Approaches: These encompass methods like accelerating basic modules, training compression, model initialization, and model-centric curriculum learning. The focus here is on accelerating training by reducing parameter computation and providing better initialization.  
+  > - Optimization-Centric Approaches: These involve strategies such as learning rate selection, utilizing large batches, designing effective objectives, and model averaging techniques. They concentrate on training strategies for large-scale models to enhance their generalizability.  
+  > - Budgeted Training: This involves unique acceleration methods under resource-constrained scenarios, such as restrictions on the total number of iterations.  
+  > - System-Centric Approaches: These include efficient distributed frameworks and open-source libraries that provide sufficient hardware support for implementing the aforementioned acceleration algorithms.
 - [[arXiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
-  >A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
-  >We propose a simple scheme for learning hard text prompts through efficient gradient-based optimization, adapted from gradient reprojection schemes and large-scale discrete optimization literature for quantization networks.    
-  >The proposed method uses continuous "soft" prompts as intermediate variables in the process of optimizing hard prompts, thus achieving robust optimization and facilitating prompt exploration and discovery.  
-  > The method is used for text-to-image and text-to-text applications, and the hard tips learned perform well in both image generation and language classification tasks.
+  > - A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
+  > - We propose a simple scheme for learning hard text prompts through efficient gradient-based optimization, adapted from gradient reprojection schemes and large-scale discrete optimization literature for quantization networks.    
+  > - The proposed method uses continuous "soft" prompts as intermediate variables in the process of optimizing hard prompts, thus achieving robust optimization and facilitating prompt exploration and discovery.  
+  > - The method is used for text-to-image and text-to-text applications, and the hard tips learned perform well in both image generation and language classification tasks.
 
 
 - [[arXiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
-  > The parallel form (prompt, Adapter, Prefix) of the mainstream Parameter efficient transfer learning (PETL) method is derived, which reduces the coupling degree and promotes the parameter efficient deployment of large pre-trained models.  
-  > We propose a unified tuning framework, U-Tuning, which contains existing PETL methods and allows new methods to be derived.  
-  > The comprehensive research on transfer learning proves the versatility and power of U-Tuning.  
-  > PTEL is divided into MHA Based Tuning (including Prefix tuning and Prompt tuning) and FFN Based Tuning (Adapter tuning), as shown in the following figure.  
+  > -  The parallel form (prompt, Adapter, Prefix) of the mainstream Parameter efficient transfer learning (PETL) method is derived, which reduces the coupling degree and promotes the parameter efficient deployment of large pre-trained models.  
+  >  - We propose a unified tuning framework, U-Tuning, which contains existing PETL methods and allows new methods to be derived.  
+  >  - The comprehensive research on transfer learning proves the versatility and power of U-Tuning.  
+  >  - PTEL is divided into MHA Based Tuning (including Prefix tuning and Prompt tuning) and FFN Based Tuning (Adapter tuning), as shown in the following figure.  
   ![](README.assets/prefix+ada+pro.PNG)
-  >The U-tuning design follows the freeze function + variable part design, so it can be extended to a variety of adaptive structures:  
-  $\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$  
+  > - The U-tuning design follows the freeze function + variable part design, so it can be extended to a variety of adaptive structures:  
+  > $$\boldsymbol{x}^{\prime}=\mathrm{OP}(\boldsymbol{x})+\mathrm{U}-\text { Tuner }(\boldsymbol{x})$$
 
 
 - [[arXiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
-  > **Fine-tuning of the entire model through prompt tuning for increased robustness against (word substitution attacks)**
+  >-  **Fine-tuning of the entire model through prompt tuning for increased robustness against (word substitution attacks)**
   ![](README.assets/MVP.PNG)
 
 
 
 - [[arXiv](https://arxiv.org/abs/2303.08518)] UPRISE: Universal Prompt Retrieval for Improving Zero-Shot Evaluation
-  >The article describes the design of a lightweight universal retriever called UPRISE. Given a zero-shot task input, the retriever automatically retrieves prompts from a pre-constructed data pool, which appear to be hard prompts. The approach involves freezing the language model (LLM) and performing gradient-based optimization on the retriever using the model's outputs. The trained retriever can then select an appropriate prompt to insert in front of the input x, which is then fed into the LLM.  
-  >The paper presents experimental analyses based on two criteria: cross-model (from small-scale models like GPT-Neo-2.7B to large-scale models like BLOOM-7.1B, OPT-66B, and GPT3-175B) and cross-task (from previously seen tasks to unseen tasks). The training and fine-tuning of the retriever are conducted on the small-scale model GPT-Neo-2.7B, while the testing is performed on the larger-scale models mentioned above.
+  > - The article describes the design of a lightweight universal retriever called UPRISE. Given a zero-shot task input, the retriever automatically retrieves prompts from a pre-constructed data pool, which appear to be hard prompts. The approach involves freezing the language model (LLM) and performing gradient-based optimization on the retriever using the model's outputs. The trained retriever can then select an appropriate prompt to insert in front of the input x, which is then fed into the LLM.  
+  > - The paper presents experimental analyses based on two criteria: cross-model (from small-scale models like GPT-Neo-2.7B to large-scale models like BLOOM-7.1B, OPT-66B, and GPT3-175B) and cross-task (from previously seen tasks to unseen tasks). The training and fine-tuning of the retriever are conducted on the small-scale model GPT-Neo-2.7B, while the testing is performed on the larger-scale models mentioned above.
   ![](README.assets/UPRISE.PNG)
   ![](README.assets/UPRISE2.PNG)
-  >The Method part introduces the construction method of data tags, the overall task is divided into text completion and multiple-choice, and then introduces the structure, fine tuning and inference method of the retrieval device.
+  > - The Method part introduces the construction method of data tags, the overall task is divided into text completion and multiple-choice, and then introduces the structure, fine tuning and inference method of the retrieval device.
   ![](README.assets/UP3.PNG)
 
 
 
 - [[CVPR](https://arxiv.org/abs/2303.02151)] Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners
 
-  > Propose a cascade of base models to incorporate diverse knowledge from different pre-training paradigms for better small-sample learning.  
-  > Four models are integrated:  
-   1.CLIP language comparison  
-   2.DINO visual comparison  
-   3.DALL-E image generation  
-   4.GPT3 language generation. 
-  > CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
+  > -  Propose a cascade of base models to incorporate diverse knowledge from different pre-training paradigms for better small-sample learning.  
+  >  - Four models are integrated:  
+  >  - CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
 
 
 ### InstructioN Tuning
@@ -238,9 +235,9 @@
 - [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
 
   **Enhanced Language Model (ALM)**
-  >This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
-  >Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
-  >Idea 2: Divide ALM into (1) Reason: inference, the ability to break down potentially complex tasks into simple subtasks that the language model can solve on its own or by invoking other tools. (2) Tool: The ability of the language model to call external modules through rules or special tokens, including a retrieval system to retrieve external information, or a tool that can call the robot arm. (3) Act: Actions, tools invoked by ALM will have an impact on the virtual or real world and observe the results.  
+  > - This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
+  > - Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
+  > - Viewpoint 2: Divide ALM into (1) Reason: inference, the ability to break down potentially complex tasks into simple subtasks that the language model can solve on its own or by invoking other tools. (2) Tool: The ability of the language model to call external modules through rules or special tokens, including a retrieval system to retrieve external information, or a tool that can call the robot arm. (3) Act: Actions, tools invoked by ALM will have an impact on the virtual or real world and observe the results.  
 
 
 
@@ -263,14 +260,13 @@
 
   **Handle factual errors in generated text**
 
-  >In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.
-
-  **IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
+  > - In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.
+  > -  **IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
     >![](README.assets/Replug1.PNG)
     >![](README.assets/Replug2.PNG)
 
-  Loss function (retrieves KL divergence between likelihood and language model likelihood) :
-  $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
+  >Loss function (retrieves KL divergence between likelihood and language model likelihood) :
+  > $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
 
 
 ### Multimodal Database Augmentation
@@ -291,7 +287,7 @@
 ## Model Distillation
 
 - [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
-  Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
+ > -  Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
    >![](README.assets/KD.PNG)
   >![](README.assets/relation-based.PNG)
   <!-- **Divided according to the stage of knowledge used:**
@@ -305,23 +301,22 @@
     $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
 
     **According to whether the teacher-student model is updated synchronously:** -->
-
-  > Offline distillation: First train the teacher model, then train the student model offline.  
-  > Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
-  >Self-distillation: The architecture of the two models is exactly the same, and it can be seen as the student's own learning.
+  > -  Offline distillation: First train the teacher model, then train the student model offline.  
+  > -  Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
+  > - Self-distillation: The architecture of the two models is exactly the same, and it can be seen as the student's own learning.
 
 
   **According to the distillation algorithm:**
 
-  >Counter distillation  
-  > Multi teacher distillation  
-  >Cross-channel distillation  
-  >graph distillation  
-  >Attention distillation  
-  >No data distillation  
-  > Quantitative distillation  
-  >Lifetime distillation  
-  > Neural structure search distillation  
+  > - Counter distillation  
+  >  - Multi teacher distillation  
+  > - Cross-channel distillation  
+  > - Graph distillation  
+  > - Attention distillation  
+  > - No data distillation  
+  >  - Quantitative distillation  
+  > - Lifetime distillation  
+  >  - Neural structure search distillation  
 
 
 
@@ -348,11 +343,11 @@
   > 在MNIST和CelebA上进行实验分析 -->
 
 - [[CVPR](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
-   >  ![](README.assets/无数据知识蒸馏.jpg)
-  > The main problem dealt with is the distribution deviation in the process of student network updating.  
-  > A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
-  > The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
-  >  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
+   >   ![](README.assets/无数据知识蒸馏.jpg)
+  > -  The main problem dealt with is the distribution deviation in the process of student network updating.  
+  > -  A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
+  >  - The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
+  >  -  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
      > ![](README.assets/元学习元训练.PNG)
      > ![](README.assets/无数据知识蒸馏.PNG)
 
@@ -377,13 +372,13 @@
   > **5.知识应用：从训练好的模型中提取可用的知识** -->
 
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
-  > **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.**  
-  > The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method
+  > -  **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.**  
+  > -  The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method
   ![](README.assets/SWA.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
-  > **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
-  > **IDEA:Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched**
+  >  - **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
+  > -  **IDEA:Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched**
 
 
 - [[CVPR](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
@@ -395,9 +390,9 @@
 ![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
-  > Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
-  > The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
-  > CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
+  >  - Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
+  > - The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
+  > -  CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
 ![](README.assets/边界知识蒸馏.PNG)
 
 
@@ -436,10 +431,10 @@
 
 - [[ICLR]( https://arxiv.org/abs/2212.04089)]  Editing models with task arithmetic
 
-  **Model editing based on task vector arithmetic**
-  The model weights are modified from a very interesting Angle, and the principle is relatively clear. The main work of the paper is to verify these views by experiments.  
-  A new method for editing pre-trained models with task vectors is proposed. The task vectors are generated by subtracting the pre-trained model weight from the fine-tuned weight of the model in the task. Arithmetic operations on task vectors, such as taking negative and adding, allow users to modify and combine the behavior of pre-trained models, and can also be used to create new models with better performance on multiple tasks or tasks connected by analogies. This method is efficient and easy to use, enabling model editing without additional inference costs.  
-  How to use: (1) Remove a specific vector to reduce the capability of this model in a certain aspect (2) add task vectors of other models to enhance the capability of this model in a certain aspect (3) by analogy (parallelogram rule) to give the model a new capability (even if there is no data in that direction).
+ > **Model editing based on task vector arithmetic**
+ > - The model weights are modified from a very interesting Angle, and the principle is relatively clear. The main work of the paper is to verify these views by experiments.  
+ > - A new method for editing pre-trained models with task vectors is proposed. The task vectors are generated by subtracting the pre-trained model weight from the fine-tuned weight of the model in the task. Arithmetic operations on task vectors, such as taking negative and adding, allow users to modify and combine the behavior of pre-trained models, and can also be used to create new models with better performance on multiple tasks or tasks connected by analogies. This method is efficient and easy to use, enabling model editing without additional inference costs.  
+ > - How to use: (1) Remove a specific vector to reduce the capability of this model in a certain aspect (2) add task vectors of other models to enhance the capability of this model in a certain aspect (3) by analogy (parallelogram rule) to give the model a new capability (even if there is no data in that direction).
 
 
 #### Mode Connectivity and Loss landscape
