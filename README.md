@@ -89,8 +89,7 @@
 
   > -  **To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification.**  
   > - Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
-  > - Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
-
+  > - Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.
   >![](README.assets/Coop.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
@@ -279,37 +278,27 @@
 
 ## Model Distillation
 
-- [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
- > -  Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
-  >![](README.assets/KD.PNG)
-  >![](README.assets/relation-based.PNG)
-  <!-- **Divided according to the stage of knowledge used:**
-  > Response-Based Knowledge 
+-  [[IJCV](https://arxiv.org/pdf/2006.05525.pdf) Knowledge distillation: A survey
 
-    $$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
+    > - Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
+    >![](README.assets/KD.PNG)
+    >![](README.assets/relation-based.PNG)
+    
+    > **According to whether the teacher-student model is updated synchronously:** 
+    > -  Offline distillation: First train the teacher model, then train the student model offline.  
+    > -  Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
+    > - Self-distillation: The architecture of the two models is exactly the same, and it can be seen as the student's own learning.  
 
-  > Feature-Based Knowledge
-    $$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
-  > Relation-Based Knowledge 
-    $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
-
-    **According to whether the teacher-student model is updated synchronously:** -->
-  > -  Offline distillation: First train the teacher model, then train the student model offline.  
-  > -  Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
-  > - Self-distillation: The architecture of the two models is exactly the same, and it can be seen as the student's own learning.
-
-
-  **According to the distillation algorithm:**
-
-  > - Counter distillation  
-  >  - Multi teacher distillation  
-  > - Cross-channel distillation  
-  > - Graph distillation  
-  > - Attention distillation  
-  > - No data distillation  
-  >  - Quantitative distillation  
-  > - Lifetime distillation  
-  >  - Neural structure search distillation  
+    >**According to the distillation algorithm:**
+    > - Counter distillation  
+    >  - Multi teacher distillation  
+    > - Cross-channel distillation  
+    > - Graph distillation  
+    > - Attention distillation  
+    > - No data distillation  
+    >  - Quantitative distillation  
+    > - Lifetime distillation  
+    >  - Neural structure search distillation  
 
 
 
