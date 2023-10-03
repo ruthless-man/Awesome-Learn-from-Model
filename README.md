@@ -87,7 +87,7 @@
 
 - [[arXiv](https://arxiv.org/abs/2109.01134)] Learning to Prompt for Vision-Language Model
 
-  > **To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification. **
+  > **To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification.**  
   >Two implementations are provided to handle tasks of different nature:  
   >Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
   >Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
@@ -100,8 +100,8 @@
 - [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models
 
 - [[arXiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
-  > **Discrete cue optimization based on reinforcement learning**
-    训练一个parameter-efficient policy network
+  > **Discrete cue optimization based on reinforcement learning**  
+    Training a parameter-efficient policy network
 
 - [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
   > **Gradientless implementation of continuous prompt, based on random embedded DFO**  
@@ -236,7 +236,6 @@
 
 
 - [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
-
   **Enhanced Language Model (ALM)**
   >This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
   >Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
@@ -247,16 +246,13 @@
 ### Language Database Augmentation
 
 
-- [[arXiv]( https://arxiv.org/abs/1612.04426)] Improving neural language models with a continuous cache
+- [[arXiv](https://arxiv.org/abs/1612.04426)] Improving neural language models with a continuous cache
 
 
-- [[arXiv] (https://arxiv.org/abs/1911.00172)] Generalization through memorization: Nearest neighbor language models
+- [[arXiv](https://arxiv.org/abs/1911.00172)] Generalization through memorization: Nearest neighbor language models
 
 
-
-
-
-- [[Nips] (https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html)] Retrieval-augmented generation for knowledge-intensive nlp tasks 
+- [[Nips](https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html)] Retrieval-augmented generation for knowledge-intensive nlp tasks 
 
 
 - [[arXiv](https://arxiv.org/abs/2208.03299)] Few-shot learning with retrieval augmented language models
