@@ -291,15 +291,18 @@
 - [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
   Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
   ![](README.assets/KD.PNG)
-  **Divided according to the stage of knowledge used:**
-  > Response-Based Knowledge 
-  $$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
-  > Feature-Based Knowledge
-  $$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
-  > Relation-Based Knowledge 
-  $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
   ![](README.assets/relation-based.PNG)
-  **According to whether the teacher-student model is updated synchronously:**
+  <!-- **Divided according to the stage of knowledge used:**
+  > Response-Based Knowledge 
+
+    $$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
+
+  > Feature-Based Knowledge
+    $$L_{F e a D}\left(f_t(x), f_s(x)\right)=\mathcal{L}_F\left(\Phi_t\left(f_t(x)\right), \Phi_s\left(f_s(x)\right)\right)$$
+  > Relation-Based Knowledge 
+    $$L_{\mathrm{RelD}}\left(F_t, F_s\right)=\mathcal{L}_{R^2}\left(\psi_t\left(t_i, t_j\right), \psi_s\left(s_i, s_j\right)\right)$$
+
+    **According to whether the teacher-student model is updated synchronously:** -->
 
   > Offline distillation: First train the teacher model, then train the student model offline.  
   > Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
