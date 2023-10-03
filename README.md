@@ -229,7 +229,7 @@
 
 - [[arXiv](https://arxiv.org/abs/2302.03202)] Exploring the benefits of training expert language models over instruction tuning
 
-- [[arXiv] (https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
+- [[arXiv](https://arxiv.org/abs/2305.03726)] Otter: A Multi-Modal Model with In-Context Instruction Tuning
 
 
 ## Database Augmentation
@@ -397,7 +397,7 @@
   >Implementation method:
   >The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.  
   >Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
-![](README.assets/GS2D.png)
+![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
   > Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
