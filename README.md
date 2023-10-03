@@ -54,8 +54,8 @@
   >delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
   >基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
   >受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。    -->
-  ![](README.assets/image-20230430221334240.png)
-  ![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
+    >![](README.assets/image-20230430221334240.png)
+    >![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
 
 ### Adapter Tuning
 
@@ -92,7 +92,7 @@
   >Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
   >Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
 
-![](README.assets/Coop.PNG)
+  >![](README.assets/Coop.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2101.00190)] Prefix-tuning: Optimizing continuous prompts for generation
 
@@ -132,14 +132,14 @@
   > prompting 更加依赖先验，而 fine-tuning 更加依赖后验 -->
 
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
-   ![](README.assets/SSL.PNG)
+   > ![](README.assets/SSL.PNG)
   >Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
 
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
   > To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark.
   <!-- prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。   -->
-  ![](README.assets/DP.PNG)
+     >![](README.assets/DP.PNG)
   <!-- DP主要就是在输入x的前后都插入prompt  
   首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
   然后，设计合适的prompt长度  
@@ -152,7 +152,7 @@
 - [[ICML](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
   > **Ensemble learning Boosting+Prompt, this paper proposes PROMPTBOOSTING, which first builds a pool of small prompts, and then through ADABOOST creates a set of weak learners from these prompts and integrates them together to achieve excellent performance**
   >Gradient-free cueing optimization techniques for black-box models have some problems, such as requiring a large number of queries on the LMs, which is very inefficient given the growing size and computational cost of pre-trained LMs, and can lead to large approximation errors
-  ![](README.assets/PROMPT_BOOSTING.PNG)
+    >![](README.assets/PROMPT_BOOSTING.PNG)
 
 
 
@@ -236,6 +236,7 @@
 
 
 - [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
+
   **Enhanced Language Model (ALM)**
   >This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
   >Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
@@ -259,13 +260,14 @@
 
 
 - [[arXiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
-**Handle factual errors in generated text**
+
+  **Handle factual errors in generated text**
 
   >In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.
 
   **IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
-  ![](README.assets/Replug1.PNG)
-  ![](README.assets/Replug2.PNG)
+    >![](README.assets/Replug1.PNG)
+    >![](README.assets/Replug2.PNG)
 
   Loss function (retrieves KL divergence between likelihood and language model likelihood) :
   $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
@@ -290,8 +292,8 @@
 
 - [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
   Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
-  ![](README.assets/KD.PNG)
-  ![](README.assets/relation-based.PNG)
+   >![](README.assets/KD.PNG)
+  >![](README.assets/relation-based.PNG)
   <!-- **Divided according to the stage of knowledge used:**
   > Response-Based Knowledge 
 
@@ -346,13 +348,13 @@
   > 在MNIST和CelebA上进行实验分析 -->
 
 - [[CVPR](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
- ![](README.assets/无数据知识蒸馏.jpg)
+   >  ![](README.assets/无数据知识蒸馏.jpg)
   > The main problem dealt with is the distribution deviation in the process of student network updating.  
   > A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
   > The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
   >  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
-    ![](README.assets/元学习元训练.PNG)
-    ![](README.assets/无数据知识蒸馏.PNG)
+     > ![](README.assets/元学习元训练.PNG)
+     > ![](README.assets/无数据知识蒸馏.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
   <!-- >  **信息抽取领域的大小模型协同**
@@ -361,7 +363,7 @@
   > 2. 更多的标注数据能否提高Large-LM和Small-LM?  
   > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
   > 思路：将小模型不太确定的测试样本再给大模型重新选择一下   -->
-  ![](README.assets/large.PNG)
+  > ![](README.assets/large.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
   <!-- > 将预训练语言模型的知识生命周期划分为五个：  
@@ -411,10 +413,10 @@
 
 - :star: [[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
 
-![](README.assets/batch_ensemble.png)
+  >![](README.assets/batch_ensemble.png)
 
 - :star:[[arXiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
-<img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
+  > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
 
 
 ### Model fusion
@@ -580,7 +582,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 - [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
-![](README.assets/editing.PNG)
+    >![](README.assets/editing.PNG)
 - [[EMNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
 
 
@@ -610,7 +612,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 - [[arXiv](https://arxiv.org/abs/2301.11997)] Prompt-Based Editing for Text Style Transfer
 
  - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Zhu_Conditional_Text_Image_Generation_With_Diffusion_Models_CVPR_2023_paper.html)]Conditional Text Image Generation With Diffusion Models
-![](README.assets/CDM.PNG)
+    > ![](README.assets/CDM.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2301.12810)] Crawling the Internal Knowledge-Base of Language Models
 
