@@ -88,7 +88,6 @@
 - [[arXiv](https://arxiv.org/abs/2109.01134)] Learning to Prompt for Vision-Language Model
 
   > -  **To study the application of Prompt in large visual-language model, adaptive context learning is also used to improve the accuracy of picture classification.**  
-  > - Two implementations are provided to handle tasks of different nature:  
   > - Based on a unified context that shares the same context with all classes and works well on most classes, i.e. unified context, the learnable context is the same regardless of the class the sample is in.  
   > - Each class learns a specific set of context tokens, based on its class-specific context, for some fine-grained class, class-specific context, each of which has its own learnable context.  
 
@@ -100,12 +99,11 @@
 - [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models
 
 - [[arXiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
-  > **Discrete cue optimization based on reinforcement learning**  
-    Training a parameter-efficient policy network
+  > **Discrete cue optimization based on reinforcement learning: Training a parameter-efficient policy network**
 
 - [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
   >  - **Gradientless implementation of continuous prompt, based on random embedded DFO**  
-  -  This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity.
+  > -  This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity.
 
 
 
@@ -139,12 +137,8 @@
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
   >  - To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark.
-  <!-- prefixtuning (PFT) 和prompttuning (PT)，只调优不属于原始预训练模型的少数参数，以及稀疏调优只优化plm的偏差项。稀疏模块设计通过调整更少的参数，这些方法有时可以匹配传统的微调性能。   -->
-     >![](README.assets/DP.PNG)
-  <!-- DP主要就是在输入x的前后都插入prompt  
-  首先，设计网络来分割prompt，一部分放在x前面，一部分放在x后面  
-  然后，设计合适的prompt长度  
-  最后，设计合适的prompt表示词 -->
+  >![](README.assets/DP.PNG)
+
 
 - [[arXiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
   > -  The PTUnifier is proposed to make the medical pretraining model compatible with different input modes
@@ -199,7 +193,6 @@
 - [[CVPR](https://arxiv.org/abs/2303.02151)] Prompt, generate, then cache: Cascade of foundation models makes strong few-shot learners
 
   > -  Propose a cascade of base models to incorporate diverse knowledge from different pre-training paradigms for better small-sample learning.  
-  >  - Four models are integrated:  
   >  - CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
 
 
@@ -234,7 +227,7 @@
 
 - [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
 
-  **Enhanced Language Model (ALM)**
+  > **Enhanced Language Model (ALM)**
   > - This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
   > - Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
   > - Viewpoint 2: Divide ALM into (1) Reason: inference, the ability to break down potentially complex tasks into simple subtasks that the language model can solve on its own or by invoking other tools. (2) Tool: The ability of the language model to call external modules through rules or special tokens, including a retrieval system to retrieve external information, or a tool that can call the robot arm. (3) Act: Actions, tools invoked by ALM will have an impact on the virtual or real world and observe the results.  
@@ -260,7 +253,7 @@
 
   **Handle factual errors in generated text**
 
-  > - In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.
+  > **In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.**
   > -  **IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
     >![](README.assets/Replug1.PNG)
     >![](README.assets/Replug2.PNG)
@@ -288,7 +281,7 @@
 
 - [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
  > -  Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
-   >![](README.assets/KD.PNG)
+  >![](README.assets/KD.PNG)
   >![](README.assets/relation-based.PNG)
   <!-- **Divided according to the stage of knowledge used:**
   > Response-Based Knowledge 
@@ -346,7 +339,7 @@
    >   ![](README.assets/无数据知识蒸馏.jpg)
   > -  The main problem dealt with is the distribution deviation in the process of student network updating.  
   > -  A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
-  >  - The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
+  > - The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
   >  -  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
      > ![](README.assets/元学习元训练.PNG)
      > ![](README.assets/无数据知识蒸馏.PNG)
@@ -372,21 +365,20 @@
   > **5.知识应用：从训练好的模型中提取可用的知识** -->
 
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
-  > -  **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.**  
+  > **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.**  
   > -  The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method
   ![](README.assets/SWA.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
-  >  - **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
-  > -  **IDEA:Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched**
+  >  **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
+  > -  **IDEA:** Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched.
 
 
 - [[CVPR](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
 
-  >A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation.  
-  >Implementation method:
-  >The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.  
-  >Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
+  > - A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation.  
+  > - The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.  
+  > - Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
 ![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
