@@ -587,7 +587,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 - [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
-  > ![](README.assets/editing.PNG)
+![](README.assets/editing.PNG)
 - [[EMNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
 
 
