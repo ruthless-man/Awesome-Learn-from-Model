@@ -397,14 +397,13 @@
   >Implementation method:
   >The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.  
   >Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
-
-  ![](README.assets/GS2D.PNG)
+![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
   > Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
   > The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
   > CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
-  ![](README.assets/边界知识蒸馏.PNG)
+![](README.assets/边界知识蒸馏.PNG)
 
 
 
