@@ -131,7 +131,7 @@
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
 
   > - Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
-     > ![](README.assets/SSL.PNG)
+  >  ![](README.assets/SSL.PNG)
 
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
@@ -258,7 +258,7 @@
     >![](README.assets/Replug2.PNG)
 
   > -  Loss function (retrieves KL divergence between likelihood and language model likelihood) :
-  > -   $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
+  >  $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
 
 
 ### Multimodal Database Augmentation
