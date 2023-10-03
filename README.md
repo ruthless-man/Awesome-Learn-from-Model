@@ -418,10 +418,10 @@
 -  [[Multiple Classifier Systems](https://link.springer.com/chapter/10.1007/3-540-45014-9_1)] Ensemble methods in machine learning
 
 - :star: [[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
-  > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
+<img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
 
 - :star:[[arXiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
-  > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
+<img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
 
 
 ### Model fusion
