@@ -292,10 +292,11 @@
 
 
   Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
-  ![](README.assets/KD.PNG)
+
+  ![JC](README.assets/KD.PNG)
 
   **Divided according to the stage of knowledge used:**
-- Response-Based Knowledge 
+  - Response-Based Knowledge 
   $$L_{\mathrm{Res} D}\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)=\mathcal{L}_R\left(p\left(z_t, T\right), p\left(z_s, T\right)\right)$$
 
   - Feature-Based Knowledge
