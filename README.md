@@ -382,7 +382,7 @@
   > **5.知识应用：从训练好的模型中提取可用的知识** -->
 
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
-  > **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time**
+  > **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.**  
   > The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method
   ![](README.assets/SWA.PNG)
 
@@ -393,17 +393,18 @@
 
 - [[CVPR](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
 
-  >A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation
+  >A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation.  
   >Implementation method:
-  >The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.
+  >The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.  
   >Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
+
   ![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
   > Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
- > The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
- > CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
-![](README.assets/边界知识蒸馏.PNG)
+  > The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
+  > CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
+  ![](README.assets/边界知识蒸馏.PNG)
 
 
 
@@ -417,7 +418,7 @@
 -  [[Multiple Classifier Systems](https://link.springer.com/chapter/10.1007/3-540-45014-9_1)] Ensemble methods in machine learning
 
 - :star: [[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
- > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
+  > <img src="README.assets/batch_ensemble.png" style="width: 600px; display: block; margin: 0 auto;"/>
 
 - :star:[[arXiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
   > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
@@ -440,23 +441,21 @@
 
 - [[ICLR]( https://arxiv.org/abs/2212.04089)]  Editing models with task arithmetic
 
-  **基于任务向量算术的模型编辑**  
-  从非常有趣的角度进行模型权重的修改，原理上比较清晰，论文主要的工作是一直在做实验验证这些观点  
-
-  提出一种用任务向量编辑预训练模型的新方法，任务向量是通过将预训练模型权重减去该模型在任务中微调后权重而产生的。任务向量上的算术运算，如取负和相加，使得用户可修改和组合预训练模型的行为，也可以用来创建新的模型，在多个任务或由类比关系连接的任务上有更好的性能。这种方法高效易用，可实现无需额外推理成本的模型编辑。
-
-  使用方法：（1）删除特定向量来降低本模型在某方面的能力   （2）添加其他模型的任务向量增强本模型某方面能力  （3）通过类比（平行四边形法则）的方式让模型获得新能力（即使没有该方向的数据）
+  **Model editing based on task vector arithmetic**
+  The model weights are modified from a very interesting Angle, and the principle is relatively clear. The main work of the paper is to verify these views by experiments.  
+  A new method for editing pre-trained models with task vectors is proposed. The task vectors are generated by subtracting the pre-trained model weight from the fine-tuned weight of the model in the task. Arithmetic operations on task vectors, such as taking negative and adding, allow users to modify and combine the behavior of pre-trained models, and can also be used to create new models with better performance on multiple tasks or tasks connected by analogies. This method is efficient and easy to use, enabling model editing without additional inference costs.  
+  How to use: (1) Remove a specific vector to reduce the capability of this model in a certain aspect (2) add task vectors of other models to enhance the capability of this model in a certain aspect (3) by analogy (parallelogram rule) to give the model a new capability (even if there is no data in that direction).
 
 
 #### Mode Connectivity and Loss landscape
 
-- :star: J.  Frankle  et  al.    Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis
+- :star: [[ICML](https://proceedings.mlr.press/v119/frankle20a)] Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis
 
-- D.  Yunis  et  al.   On  convexity  and  linear  mode  connectivity  in  neural networks
+- [[openreview](https://openreview.net/forum?id=TZQ3PKL3fPr)] On convexity and linear mode connectivity in neural networks
 
-- :star: [[arXiv](https://arxiv.org/abs/1802.10026)] T. Garipov et al.  Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs
+- :star: [[arXiv](https://arxiv.org/abs/1802.10026)] Loss Surfaces, Mode Connectivity, and Fast Ensembling of DNNs
 
-- [[arXiv](https://arxiv.org/abs/2209.04836)] S. K. Ainsworth et al.  Git Re-Basin: Merging Models modulo Permutation Symmetries
+- [[arXiv](https://arxiv.org/abs/2209.04836)] Git Re-Basin: Merging Models modulo Permutation Symmetries
 
 - [[arXiv](https://arxiv.org/abs/2305.03053)] George  Stoica  et  al. ZipIt!  Merging  Models  from  Different  Tasks without Training
 
@@ -588,7 +587,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 - [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
-![](README.assets/editing.PNG)
+  ![](README.assets/editing.PNG)
 - [[EMNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
 
 
