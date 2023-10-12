@@ -1,4 +1,4 @@
-# Learn from Model: A suvery (paper list)
+# Learn From Model Beyond Fine-Tuning: A suvery (paper list)
 
 **Abstract**
 
