@@ -4,6 +4,8 @@
 ✨ Please check out our survey paper https://arxiv.org/abs/2310.08184
 
 >![](README.assets/LFM.PNG)
+
+
 **Abstract**
 
 > Large Pre-trained Models (LPMs) have demonstrated remarkable performance across a wide range of tasks (especially in the fields of natural language processing and computer vision), primarily attributed to their ability to comprehend instructions and access extensive, high-quality data. This not only showcases their current effectiveness but also sets a promising trajectory towards the development of artificial general intelligence.
