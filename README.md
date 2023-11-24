@@ -3,7 +3,7 @@
 
 ✨ Please check out our survey paper https://arxiv.org/abs/2310.08184
 
->![](README.assets/LFM.PNG)
+>![](README.assets/LFM.png)
 
 
 **Abstract**
