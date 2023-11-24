@@ -100,8 +100,8 @@
   >delta-tuning可分为addition-based, specification-based and reparameterization-based methods.  
   >基于大型PLM中低内在维度的知识，我们表明delta调优本质上是一种关于解空间或函数空间的子空间优化方法。讨论证明了现有delta调谐方法的设计是合理的，并解释了实验中的一些现象。  
   >受深度学习和最优控制理论之间关系的启发，我们将delta调谐解释为PLM寻找最优控制器。我们提出了一个最优控制框架，该框架统一了不同的delta调整方法。我们的分析为delta调谐方法的新颖设计提供了理论参考。实验设计部分评估了vanilla fine-tuning（FT）和四种代表性的delta微调方法，包括提示微调（PT）、前缀微调（PF）、LoRA（LR）和适配器（AP）。    -->
-    >![](README.assets/image-20230430221334240.png)
-    >![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
+    <!-- >![](README.assets/image-20230430221334240.png)
+    >![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png) -->
 
 #### Adapter Tuning
 
@@ -327,8 +327,8 @@
 -  [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
 
     > - Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
-    >![](README.assets/KD.PNG)
-    >![](README.assets/relation-based.PNG)
+    <!-- >![](README.assets/KD.PNG) -->
+    <!-- >![](README.assets/relation-based.PNG) -->
 
     > **According to whether the teacher-student model is updated synchronously:** 
     > -  Offline distillation: First train the teacher model, then train the student model offline.  
@@ -436,10 +436,10 @@
 
 - :star: [[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
 
-  >![](README.assets/batch_ensemble.png)
+  <!-- >![](README.assets/batch_ensemble.png) -->
 
 - :star:[[arXiv](https://arxiv.org/abs/2307.08114)] Tangent Model Composition for Ensembling and Continual Fine-tuning
-  > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
+  <!-- > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/> -->
 
 
 ### Model Fusion
@@ -605,7 +605,7 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 - [[ICRA](https://arxiv.org/abs/2305.13172)] Editing Large Language Models: Problems, Methods, and Opportunities
-    >![](README.assets/editing.PNG)
+    <!-- >![](README.assets/editing.PNG) -->
 - [[EMNLP](https://arxiv.org/abs/2201.06009)] Memory-assisted prompt editing to improve GPT-3 after deployment
 
 
