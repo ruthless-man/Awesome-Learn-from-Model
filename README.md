@@ -89,7 +89,7 @@
 - [[CVPR](https://openaccess.thecvf.com/content/CVPR2023/html/Ruiz_DreamBooth_Fine_Tuning_Text-to-Image_Diffusion_Models_for_Subject-Driven_Generation_CVPR_2023_paper.html)] Dreambooth: Fine tuning text-to-image diffusion models for subject-driven generation
 
 - [[arXiv](https://arxiv.org/abs/2302.04863)] Knowledge is a Region in Weight Space for Fine-tuned Language Models 
-  >  - **The weight space formed by the model helps to find the parameters, and the relationship between the models is deeply understood. The model located between two similar models can obtain the knowledge of both.**
+  <!-- >  - **The weight space formed by the model helps to find the parameters, and the relationship between the models is deeply understood. The model located between two similar models can obtain the knowledge of both.** -->
 
 - [[Nips](https://proceedings.neurips.cc/paper_files/paper/2022/hash/f3bfbd65743e60c685a3845bd61ce15f-Abstract-Conference.html)] Singular value fine-tuning: Few-shot segmentation requires few-parameters fine-tuning
 
@@ -144,7 +144,7 @@
 - [[ICLR](https://arxiv.org/abs/2301.12314)] Progressive prompts: Continual learning for language models
 
 - [[arXiv](https://arxiv.org/abs/2205.12548)] Rlprompt: Optimizing discrete text prompts with reinforcement learning
-  > **Discrete cue optimization based on reinforcement learning: Training a parameter-efficient policy network**
+  <!-- > **Discrete cue optimization based on reinforcement learning: Training a parameter-efficient policy network** -->
 
 - [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
   <!-- >  - **Gradientless implementation of continuous prompt, based on random embedded DFO**   -->
@@ -220,7 +220,7 @@
 
 
 - [[arXiv](https://arxiv.org/abs/2303.07320)] Model-tuning Via Prompts Makes NLP Models Adversarially Robust
-  >-  **Fine-tuning of the entire model through prompt tuning for increased robustness against (word substitution attacks)**
+  <!-- >-  **Fine-tuning of the entire model through prompt tuning for increased robustness against (word substitution attacks)** -->
   ![](README.assets/MVP.PNG)
 
 
@@ -296,7 +296,7 @@
 
 - [[arXiv](https://arxiv.org/abs/2301.12652)] Replug: Retrieval-augmented black-box language models
 
-  **Handle factual errors in generated text**
+  <!-- **Handle factual errors in generated text** -->
 
   <!-- > **In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.**
   > -  **IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
@@ -373,10 +373,10 @@
 
 - [[CVPR](https://arxiv.org/abs/2302.14290)] Learning to Retain while Acquiring: Combating Distribution-Shift in Adversarial Data-Free Knowledge Distillation
    <!-- >   ![](README.assets/无数据知识蒸馏.jpg) -->
-  > -  The main problem dealt with is the distribution deviation in the process of student network updating.  
+  <!-- > -  The main problem dealt with is the distribution deviation in the process of student network updating.  
   > -  A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
   > - The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
-  >  -  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
+  >  -  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets. -->
      > ![](README.assets/无数据知识蒸馏.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
@@ -400,27 +400,27 @@
   > **5.知识应用：从训练好的模型中提取可用的知识** -->
 
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
-  > - Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.  
-  > - The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method.
+  <!-- > - Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.  
+  > - The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method. -->
 
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
-  > - A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation.
+  <!-- > - A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation.
 
-  >  -  **IDEA:** Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched.
+  >  -  **IDEA:** Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched. -->
 
 ### Adversarial Exploration
 
 - [[CVPR](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
 
-  > - A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation.  
+  <!-- > - A general-purpose to specific distillation (G2SD) is proposed to transfer mission-agnostic and mission-specific knowledge from MAE to lightweight vit, setting a solid baseline for two-stage visual model distillation.  
   > - The first stage: the hidden feature output of the middle layer of MAE teacher decoder is used to guide the training of the student model.  
-  > - Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label.
+  > - Second stage: For task-specific distillation, fine-tuning MAE equipped with task layers teaches task-specific knowledge (e.g. classification scores) to the student model. The student model is initialized from the previous distillation stage, while the task layer is initialized randomly. The predictions of the student model are limited to being consistent with MAE's predictions as well as the true label. -->
 ![](README.assets/GS2D.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2306.02090)] Deep Classifier Mimicry without Data Access
-  >  - Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
+  <!-- >  - Proposed Contrastive Abductive Knowledge Extraction (CAKE), a knowledge distillation process that does not rely on models and does not require access to the original data. Instead, a process of comparative diffusion generates synthetic samples that are located near the decision boundaries of the teacher model.  
   > - The contribution of CAKE components is highlighted through empirical research, showing differences in depth and capacity between teacher and student neural networks, and analyzing the effectiveness of CAKE when teacher and student models differ (MLP, CNN, ResNet, and ViT).  
-  > -  CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions.
+  > -  CAKE's classification accuracy is competitive with many "state of the art" methods that require access to raw data or rely on complex model assumptions. -->
 ![](README.assets/边界知识蒸馏.PNG)
 
 
