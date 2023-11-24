@@ -335,16 +335,6 @@
     > -  Online distillation: Both models are updated simultaneously, without distinguishing between teacher and student models.  
     > - Self-distillation: The architecture of the two models is exactly the same, and it can be seen as the student's own learning.   -->
 
-    <!-- >**According to the distillation algorithm:**
-    > - Counter distillation  
-    >  - Multi teacher distillation  
-    > - Cross-channel distillation  
-    > - Graph distillation  
-    > - Attention distillation  
-    > - No data distillation  
-    >  - Quantitative distillation  
-    > - Lifetime distillation  
-    >  - Neural structure search distillation   --> -->
 
 
 
