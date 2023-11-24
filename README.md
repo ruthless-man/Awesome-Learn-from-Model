@@ -176,17 +176,17 @@
 
 - [[arXiv](https://arxiv.org/abs/2302.09236)] Scalable Prompt Generation for Semi-supervised Learning with Language Models
 
-  > - Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors
+  <!-- > - Investigate prompt design under semi-supervised learning, the first to completely eliminate human involvement in designing multiple prompts and language expressors in an SSL setup, and achieve similar or even better performance than SoTA methods using manual prompts and language expressors -->
   >  ![](README.assets/SSL.PNG)
 
 
 - [[arXiv](https://arxiv.org/abs/2303.02909)] Dynamic Prompting: A Unified Framework for Prompt Tuning
-  >  - To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark.
+  <!-- >  - To fill this gap, we propose dynamic prompting: position, length, and prompt representation can all be dynamically optimized for different tasks and instances, using SuperGlue as the benchmark. -->
   >![](README.assets/DP.PNG)
 
 
 - [[arXiv](https://arxiv.org/abs/2302.08958)] Towards Unifying Medical Vision-and-Language Pre-training via Soft Prompts
-  > -  The PTUnifier is proposed to make the medical pretraining model compatible with different input modes
+  <!-- > -  The PTUnifier is proposed to make the medical pretraining model compatible with different input modes -->
 
 
 - [[ICML](https://arxiv.org/abs/2212.09257)] PromptBoosting: Black-Box Text Classification with Ten Forward Passes
