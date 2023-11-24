@@ -18,7 +18,6 @@
 
 ## Table of Contents
 - [Learn From Model Beyond Fine-Tuning: A Survey](#learn-from-model-beyond-fine-tuning-a-survey)
-
   - [Table of Contents](#table-of-contents)
   - [Papers](#papers)
     - [Model Tuning](#model-tuning)
@@ -32,8 +31,6 @@
         - [Language Database Augmentation](#Language-Database-Augmentation)
         - [Multimodal Database Augmentation](#Multimodal-Database-Augmentation)
     - [Model Distillation](#Model-Distillation)
-
-
     - [Model Reuse](#Model-Reuse)
       - [Model Ensemble](#Model-Ensemble)
       - [Model fusion](#Model-Fusion)
@@ -50,9 +47,6 @@
         - [Locate And Edit](#Locate-And-Edit)
         - [Meta Learning](#Meta-Learning)    
   - [Citation](#citation)
-
-
-
 ## Model Tuning
 
 
