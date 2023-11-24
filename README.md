@@ -31,6 +31,9 @@
         - [Language Database Augmentation](#Language-Database-Augmentation)
         - [Multimodal Database Augmentation](#Multimodal-Database-Augmentation)
     - [Model Distillation](#Model-Distillation)
+      - [Noise Optimization](#Noise-Optimization)
+      - [Generative Reconstruction](#Generative-Reconstruction)
+      - [Adversarial Exploration](#Adversarial-Exploration)
     - [Model Reuse](#Model-Reuse)
       - [Model Ensemble](#Model-Ensemble)
       - [Model fusion](#Model-Fusion)
@@ -317,7 +320,7 @@
 
 
 ## Model Distillation
-
+### Noise Optimization
 -  [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
 
     > - Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
@@ -359,6 +362,7 @@
   > 3. 联合学习  
   > 4. Transformer or GNN -->
 
+### Generative Reconstruction
 - [[arXiv](https://arxiv.org/abs/1710.07535)] Data-free knowledge distillation for deep neural networks
   <!-- > 提出了一种新的基于知识蒸馏[8]的神经网络压缩策略，而无需访问原始数据，提出了多种不同的教师网络的激活记录策略用来重建原始数据集，然后用重建的数据集去训练学生网络  
   > 传统模型压缩：（1）权重量化 （2）网络修剪 （3）知识蒸馏  
@@ -402,6 +406,7 @@
   >  **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
   > -  **IDEA:** Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched.
 
+### Adversarial Exploration
 
 - [[CVPR](https://arxiv.org/abs/2302.14771)] Generic-to-Specific Distillation of Masked Autoencoders
 
