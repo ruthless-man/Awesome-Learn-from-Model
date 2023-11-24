@@ -375,7 +375,6 @@
   > -  A novel meta-learning-inspired knowledge distillation strategy for secondary student network renewal is proposed, aiming to maintain student performance on knowledge retention while acquiring knowledge from currently distributed samples.  
   > - The strategy enforces an implicit gradient alignment between knowledge acquisition and knowledge retention, that is, the proposed student renewal strategy implements a common gradient direction for the two tasks, reducing the interference between the two goals.  
   >  -  Finally, this paper supports the hypothesis of this paper by showing extensive validation and comparison of our method with previous techniques on multiple data sets.
-     > ![](README.assets/元学习元训练.PNG)
      > ![](README.assets/无数据知识蒸馏.PNG)
 
 - [[arXiv](https://arxiv.org/abs/2303.08559)] Large Language Model Is Not a Good Few-shot Information Extractor, but a Good Reranker for Hard Samples!
