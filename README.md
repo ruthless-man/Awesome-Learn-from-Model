@@ -599,7 +599,16 @@ KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通�
 
 
 
-
+## Citation
+If you find this repository useful, please consider citing this paper:
+```
+@article{zheng2023learn,
+  title={Learn From Model Beyond Fine-Tuning: A Survey},
+  author={Zheng, Hongling and Shen, Li and Tang, Anke and Luo, Yong and Hu, Han and Du, Bo and Tao, Dacheng},
+  journal={arXiv preprint arXiv:2310.08184},
+  year={2023}
+}
+```
 
 
 
