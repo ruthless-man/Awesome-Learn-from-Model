@@ -6,11 +6,51 @@
 >![](README.assets/LFM.png)
 
 
-**Abstract**
+## Abstract
 
 > Large Pre-trained Models (LPMs) have demonstrated remarkable performance across a wide range of tasks (especially in the fields of natural language processing and computer vision), primarily attributed to their ability to comprehend instructions and access extensive, high-quality data. This not only showcases their current effectiveness but also sets a promising trajectory towards the development of artificial general intelligence.
 > Unfortunately, due to competitive reasons, the raw data of the model used for large model training are often inaccessible, so the use of end-to-end models for downstream tasks has become a new research trend, which we call **learn from model (LFM)** in this article. LFM focuses on the research, modification, and design of LPMs based on the only model interface, so as to better understand the model structure and weights (in a black box environment), and to generalize the model to downstream tasks. The study of LFM techniques can be broadly categorized into six major areas: model tuning, model distillation, model reuse, meta learning, model editing and model augmentation. Each category encompasses a repertoire of methods and strategies that aim to enhance the capabilities and performance of LPMs.
 > This paper gives a comprehensive review of the current methods based on LPMs from the perspective of LFM, in order to help readers better understand the current research status and ideas. To conclude, we summarize the survey by highlighting several critical areas for future exploration and addressing open issues that require further attention from the research community. As the field of LFM continues to evolve, it is essential to explore new directions, tackle challenges, and collaborate to unlock the full potential of LPMs in the advancement of artificial intelligence. The relevant papers we investigated in this article can be accessed at https://github.com/ruthless-man/Awesome-Learn-from-Model.
+
+
+
+
+
+## Table of Contents
+- [Learn From Model Beyond Fine-Tuning: A Survey](#learn-from-model-beyond-fine-tuning-a-survey)
+
+  - [Table of Contents](#table-of-contents)
+  - [Papers](#papers)
+    - [Model Tuning](#model-tuning)
+      - [Weight Enginerring](#Weight-Enginerring)
+          - [Fine Tuning](#Fine-Tuning)
+          - [Adapter Tuning](#Adapter-Tuning)
+      - [Input engineering](#Input-engineering)
+        - [Prompt Tuning](#Prompt-Tuning)
+        - [InstructioN Tuning](#InstructioN-Tuning)
+      - [Database Augmentation](#Database-Augmentation)
+        - [Language Database Augmentation](#Language-Database-Augmentation)
+        - [Multimodal Database Augmentation](#Multimodal-Database-Augmentation)
+    - [Model Distillation](#Model-Distillation)
+
+
+    - [Model Reuse](#Model-Reuse)
+      - [Model Ensemble](#Model-Ensemble)
+      - [Model fusion](#Model-Fusion)
+        - [Weight Interpolation](#Weight-Interpolation)
+        - [Mode Connectivity Based Method](#Mode-Connectivity-Based-Method)
+        - [Straightforward Optimization](#Straightforward-Optimization)
+    - [Meta Learning](#Meta-Learning)
+      - [White-box Data-free Meta-learning](#White-box-Data-free-Meta-learning)
+      - [Black-box Data-free Meta-learning](#Black-box-Data-free-Meta-learning)
+    - [Model Editing](#Model-Editing)
+      - [Memory Based Model Editing](#Memory-Based-Model-Editing)
+      - [Parameter Based Model Editing](#Parameter-Based-Model-Editing) 
+        - [Constrained Tuning](#Constrained-Tuning)
+        - [Locate And Edit](#Locate-And-Edit)
+        - [Meta Learning](#Meta-Learning)    
+  - [Citation](#citation)
+
 
 
 ## Model Tuning
@@ -201,7 +241,7 @@
   >  - CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
 
 
-### InstructioN Tuning
+### Instruction Tuning
 
 
 - [[COLING](https://arxiv.org/abs/2209.09900)] Linguist: Language model instruction tuning to generate annotated utterances for intent classification and slot tagging
@@ -401,7 +441,7 @@
   > <img src="README.assets/tangent_model_composition.png" style="width: 800px; display: block; margin: 0 auto;"/>
 
 
-### Model fusion
+### Model Fusion
 
 #### Weight Interpolation
 
@@ -424,7 +464,7 @@
  > - How to use: (1) Remove a specific vector to reduce the capability of this model in a certain aspect (2) add task vectors of other models to enhance the capability of this model in a certain aspect (3) by analogy (parallelogram rule) to give the model a new capability (even if there is no data in that direction).
 
 
-#### Mode Connectivity and Loss landscape
+#### Mode Connectivity Based Method
 
 - :star: [[ICML](https://proceedings.mlr.press/v119/frankle20a)] Linear  Mode  Connectivity  and  the  Lottery  Ticket Hypothesis
 
