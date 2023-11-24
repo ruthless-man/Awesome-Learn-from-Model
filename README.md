@@ -50,6 +50,7 @@
         - [Locate And Edit](#Locate-And-Edit)
         - [Meta Learning](#Meta-Learning)    
   - [Citation](#citation)
+
 ## Model Tuning
 
 
@@ -100,7 +101,7 @@
     >![](README.assets/image-20230430221334240.png)
     >![](README.assets/C4E863EF5887FCB856CC72BDC72_2D68437A_2136C.png)
 
-### Adapter Tuning
+#### Adapter Tuning
 
 - [[arXiv](https://arxiv.org/abs/2106.01463)] Lightweight adapter tuning for multilingual speech translation
 
@@ -124,9 +125,9 @@
 
 - [[ICASSP]( https://ieeexplore.ieee.org/abstract/document/10095837)]  Using  adapters  to  overcome catastrophic  forgetting  in  end-to-end  automatic  speech  recognition
 
-## Input engineering
+### Input engineering
 
-### Prompt Tuning
+#### Prompt Tuning
 
 - [[arXiv](https://arxiv.org/abs/2109.01134)] Learning to Prompt for Vision-Language Model
 
@@ -238,7 +239,7 @@
   >  - CaFo: First GPT-3 generates text input to prompt CLIP, DALL-E is used to generate more trainable data, and a learnable cache model is introduced to adaptively mix predictions from CLIP and DINO, resulting in good classification.
 
 
-### Instruction Tuning
+#### Instruction Tuning
 
 
 - [[COLING](https://arxiv.org/abs/2209.09900)] Linguist: Language model instruction tuning to generate annotated utterances for intent classification and slot tagging
