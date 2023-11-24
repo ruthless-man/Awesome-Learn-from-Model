@@ -13,13 +13,10 @@
 > This paper gives a comprehensive review of the current methods based on LPMs from the perspective of LFM, in order to help readers better understand the current research status and ideas. To conclude, we summarize the survey by highlighting several critical areas for future exploration and addressing open issues that require further attention from the research community. As the field of LFM continues to evolve, it is essential to explore new directions, tackle challenges, and collaborate to unlock the full potential of LPMs in the advancement of artificial intelligence. The relevant papers we investigated in this article can be accessed at https://github.com/ruthless-man/Awesome-Learn-from-Model.
 
 
-
-
-
 ## Table of Contents
 - [Learn From Model Beyond Fine-Tuning: A Survey](#learn-from-model-beyond-fine-tuning-a-survey)
   - [Table of Contents](#table-of-contents)
-  - [Papers](#papers)
+  - [Papers](#Papers)
     - [Model Tuning](#model-tuning)
       - [Weight Enginerring](#Weight-Enginerring)
           - [Fine Tuning](#Fine-Tuning)
@@ -50,6 +47,11 @@
         - [Locate And Edit](#Locate-And-Edit)
         - [Meta Learning](#Meta-Learning)    
   - [Citation](#citation)
+
+## Papers
+
+
+
 
 ## Model Tuning
 
