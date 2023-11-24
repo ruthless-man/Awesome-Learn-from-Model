@@ -386,7 +386,7 @@
   > 2. 更多的标注数据能否提高Large-LM和Small-LM?  
   > 3. LLMs和SLMs是否分别擅长处理不同类型的样本?  
   > 思路：将小模型不太确定的测试样本再给大模型重新选择一下   -->
-  > ![](README.assets/large.PNG)
+  <!-- > ![](README.assets/large.PNG) -->
 
 - [[arXiv](https://arxiv.org/abs/2303.07616)] The Life Cycle of Knowledge in Big Language Models: A Survey
   <!-- > 将预训练语言模型的知识生命周期划分为五个：  
