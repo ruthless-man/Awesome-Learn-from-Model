@@ -148,7 +148,7 @@
 
 - [[ICML](https://proceedings.mlr.press/v162/sun22e.html)] Black-Box Tuning for Language-Model-as-a-Service (BBTv1)
   >  - **Gradientless implementation of continuous prompt, based on random embedded DFO**  
-  > -  This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity.
+  <!-- > -  This article provides a solution, called Black-Box Tuning (BBT), for this scenario to accomplish general language understanding tasks without accessing model parameters and gradients. It enables large-scale Pre-Trained Models (PTMs) to better benefit users by combining parameter-efficient tuning and non-gradient optimization algorithms based on random embedding. The vision is to use inference APIs to excel in downstream tasks. The optimization of prompts is almost computationally inexpensive, allowing this optimization process to be performed on any endpoint device without the need for GPUs. All computational requirements are concentrated on the large-scale model server. Furthermore, this optimization approach decouples the complexity of the optimization process from the model's forward propagation. In the conventional gradient descent method, the time and memory consumption of backpropagation are directly proportional to the forward propagation of the model, making optimization more expensive as models grow larger. In contrast, the optimization process of black-box tuning itself consumes minimal time and memory, with complexity dependent only on the intrinsic dimensionality d, independent of forward propagation complexity. -->
 
 
 
@@ -197,16 +197,16 @@
 
 
 - [[Arxiv](https://arxiv.org/abs/2304.03589)] On Efficient Training of Large-Scale Deep Learning Models: A Literature Review
-  > - Data-Centric Approaches: These include techniques such as data set regularization, data sampling, and data-centric curriculum learning, which can significantly reduce the computational complexity of data samples.  
+  <!-- > - Data-Centric Approaches: These include techniques such as data set regularization, data sampling, and data-centric curriculum learning, which can significantly reduce the computational complexity of data samples.  
   > - Model-Centric Approaches: These encompass methods like accelerating basic modules, training compression, model initialization, and model-centric curriculum learning. The focus here is on accelerating training by reducing parameter computation and providing better initialization.  
   > - Optimization-Centric Approaches: These involve strategies such as learning rate selection, utilizing large batches, designing effective objectives, and model averaging techniques. They concentrate on training strategies for large-scale models to enhance their generalizability.  
   > - Budgeted Training: This involves unique acceleration methods under resource-constrained scenarios, such as restrictions on the total number of iterations.  
-  > - System-Centric Approaches: These include efficient distributed frameworks and open-source libraries that provide sufficient hardware support for implementing the aforementioned acceleration algorithms.
+  > - System-Centric Approaches: These include efficient distributed frameworks and open-source libraries that provide sufficient hardware support for implementing the aforementioned acceleration algorithms. -->
 - [[arXiv](https://arxiv.org/abs/2302.03668)] Hard prompts made easy: Gradient-based discrete optimization for prompt tuning and discovery
-  > - A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
+  <!-- > - A gradient-based optimization method is proposed to generate robust and flexible hard text prompts for text-to-image and text-to-text applications.  
   > - We propose a simple scheme for learning hard text prompts through efficient gradient-based optimization, adapted from gradient reprojection schemes and large-scale discrete optimization literature for quantization networks.    
   > - The proposed method uses continuous "soft" prompts as intermediate variables in the process of optimizing hard prompts, thus achieving robust optimization and facilitating prompt exploration and discovery.  
-  > - The method is used for text-to-image and text-to-text applications, and the hard tips learned perform well in both image generation and language classification tasks.
+  > - The method is used for text-to-image and text-to-text applications, and the hard tips learned perform well in both image generation and language classification tasks. -->
 
 
 - [[arXiv](https://arxiv.org/abs/2303.00690)] Rethinking Efficient Tuning Methods from a Unified Perspective
@@ -272,10 +272,10 @@
 
 - [[arXiv](https://arxiv.org/abs/2302.07842)] Augmented Language Models: a Survey
 
-  > **Enhanced Language Model (ALM)**
+  <!-- > **Enhanced Language Model (ALM)**
   > - This paper summarizes the inference ability of language models and the work on the ability to use external tools (inference refers to the decomposition of complex tasks into simpler subtasks, tools include calling modules, etc.), and points out that this direction may solve the problems of interpretability, consistency, and extensibility faced by traditional language models.  
   > - Viewpoint 1: Large-scale language models are limited in large-scale promotion due to problems such as model vision. Many LLM capabilities will emerge only when the number of model parameters increases to a certain limit. The model scale and data requirements of LLM are unrealistic in many cases.  
-  > - Viewpoint 2: Divide ALM into (1) Reason: inference, the ability to break down potentially complex tasks into simple subtasks that the language model can solve on its own or by invoking other tools. (2) Tool: The ability of the language model to call external modules through rules or special tokens, including a retrieval system to retrieve external information, or a tool that can call the robot arm. (3) Act: Actions, tools invoked by ALM will have an impact on the virtual or real world and observe the results.  
+  > - Viewpoint 2: Divide ALM into (1) Reason: inference, the ability to break down potentially complex tasks into simple subtasks that the language model can solve on its own or by invoking other tools. (2) Tool: The ability of the language model to call external modules through rules or special tokens, including a retrieval system to retrieve external information, or a tool that can call the robot arm. (3) Act: Actions, tools invoked by ALM will have an impact on the virtual or real world and observe the results.   -->
 
 
 
@@ -298,10 +298,10 @@
 
   **Handle factual errors in generated text**
 
-  > **In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.**
+  <!-- > **In the past, the white box search enhancement is generally freezing the retriever and optimizing the large model, that is, making the LM adapt to the retriever.**
   > -  **IDEA:** This paper proposes a black box search enhancement component REPLUG, optimize the search component, freeze the large model, let retriever adapt to LM, and then use an integrated framework, in fact, is to combine multiple retrieved documents and input x to LM, the results are integrated with weights, the old routine. Cosine similarity is used to extract the text that is closest to x, and then LM is input with x respectively to obtain the integrated result, and the retrieval is trained according to KL divergence.
     >![](README.assets/Replug1.PNG)
-    >![](README.assets/Replug2.PNG)
+    >![](README.assets/Replug2.PNG) -->
 
   > -  Loss function (retrieves KL divergence between likelihood and language model likelihood) :
   >  $$\mathcal{L}=\frac{1}{|\mathcal{B}|} \sum_{x \in \mathcal{B}} K L\left(P_R(d \mid x) \| Q_{\mathrm{LM}}(d \mid x, y)\right)$$
