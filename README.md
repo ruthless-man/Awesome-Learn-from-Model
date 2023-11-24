@@ -398,13 +398,13 @@
   > **5.知识应用：从训练好的模型中提取可用的知识** -->
 
 - [[arXiv](https://arxiv.org/abs/2212.05956)] Improving Generalization of Pre-trained Language Models via Stochastic Weight Averaging
-  > **Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.**  
-  > -  The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method
-  ![](README.assets/SWA.PNG)
+  > - Using Random Weighted average (SWA) at a high constant learning rate, a method that encourages convergence to a flatter minimum, to fine-tune PLM, introduced SWA into the NLP field for the first time.  
+  > - The advantage of SWA is that it does not introduce additional computational costs, and the effect in compact PLM is comparable to that of SOTA KD method.
 
 - [[arXiv](https://arxiv.org/abs/2302.14771)] Feature Affinity Assisted Knowledge Distillation and Quantization of Deep Neural Networks on Label-Free Data
-  >  **A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation**
-  > -  **IDEA:** Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched.
+  > - A Fast Feature Affinity (FFA) was designed to improve the efficiency of knowledge distillation.
+
+  >  -  **IDEA:** Not only the labels of teachers and students in the output layer are matched, but also the feature maps of their intermediate stages are matched.
 
 ### Adversarial Exploration
 
