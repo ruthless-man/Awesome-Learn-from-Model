@@ -318,7 +318,7 @@
 
 ## Model Distillation
 
--  [[IJCV](https://arxiv.org/pdf/2006.05525.pdf) Knowledge distillation: A survey
+-  [[IJCV](https://arxiv.org/pdf/2006.05525.pdf)] Knowledge distillation: A survey
 
     > - Knowledge distillation consists of three parts: knowledge type, distillation algorithm and teacher-student structure.
     >![](README.assets/KD.PNG)
