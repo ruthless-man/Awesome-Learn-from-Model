@@ -420,7 +420,7 @@
 
 -  [[Multiple Classifier Systems](https://link.springer.com/chapter/10.1007/3-540-45014-9_1)] Ensemble methods in machine learning
 
-- :star: [[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
+- :star:[[arXiv](https://arxiv.org/abs/2002.06715)] BatchEnsemble:  An  Alternative  Approach  to  Efficient Ensemble and Lifelong Learning
 
   <!-- >![](README.assets/batch_ensemble.png) -->
 
