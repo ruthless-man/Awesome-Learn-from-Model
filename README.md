@@ -1,5 +1,9 @@
-# Learn From Model Beyond Fine-Tuning: A suvery
+# Learn From Model Beyond Fine-Tuning
 
+
+### 🎉 **Exciting News (2024.11): Our Paper Has Been Accepted By Nature Machine Intelligence!** 🎉
+
+We are thrilled to share that our paper has been accepted for publication! It is an exciting milestone, and we want to thank everyone involved for their hard work and support. Looking forward to seeing our research contribute to the field.  🚀
 
 ✨ Please check out our survey paper https://arxiv.org/abs/2310.08184
 
