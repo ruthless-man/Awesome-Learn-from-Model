@@ -430,6 +430,14 @@ We are thrilled to share that our paper has been accepted for publication! It is
 
 ### Model Fusion
 
+#### Survey Paper
+
+- :star: [[arXiv](https://arxiv.org/pdf/2309.15698)] Deep Model Fusion: A Survey
+- :star: [[arXiv](http://arxiv.org/abs/2408.07057)] A Survey on Model MoErging: Recycling and Routing Among Specialized Experts for Collaborative Learning
+- :star: [[arXiv](https://arxiv.org/pdf/2408.07666)] Model Merging in LLMs, MLLMs, and Beyond: Methods, Theories, Applications and Opportunities. Arxiv, 2024.
+- [[arXiv](https://arxiv.org/pdf/2406.03280)] FusionBench: A Comprehensive Benchmark of Deep Model Fusion
+- [[arXiv](https://arxiv.org/pdf/2410.12927)] SoK: On Finding Common Ground in Loss Landscapes Using Deep Model Merging Techniques	
+
 #### Weight Interpolation
 
 - :star: [[ICML](https://proceedings.mlr.press/v119/frankle20a)] Linear Mode Connectivity and the Lottery Ticket Hypothesis
@@ -445,6 +453,7 @@ We are thrilled to share that our paper has been accepted for publication! It is
 - [[arXiv](https://arxiv.org/pdf/2403.13187)] Evolutionary optimization of model merging recipes
 - [[ICLR 2024](https://openreview.net/pdf?id=nZP6NgD3QY)] AdaMerging: Adaptive Model Merging for Multi-Task Learning
 - [[NeurIPS 2022](https://proceedings.neurips.cc/paper_files/paper/2022/hash/70c26937fbf3d4600b69a129031b66ec-Abstract-Conference.html)] Merging  Models  with  Fisher-Weighted Averaging
+- [[arXiv](https://arxiv.org/pdf/2411.09263)] Rethinking Weight-Averaged Model-merging
 
 #### Mode Connectivity Based Method
 
@@ -461,67 +470,18 @@ We are thrilled to share that our paper has been accepted for publication! It is
 
 #### MoE Based Method (Model MoErging)
 
-- [[arXiv](http://arxiv.org/abs/2408.07057)] (**survey**) A Survey on Model MoErging: Recycling and Routing Among Specialized Experts for Collaborative Learning
 - [[ICML2024](http://arxiv.org/abs/2402.00433)] Merging Multi-Task Models via Weight-Ensembling Mixture of Experts
 - [[arXiv](http://arxiv.org/abs/2410.21804)] Efficient and Effective Weight-Ensembling Mixture of Experts for Multi-Task Model Merging
 - [[NeurIPS 2024](http://arxiv.org/abs/2406.15479)] Twin-Merging: Dynamic Integration of Modular Expertise in Model Merging
 - [[arXiv](http://arxiv.org/abs/2408.10174)] SMILE: Zero-Shot Sparse Mixture of Low-Rank Experts Construction From Pre-Trained Foundation Models
 - [[arXiv](http://arxiv.org/abs/2406.09770)] Towards Efficient Pareto Set Approximation via Mixture of Experts Based Model Fusion
 
-<!-- <details>
-<summary>  <a href="https://arxiv.org/abs/2302.10879">KNN-Adapter: Efficient Domain Adaptation for Black-Box Language Models</a> </summary>
-<br>
-<blockquote> -->
+#### Benchmark/Evaluation
 
-<!-- 
-思路基于2019年的文章：https://arxiv.org/abs/1911.00172
-k-Nearest将语言模型的输出与从目标域构建的数据存储中的topk最近匹配示例所做的预测相结合。这种组合允许模型在没有额外训练的情况下，通过将该领域的特定特征纳入其预测来适应新的目标领域。然而，检索增强域自适应的零样本特性常常导致有限的实用性，因为模型不是在目标域上训练的，而是仅基于在数据存储中可以找到的最近的示例来适应域。与在目标域上进行专门微调的模型相比，这可能会导致性能次优。  
-**KNN-Adapter+LM**  
-KNN-LM中插值系数和分布温度是固定的，本文的创新就在于通过学习根据要预测的令牌、当前上下文和从数据存储中检索到的邻居来调整两个关键参数，即插值系数$\lambda $和分布温度$t$，从而提高kNN-LM的域自适应性能。
-![](README.assets/KNN.PNG)
-
-</blockquote>
-</details> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <summary>  <a href="https://direct.mit.edu/tacl/article/doi/10.1162/tacl_a_00324/96460">How Can We Know What Language Models Know?
-</a> </summary>
-<br>
-<blockquote>
-
-**研究prompt工程**
-
-论文提出了基于挖掘（mining-based）和基于释义（paraphrasing-based）的方法来自动生成高质量和多样化的prompt，以及集成方法来组合来自不同提示的答案，用以更准确地估计LM中包含的知识，主要使用的数据集是LAMA。
-</blockquote>
-</details>
-
-
-<details>
-<summary>  <a href="https://arxiv.org/abs/2302.04761">Toolformer: Language models can teach themselves to use tools</a> </summary>
-<br>
-<blockquote>
-
-**基于自监督生成标签的方式，让语言模型可以自己决定什么时候使用外部工具，使用什么外部工具，怎么使用外部工具。**
-![](README.assets/Toolformer.PNG)
-</blockquote>
-</details> -->
-
-
-
-
+- [[arXiv](https://arxiv.org/pdf/2403.13257)] Arcee's MergeKit: A Toolkit for Merging Large Language Models
+- [[arXiv](https://arxiv.org/pdf/2406.03280)] FusionBench: A Comprehensive Benchmark of Deep Model Fusion
+- [[arXiv](https://arxiv.org/pdf/2409.18314)] Realistic Evaluation of Model Merging for Compositional Generalization
+- [[arXiv](https://arxiv.org/pdf/2410.03617)] What Matters for Model Merging at Scale?
 
 ## Meta Learning
 
